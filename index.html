@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="pt-BR" data-bs-theme="light">
+<head>
+	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>ODSCharts - Chart Maker</title>
+	
+	<!-- CSS da página -->
+	<link rel="stylesheet" href="index.css">
+	<!-- Bootstrap's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+	<!-- Bootstrap's Icons -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+	
+	<!-- Bootstrap's JS -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+	<!-- Jquery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<!-- Apache ECharts -->
+	<script src="https://cdn.jsdelivr.net/npm/echarts@5.5.1/dist/echarts.min.js"></script>
+	<!-- TopoJSON Client-->
+	<script src="https://cdn.jsdelivr.net/npm/topojson-client@3.1.0/dist/topojson-client.min.js"></script>
+	<!-- ODS Charts -->
+	<script src="ods-charts.js"></script>
+	
+</head>
+<body>
+	
+	<!-- CABEÇALHO EXPANSÍVEL COM OS SELECTS DE OBJETIVO, META E INDICADOR -->
+	<section class="bg-body-tertiary border-bottom">
+		<div class="container">
+			<button
+			class="btn menu-toggle w-100 py-3"
+			type="button"
+			id="form-toggle-btn"
+			data-bs-toggle="collapse"
+			data-bs-target="#filtros"
+			>
+				<span id="span-indicador">Indicador</span> 
+				&nbsp;
+				<span class="menu-icons" aria-hidden="true">
+					<i class="bi bi-plus-circle icon-closed"></i>
+					<i class="bi bi-x-circle icon-open"></i>
+				</span>
+			</button>
+			<div class="collapse" id="filtros">
+				<div class="row mb-3 justify-content-center">
+					<div class="col-sm-8 col-lg-6">
+						<select id="select-obj" class="form-select"></select>
+					</div>
+				</div>
+				<div class="row mb-3 justify-content-center">
+					<div class="col-sm-8 col-lg-6">
+						<select id="select-met" class="form-select"></select>
+					</div>
+				</div>
+				<div class="row mb-3 justify-content-center">
+					<div class="col-sm-8 col-lg-6">
+						<select id="select-ind" class="form-select"></select>
+					</div>
+				</div>
+				<div class="row mb-3 justify-content-center">
+					<div class="col-sm-8 col-lg-6 text-center">
+						<button type="button" class="btn btn-primary" id="btn-indicador">
+							<i class="bi bi-arrow-clockwise"></i>
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	<!-- CORPO DA PÁGINA, ONDE VÃO OS GRÁFICOS -->
+	<main class="container" id="charts-wrapper"></main>
+	
+	<!-- SEÇÃO EXPANSÍVEL COM O ESQUELETO DO FORMULÁRIO DE CRIAÇÃO -->
+	<section class="container my-3 mb-5">
+		<div class="bg-body-tertiary border rounded">
+			<button
+			class="btn menu-toggle w-100 py-3"
+			type="button"
+			id="form-toggle-btn"
+			data-bs-toggle="collapse"
+			data-bs-target="#formulario"
+			>
+				Chart maker
+				&nbsp;
+				<span class="menu-icons" aria-hidden="true">
+					<i class="bi bi-plus-circle icon-closed"></i>
+					<i class="bi bi-x-circle icon-open"></i>
+				</span>
+			</button>
+			<div class="collapse" id="formulario">
+				<div class="p-5">
+					<!-- CÓDIGO DO AGREGADO -->
+					<div class="row mb-2">
+						<label 
+						for="input-agregado" 
+						class="col-3 col-lg-2 col-form-label">
+							Agregado
+						</label>
+						<div class="col-auto">
+							<input 
+							type="text" 
+							id="input-agregado" 
+							class="form-control" 
+							placeholder="Código do agregado">
+						</div>
+						<div class="col-auto">
+							<button type="button" class="btn btn-primary" id="btn-load">
+								<i class="bi bi-lightning-charge-fill"></i>
+							</button>
+						</div>
+					</div>
+					<hr class="divisor my-4">
+					<!-- METADADOS -->
+					<div id="metadados-wrapper">
+						<div class="row mb-2">
+							<div class="col-3 col-lg-2">Código</div>
+							<div class="col" id="codigo">-</div>
+						</div>
+						<div class="row mb-2">
+							<div class="col-3 col-lg-2">Nome</div>
+							<div class="col" id="nome">-</div>
+						</div>
+						<div class="row mb-2">
+							<div class="col-3 col-lg-2">Variáveis</div>
+							<div class="col" id="variaveis">-</div>
+						</div>
+						<div class="row mb-2">
+							<div class="col-3 col-lg-2">Classificações</div>
+							<div class="col" id="classificacoes">-</div>
+						</div>
+						<div class="row mb-2">
+							<div class="col-3 col-lg-2">Períodos</div>
+							<div class="col" id="periodos">-</div>
+						</div>
+						<div class="row mb-2">
+							<div class="col-3 col-lg-2">Níveis</div>
+							<div class="col" id="niveis">-</div>
+						</div>
+					</div>
+					<hr class="divisor my-4">
+					<!-- SELECT DE TIPO -->
+					<div class="row mb-2">
+						<label for="select-tipo" class="col-3 col-lg-2 col-form-label">Tipo</label>
+						<div class="col">
+							<select class="form-select" id="select-tipo" disabled></select>
+						</div>
+					</div>
+					<!-- WRAPPER DO FORMULÁRIO -->
+					<div id="chart-form-wrapper"></div>
+					<hr class="divisor my-4">
+					<!-- BOTÕES PLOT, COPIAR E ADICIONAR -->
+					<div class="row mt-4">
+						<div class="col text-center">
+							<button type="button" class="btn btn-primary" id="btn-plot" disabled>
+								Plot
+								&nbsp;
+								<i class="bi bi-bar-chart-line-fill"></i>
+							</button>
+							<button type="button" class="btn btn-secondary" id="btn-copy" disabled>
+								Copiar
+								&nbsp;
+								<i class="bi bi-copy"></i>
+							</button>
+							<button type="button" class="btn btn-secondary" id="btn-add" disabled>
+								Adicionar
+								&nbsp;
+								<i class="bi bi-patch-plus"></i>
+							</button>
+						</div>
+					</div>
+					<div class="row mt-4">
+						<div class="col">
+							<div id="maker-chart"></div>
+							<div 
+							id="maker-chart-placeholder" 
+							class="bg-info-subtle text-secondary chart-placeholder">
+								Clique em "plot" para gerar o gráfico
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	<!-- BOTÕES FLUTUANTES DO CANTO INFERIOR DIREITO -->
+	<div class="position-fixed bottom-0 end-0 m-3 d-flex gap-2">
+		<!-- DOWNLOAD BTN -->
+		<button
+		id="btn-download"
+		type="button"
+		class="btn btn-secondary rounded-circle"
+		>
+			<i class="bi bi-floppy-fill"></i>
+		</button>
+		<!-- PREVIEW BTN -->
+		<button
+		id="btn-preview"
+		type="button"
+		class="btn btn-secondary rounded-circle"
+		>
+			<i class="bi bi-play-circle-fill"></i>
+		</button>
+		<!-- THEME BTN -->
+		<button
+		id="btn-theme"
+		type="button"
+		class="btn btn-secondary rounded-circle"
+		>
+			<i id="btn-theme-icon" class="bi bi-moon-stars-fill"></i>
+		</button>
+	</div>
+	
+	<!-- MODAL DE TOGGLES -->
+	<div class="modal fade" id="modal-toggles" tabindex="-1" role="dialog">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h1 class="modal-title fs-5"></h1>
+					<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+				</div>
+				<div class="modal-body">
+					<div id="itens"></div>
+				</div>
+				<div class="modal-footer">
+					<span class="me-auto text-danger" id="modal-toggles-span-error"></span>
+					<button type="button" class="btn btn-default" data-bs-dismiss="modal">Cancelar</button>
+					<button type="button" class="btn btn-primary" id="modal-toggles-btn-save">Salvar</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<!-- JS da página -->
+	<script src="index.js"></script>
+	
+</body>
+</html>

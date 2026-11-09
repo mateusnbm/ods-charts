@@ -1,0 +1,1397 @@
+[
+  {
+    "codigo": "1",
+    "nome": "Erradicação da pobreza",
+    "metas": [
+      {
+        "codigo": "1.1",
+        "nome": "Até 2030, erradicar a pobreza extrema para todas as pessoas em todos os lugares",
+        "indicadores": [
+          {"codigo": "1.1.1", "nome": "Proporção da população que vive abaixo da linha internacional de pobreza, por sexo, idade, situação de emprego e localização geográfica"}
+        ]
+      },
+      {
+        "codigo": "1.2",
+        "nome": "Até 2030, reduzir pelo menos à metade a proporção de homens, mulheres e crianças de todas as idades que vivem na pobreza, em todas as suas dimensões",
+        "indicadores": [
+          {"codigo": "1.2.1", "nome": "Proporção da população vivendo abaixo da linha de pobreza nacional, por sexo e idade"},
+          {"codigo": "1.2.2", "nome": "Proporção de homens, mulheres e crianças de todas as idades vivendo em pobreza em todas as suas dimensões, segundo definições nacionais"}
+        ]
+      },
+      {
+        "codigo": "1.3",
+        "nome": "Implementar sistemas e medidas de proteção social adequados para todos",
+        "indicadores": [
+          {"codigo": "1.3.1", "nome": "Proporção da população coberta por sistemas/pisos de proteção social"}
+        ]
+      },
+      {
+        "codigo": "1.4",
+        "nome": "Garantir que todos tenham direitos iguais aos recursos econômicos e acesso a serviços básicos",
+        "indicadores": [
+          {"codigo": "1.4.1", "nome": "Proporção da população que vive em domicílios com acesso a serviços básicos"},
+          {"codigo": "1.4.2", "nome": "Proporção da população adulta total com direitos seguros de terra"}
+        ]
+      },
+      {
+        "codigo": "1.5",
+        "nome": "Fortalecer a resiliência dos pobres e reduzir a exposição e vulnerabilidade a eventos extremos",
+        "indicadores": [
+          {"codigo": "1.5.1", "nome": "Número de mortes, pessoas desaparecidas e pessoas diretamente afetadas atribuídas a desastres por 100.000 habitantes"},
+          {"codigo": "1.5.2", "nome": "Perdas econômicas diretas atribuídas a desastres em relação ao PIB"},
+          {"codigo": "1.5.3", "nome": "Número de países que adotam e implementam estratégias nacionais de redução de risco de desastres"},
+          {"codigo": "1.5.4", "nome": "Proporção de governos locais que adotam e implementam estratégias locais de redução de risco de desastres"}
+        ]
+      },
+      {
+        "codigo": "1.a",
+        "nome": "Garantir mobilização significativa de recursos de diversas fontes",
+        "indicadores": [
+          {"codigo": "1.a.1", "nome": "Proporção de recursos gerados domesticamente alocados pelo governo diretamente para programas de redução da pobreza"},
+          {"codigo": "1.a.2", "nome": "Proporção do total de gastos do governo em serviços essenciais"}
+        ]
+      },
+      {
+        "codigo": "1.b",
+        "nome": "Criar marcos políticos sólidos em níveis nacional, regional e internacional",
+        "indicadores": [
+          {"codigo": "1.b.1", "nome": "Proporção de gastos públicos recorrentes e de capital pró-pobres"}
+        ]
+      }
+    ]
+  },
+  {
+    "codigo": "2",
+    "nome": "Fome zero e agricultura sustentável",
+    "metas": [
+      {
+        "codigo": "2.1",
+        "nome": "Até 2030, acabar com a fome e garantir o acesso de todas as pessoas a alimentos seguros, nutritivos e suficientes",
+        "indicadores": [
+          {"codigo": "2.1.1", "nome": "Prevalência de subalimentação"},
+          {"codigo": "2.1.2", "nome": "Prevalência de insegurança alimentar moderada ou grave"}
+        ]
+      },
+      {
+        "codigo": "2.2",
+        "nome": "Até 2030, acabar com todas as formas de desnutrição",
+        "indicadores": [
+          {"codigo": "2.2.1", "nome": "Prevalência de atraso no crescimento entre crianças menores de 5 anos"},
+          {"codigo": "2.2.2", "nome": "Prevalência de desnutrição entre crianças menores de 5 anos"},
+          {"codigo": "2.2.3", "nome": "Prevalência de anemia em mulheres de 15 a 49 anos"}
+        ]
+      },
+      {
+        "codigo": "2.3",
+        "nome": "Até 2030, dobrar a produtividade agrícola e a renda dos pequenos produtores de alimentos",
+        "indicadores": [
+          {"codigo": "2.3.1", "nome": "Volume de produção por unidade de trabalho"},
+          {"codigo": "2.3.2", "nome": "Renda média dos pequenos produtores de alimentos"}
+        ]
+      },
+      {
+        "codigo": "2.4",
+        "nome": "Até 2030, garantir sistemas sustentáveis de produção de alimentos",
+        "indicadores": [
+          {"codigo": "2.4.1", "nome": "Proporção da área agrícola sob agricultura produtiva e sustentável"}
+        ]
+      },
+      {
+        "codigo": "2.5",
+        "nome": "Manter a diversidade genética de sementes, plantas cultivadas e animais de criação",
+        "indicadores": [
+          {"codigo": "2.5.1", "nome": "Número de recursos genéticos vegetais e animais assegurados em instalações de conservação"},
+          {"codigo": "2.5.2", "nome": "Proporção de raças locais classificadas como em risco de extinção"}
+        ]
+      },
+      {
+        "codigo": "2.a",
+        "nome": "Aumentar o investimento em infraestrutura rural, pesquisa agrícola e extensão",
+        "indicadores": [
+          {"codigo": "2.a.1", "nome": "Índice de orientação agrícola para a despesa pública"},
+          {"codigo": "2.a.2", "nome": "Total de fluxos oficiais para o setor agrícola"}
+        ]
+      },
+      {
+        "codigo": "2.b",
+        "nome": "Corrigir e prevenir restrições comerciais e distorções nos mercados agrícolas mundiais",
+        "indicadores": [
+          {"codigo": "2.b.1", "nome": "Subsídios à exportação agrícola"}
+        ]
+      },
+      {
+        "codigo": "2.c",
+        "nome": "Adotar medidas para garantir o funcionamento adequado dos mercados de commodities alimentares",
+        "indicadores": [
+          {"codigo": "2.c.1", "nome": "Indicador de anomalias de preços de alimentos"}
+        ]
+      }
+    ]
+  },
+  {
+    "codigo": "3",
+    "nome": "Saúde e bem-estar",
+    "metas": [
+      {
+        "codigo": "3.1",
+        "nome": "Até 2030, reduzir a taxa de mortalidade materna",
+        "indicadores": [
+          {"codigo": "3.1.1", "nome": "Razão de mortalidade materna"},
+          {"codigo": "3.1.2", "nome": "Proporção de nascimentos assistidos por pessoal de saúde qualificado"}
+        ]
+      },
+      {
+        "codigo": "3.2",
+        "nome": "Até 2030, acabar com as mortes evitáveis de recém-nascidos e crianças menores de 5 anos",
+        "indicadores": [
+          {"codigo": "3.2.1", "nome": "Taxa de mortalidade em menores de 5 anos"},
+          {"codigo": "3.2.2", "nome": "Taxa de mortalidade neonatal"}
+        ]
+      },
+      {
+        "codigo": "3.3",
+        "nome": "Até 2030, acabar com as epidemias de AIDS, tuberculose, malária e doenças tropicais negligenciadas",
+        "indicadores": [
+          {"codigo": "3.3.1", "nome": "Número de novas infecções por HIV"},
+          {"codigo": "3.3.2", "nome": "Incidência de tuberculose"},
+          {"codigo": "3.3.3", "nome": "Incidência de malária"},
+          {"codigo": "3.3.4", "nome": "Incidência de hepatite B"},
+          {"codigo": "3.3.5", "nome": "Número de pessoas que necessitam de intervenções contra doenças tropicais negligenciadas"}
+        ]
+      },
+      {
+        "codigo": "3.4",
+        "nome": "Até 2030, reduzir em um terço a mortalidade prematura por doenças não transmissíveis",
+        "indicadores": [
+          {"codigo": "3.4.1", "nome": "Taxa de mortalidade atribuída a doenças cardiovasculares, câncer, diabetes ou doenças respiratórias crônicas"},
+          {"codigo": "3.4.2", "nome": "Taxa de mortalidade por suicídio"}
+        ]
+      },
+      {
+        "codigo": "3.5",
+        "nome": "Fortalecer a prevenção e o tratamento do abuso de substâncias",
+        "indicadores": [
+          {"codigo": "3.5.1", "nome": "Cobertura de tratamentos para transtornos por uso de substâncias"},
+          {"codigo": "3.5.2", "nome": "Consumo nocivo de álcool"}
+        ]
+      },
+      {
+        "codigo": "3.6",
+        "nome": "Até 2030, reduzir pela metade o número de mortes e lesões por acidentes de trânsito",
+        "indicadores": [
+          {"codigo": "3.6.1", "nome": "Taxa de mortalidade por lesões no trânsito"}
+        ]
+      },
+      {
+        "codigo": "3.7",
+        "nome": "Até 2030, assegurar o acesso universal aos serviços de saúde sexual e reprodutiva",
+        "indicadores": [
+          {"codigo": "3.7.1", "nome": "Proporção de mulheres em idade reprodutiva com necessidades de planejamento familiar satisfeitas"},
+          {"codigo": "3.7.2", "nome": "Taxa de natalidade em adolescentes"}
+        ]
+      },
+      {
+        "codigo": "3.8",
+        "nome": "Alcançar a cobertura universal de saúde",
+        "indicadores": [
+          {"codigo": "3.8.1", "nome": "Cobertura de serviços de saúde essenciais"},
+          {"codigo": "3.8.2", "nome": "Proporção da população com grandes gastos familiares com saúde"}
+        ]
+      },
+      {
+        "codigo": "3.9",
+        "nome": "Até 2030, reduzir substancialmente o número de mortes e doenças por produtos químicos perigosos e poluição",
+        "indicadores": [
+          {"codigo": "3.9.1", "nome": "Taxa de mortalidade atribuída à poluição do ar doméstico e ambiente"},
+          {"codigo": "3.9.2", "nome": "Taxa de mortalidade atribuída à água insegura, saneamento inseguro e falta de higiene"},
+          {"codigo": "3.9.3", "nome": "Taxa de mortalidade atribuída a envenenamento não intencional"}
+        ]
+      },
+      {
+        "codigo": "3.a",
+        "nome": "Fortalecer a implementação da Convenção-Quadro para o Controle do Tabaco",
+        "indicadores": [
+          {"codigo": "3.a.1", "nome": "Prevalência padronizada por idade do uso atual de tabaco"}
+        ]
+      },
+      {
+        "codigo": "3.b",
+        "nome": "Apoiar a pesquisa e o desenvolvimento de vacinas e medicamentos",
+        "indicadores": [
+          {"codigo": "3.b.1", "nome": "Proporção da população-alvo coberta por todas as vacinas do programa nacional"},
+          {"codigo": "3.b.2", "nome": "Total líquido de assistência oficial ao desenvolvimento para pesquisa médica e setores básicos de saúde"},
+          {"codigo": "3.b.3", "nome": "Proporção de estabelecimentos de saúde com conjunto básico de medicamentos essenciais disponíveis"}
+        ]
+      },
+      {
+        "codigo": "3.c",
+        "nome": "Aumentar substancialmente o financiamento da saúde e o recrutamento de profissionais de saúde",
+        "indicadores": [
+          {"codigo": "3.c.1", "nome": "Densidade e distribuição de profissionais de saúde"}
+        ]
+      },
+      {
+        "codigo": "3.d",
+        "nome": "Reforçar a capacidade de todos os países para o alerta precoce e gestão de riscos de saúde",
+        "indicadores": [
+          {"codigo": "3.d.1", "nome": "Capacidade do Regulamento Sanitário Internacional e preparação para emergências de saúde"},
+          {"codigo": "3.d.2", "nome": "Porcentagem de infecções da corrente sanguínea por organismos resistentes a antimicrobianos"}
+        ]
+      }
+    ]
+  },
+  {
+    "codigo": "4",
+    "nome": "Educação de qualidade",
+    "metas": [
+      {
+        "codigo": "4.1",
+        "nome": "Até 2030, garantir que todas as meninas e meninos completem o ensino primário e secundário gratuito, equitativo e de qualidade",
+        "indicadores": [
+          {"codigo": "4.1.1", "nome": "Proporção de crianças e jovens que atingiram pelo menos um nível mínimo de proficiência em leitura e matemática"},
+          {"codigo": "4.1.2", "nome": "Taxa de conclusão do ensino fundamental e ensino médio"}
+        ]
+      },
+      {
+        "codigo": "4.2",
+        "nome": "Até 2030, garantir que todos os meninos e meninas tenham acesso a desenvolvimento de qualidade na primeira infância",
+        "indicadores": [
+          {"codigo": "4.2.1", "nome": "Proporção de crianças de 24-59 meses com desenvolvimento adequado"},
+          {"codigo": "4.2.2", "nome": "Taxa de participação no ensino organizado (um ano antes da idade oficial)"}
+        ]
+      },
+      {
+        "codigo": "4.3",
+        "nome": "Até 2030, assegurar a igualdade de acesso à educação técnica, profissional e superior de qualidade",
+        "indicadores": [
+          {"codigo": "4.3.1", "nome": "Taxa de participação de jovens e adultos na educação formal e não formal"}
+        ]
+      },
+      {
+        "codigo": "4.4",
+        "nome": "Até 2030, aumentar substancialmente o número de jovens e adultos com habilidades relevantes",
+        "indicadores": [
+          {"codigo": "4.4.1", "nome": "Proporção de jovens e adultos com habilidades em tecnologias da informação e comunicação"}
+        ]
+      },
+      {
+        "codigo": "4.5",
+        "nome": "Até 2030, eliminar as disparidades de gênero na educação",
+        "indicadores": [
+          {"codigo": "4.5.1", "nome": "Índices de paridade para todos os indicadores desta lista que possam ser desagregados"}
+        ]
+      },
+      {
+        "codigo": "4.6",
+        "nome": "Até 2030, garantir que todos os jovens e uma proporção substancial de adultos sejam alfabetizados",
+        "indicadores": [
+          {"codigo": "4.6.1", "nome": "Proporção da população que alcança pelo menos um nível fixo de proficiência em alfabetização funcional e numeracia"}
+        ]
+      },
+      {
+        "codigo": "4.7",
+        "nome": "Até 2030, garantir que todos os alunos adquiram conhecimentos e habilidades necessários para promover o desenvolvimento sustentável",
+        "indicadores": [
+          {"codigo": "4.7.1", "nome": "Grau em que a educação para cidadania global e o desenvolvimento sustentável são mainstreamed"}
+        ]
+      },
+      {
+        "codigo": "4.a",
+        "nome": "Construir e melhorar instalações físicas para educação",
+        "indicadores": [
+          {"codigo": "4.a.1", "nome": "Proporção de escolas com acesso a eletricidade, internet, computadores, infraestrutura adaptada, água potável, banheiros e lavagem de mãos"}
+        ]
+      },
+      {
+        "codigo": "4.b",
+        "nome": "Até 2020, expandir globalmente o número de bolsas de estudo",
+        "indicadores": [
+          {"codigo": "4.b.1", "nome": "Volume de assistência oficial ao desenvolvimento para bolsas de estudo"}
+        ]
+      },
+      {
+        "codigo": "4.c",
+        "nome": "Até 2030, aumentar substancialmente o contingente de professores qualificados",
+        "indicadores": [
+          {"codigo": "4.c.1", "nome": "Proporção de professores com as qualificações mínimas requeridas"}
+        ]
+      }
+    ]
+  },
+  {
+    "codigo": "5",
+    "nome": "Igualdade de gênero",
+    "metas": [
+      {
+        "codigo": "5.1",
+        "nome": "Acabar com todas as formas de discriminação contra todas as mulheres e meninas",
+        "indicadores": [
+          {"codigo": "5.1.1", "nome": "Existência de marcos legais para promover, fazer cumprir e monitorar a igualdade e a não discriminação com base no sexo"}
+        ]
+      },
+      {
+        "codigo": "5.2",
+        "nome": "Eliminar todas as formas de violência contra todas as mulheres e meninas",
+        "indicadores": [
+          {"codigo": "5.2.1", "nome": "Proporção de mulheres e meninas sujeitas a violência física, sexual ou psicológica por parceiro íntimo"},
+          {"codigo": "5.2.2", "nome": "Proporção de mulheres e meninas sujeitas a violência sexual por pessoas que não sejam parceiro íntimo"}
+        ]
+      },
+      {
+        "codigo": "5.3",
+        "nome": "Eliminar todas as práticas nocivas, como casamento infantil e mutilação genital feminina",
+        "indicadores": [
+          {"codigo": "5.3.1", "nome": "Proporção de mulheres de 20-24 anos que foram casadas ou em união antes dos 15 e antes dos 18 anos"},
+          {"codigo": "5.3.2", "nome": "Proporção de meninas e mulheres de 15-49 anos que sofreram mutilação genital feminina"}
+        ]
+      },
+      {
+        "codigo": "5.4",
+        "nome": "Reconhecer e valorizar o trabalho de cuidados e doméstico não remunerado",
+        "indicadores": [
+          {"codigo": "5.4.1", "nome": "Proporção de tempo gasto em trabalho doméstico e de cuidados não remunerado"}
+        ]
+      },
+      {
+        "codigo": "5.5",
+        "nome": "Garantir a participação plena e efetiva das mulheres e a igualdade de oportunidades",
+        "indicadores": [
+          {"codigo": "5.5.1", "nome": "Proporção de assentos ocupados por mulheres em parlamentos nacionais e governos locais"},
+          {"codigo": "5.5.2", "nome": "Proporção de mulheres em cargos gerenciais"}
+        ]
+      },
+      {
+        "codigo": "5.6",
+        "nome": "Assegurar o acesso universal à saúde sexual e reprodutiva",
+        "indicadores": [
+          {"codigo": "5.6.1", "nome": "Proporção de mulheres de 15-49 anos que tomam suas próprias decisões informadas sobre relações sexuais, uso de contraceptivos e saúde reprodutiva"},
+          {"codigo": "5.6.2", "nome": "Número de países com leis e regulamentos que garantem acesso pleno e igualitário a cuidados de saúde sexual e reprodutiva"}
+        ]
+      },
+      {
+        "codigo": "5.a",
+        "nome": "Empreender reformas para dar às mulheres direitos iguais aos recursos econômicos",
+        "indicadores": [
+          {"codigo": "5.a.1", "nome": "Proporção de pessoas com direitos de propriedade ou direitos seguros sobre terras agrícolas, por sexo"},
+          {"codigo": "5.a.2", "nome": "Proporção de países onde o quadro legal garante direitos iguais das mulheres à propriedade e/ou controle da terra"}
+        ]
+      },
+      {
+        "codigo": "5.b",
+        "nome": "Melhorar o uso de tecnologia habilitadora, em particular a tecnologia da informação e comunicação",
+        "indicadores": [
+          {"codigo": "5.b.1", "nome": "Proporção de indivíduos que possuem um telefone celular, por sexo"}
+        ]
+      },
+      {
+        "codigo": "5.c",
+        "nome": "Adotar e fortalecer políticas sólidas e legislação aplicável",
+        "indicadores": [
+          {"codigo": "5.c.1", "nome": "Proporção de países com sistemas para acompanhar e tornar públicos os recursos para igualdade de gênero"}
+        ]
+      }
+    ]
+  },
+  {
+    "codigo": "6",
+    "nome": "Água potável e saneamento",
+    "metas": [
+      {
+        "codigo": "6.1",
+        "nome": "Até 2030, alcançar o acesso universal e equitativo a água potável e segura",
+        "indicadores": [
+          {"codigo": "6.1.1", "nome": "Proporção da população que utiliza serviços de água potável gerenciados de forma segura"}
+        ]
+      },
+      {
+        "codigo": "6.2",
+        "nome": "Até 2030, alcançar o acesso a saneamento e higiene adequados e equitativos",
+        "indicadores": [
+          {"codigo": "6.2.1", "nome": "Proporção da população que utiliza serviços de saneamento gerenciados de forma segura"}
+        ]
+      },
+      {
+        "codigo": "6.3",
+        "nome": "Até 2030, melhorar a qualidade da água, reduzindo a poluição",
+        "indicadores": [
+          {"codigo": "6.3.1", "nome": "Proporção de fluxos de águas residuais tratadas de forma segura"},
+          {"codigo": "6.3.2", "nome": "Proporção de corpos d'água com boa qualidade ambiental"}
+        ]
+      },
+      {
+        "codigo": "6.4",
+        "nome": "Até 2030, aumentar substancialmente a eficiência do uso da água",
+        "indicadores": [
+          {"codigo": "6.4.1", "nome": "Mudança na eficiência do uso da água ao longo do tempo"},
+          {"codigo": "6.4.2", "nome": "Nível de estresse hídrico"}
+        ]
+      },
+      {
+        "codigo": "6.5",
+        "nome": "Até 2030, implementar a gestão integrada dos recursos hídricos",
+        "indicadores": [
+          {"codigo": "6.5.1", "nome": "Grau de implementação da gestão integrada de recursos hídricos"},
+          {"codigo": "6.5.2", "nome": "Proporção da área de bacias hidrográficas transfronteiriças com arranjo operacional"}
+        ]
+      },
+      {
+        "codigo": "6.6",
+        "nome": "Até 2020, proteger e restaurar ecossistemas relacionados à água",
+        "indicadores": [
+          {"codigo": "6.6.1", "nome": "Mudança na extensão dos ecossistemas relacionados à água"}
+        ]
+      },
+      {
+        "codigo": "6.a",
+        "nome": "Até 2030, expandir a cooperação internacional e o apoio à capacitação",
+        "indicadores": [
+          {"codigo": "6.a.1", "nome": "Montante de assistência oficial ao desenvolvimento relacionada à água e saneamento"}
+        ]
+      },
+      {
+        "codigo": "6.b",
+        "nome": "Apoiar e fortalecer a participação das comunidades locais",
+        "indicadores": [
+          {"codigo": "6.b.1", "nome": "Proporção de unidades administrativas locais com políticas e procedimentos para participação das comunidades"}
+        ]
+      }
+    ]
+  },
+  {
+    "codigo": "7",
+    "nome": "Energia limpa e acessível",
+    "metas": [
+      {
+        "codigo": "7.1",
+        "nome": "Até 2030, assegurar o acesso universal, confiável, moderno e a preços acessíveis a serviços de energia",
+        "indicadores": [
+          {"codigo": "7.1.1", "nome": "Proporção da população com acesso à eletricidade"},
+          {"codigo": "7.1.2", "nome": "Proporção da população com acesso primário a combustíveis e tecnologias limpas"}
+        ]
+      },
+      {
+        "codigo": "7.2",
+        "nome": "Até 2030, aumentar substancialmente a participação de energias renováveis na matriz energética global",
+        "indicadores": [
+          {"codigo": "7.2.1", "nome": "Participação de energias renováveis no consumo final total de energia"}
+        ]
+      },
+      {
+        "codigo": "7.3",
+        "nome": "Até 2030, dobrar a taxa global de melhoria da eficiência energética",
+        "indicadores": [
+          {"codigo": "7.3.1", "nome": "Intensidade energética medida em termos de energia primária e PIB"}
+        ]
+      },
+      {
+        "codigo": "7.a",
+        "nome": "Até 2030, reforçar a cooperação internacional para facilitar o acesso à pesquisa e tecnologia de energia limpa",
+        "indicadores": [
+          {"codigo": "7.a.1", "nome": "Fluxos financeiros internacionais para países em desenvolvimento em apoio à pesquisa e desenvolvimento de energia limpa"}
+        ]
+      },
+      {
+        "codigo": "7.b",
+        "nome": "Até 2030, expandir a infraestrutura e modernizar a tecnologia para fornecer serviços de energia modernos e sustentáveis",
+        "indicadores": [
+          {"codigo": "7.b.1", "nome": "Capacidade instalada de geração de energia renovável em países em desenvolvimento"}
+        ]
+      }
+    ]
+  },
+  {
+    "codigo": "8",
+    "nome": "Trabalho decente e crescimento econômico",
+    "metas": [
+      {
+        "codigo": "8.1",
+        "nome": "Sustentar o crescimento econômico per capita",
+        "indicadores": [
+          {"codigo": "8.1.1", "nome": "Taxa de crescimento anual do PIB real per capita"}
+        ]
+      },
+      {
+        "codigo": "8.2",
+        "nome": "Atingir níveis mais elevados de produtividade econômica",
+        "indicadores": [
+          {"codigo": "8.2.1", "nome": "Taxa de crescimento anual do PIB real por pessoa empregada"}
+        ]
+      },
+      {
+        "codigo": "8.3",
+        "nome": "Promover políticas orientadas para o desenvolvimento que apoiem atividades produtivas e trabalho decente",
+        "indicadores": [
+          {"codigo": "8.3.1", "nome": "Proporção do emprego informal no emprego total"}
+        ]
+      },
+      {
+        "codigo": "8.4",
+        "nome": "Melhorar progressivamente a eficiência dos recursos globais no consumo e na produção",
+        "indicadores": [
+          {"codigo": "8.4.1", "nome": "Pegada material"},
+          {"codigo": "8.4.2", "nome": "Consumo material doméstico"}
+        ]
+      },
+      {
+        "codigo": "8.5",
+        "nome": "Até 2030, alcançar o emprego pleno e produtivo e o trabalho decente",
+        "indicadores": [
+          {"codigo": "8.5.1", "nome": "Rendimento médio por hora de empregados"},
+          {"codigo": "8.5.2", "nome": "Taxa de desemprego"}
+        ]
+      },
+      {
+        "codigo": "8.6",
+        "nome": "Até 2030, reduzir substancialmente a proporção de jovens que não estão empregados, estudando ou em formação",
+        "indicadores": [
+          {"codigo": "8.6.1", "nome": "Proporção de jovens (15-24 anos) que não estudam, não trabalham e não estão em formação"}
+        ]
+      },
+      {
+        "codigo": "8.7",
+        "nome": "Tomar medidas imediatas e eficazes para erradicar o trabalho forçado e acabar com o trabalho infantil",
+        "indicadores": [
+          {"codigo": "8.7.1", "nome": "Proporção e número de crianças de 5-17 anos envolvidas em trabalho infantil"}
+        ]
+      },
+      {
+        "codigo": "8.8",
+        "nome": "Proteger os direitos trabalhistas e promover ambientes de trabalho seguros",
+        "indicadores": [
+          {"codigo": "8.8.1", "nome": "Taxas de frequência de lesões ocupacionais fatais e não fatais"},
+          {"codigo": "8.8.2", "nome": "Nível de cumprimento nacional dos direitos trabalhistas"}
+        ]
+      },
+      {
+        "codigo": "8.9",
+        "nome": "Até 2030, elaborar e implementar políticas para promover o turismo sustentável",
+        "indicadores": [
+          {"codigo": "8.9.1", "nome": "PIB direto do turismo como proporção do PIB total"},
+          {"codigo": "8.9.2", "nome": "Proporção de empregos no turismo sustentável"}
+        ]
+      },
+      {
+        "codigo": "8.10",
+        "nome": "Fortalecer a capacidade das instituições financeiras nacionais",
+        "indicadores": [
+          {"codigo": "8.10.1", "nome": "Número de agências de bancos comerciais e caixas eletrônicos por 100.000 adultos"},
+          {"codigo": "8.10.2", "nome": "Proporção de adultos com conta em banco ou outra instituição financeira"}
+        ]
+      },
+      {
+        "codigo": "8.a",
+        "nome": "Aumentar o apoio da Ajuda para o Comércio aos países em desenvolvimento",
+        "indicadores": [
+          {"codigo": "8.a.1", "nome": "Compromissos e desembolsos de Ajuda para o Comércio"}
+        ]
+      },
+      {
+        "codigo": "8.b",
+        "nome": "Até 2020, desenvolver e operacionalizar uma estratégia global para o emprego juvenil",
+        "indicadores": [
+          {"codigo": "8.b.1", "nome": "Existência de uma estratégia nacional para o emprego juvenil"}
+        ]
+      }
+    ]
+  },
+  {
+    "codigo": "9",
+    "nome": "Indústria, inovação e infraestrutura",
+    "metas": [
+      {
+        "codigo": "9.1",
+        "nome": "Desenvolver infraestrutura de qualidade, confiável, sustentável e resiliente",
+        "indicadores": [
+          {"codigo": "9.1.1", "nome": "Proporção da população rural que vive a menos de 2 km de uma estrada transitável o ano todo"},
+          {"codigo": "9.1.2", "nome": "Volume de transporte de passageiros e carga, por modo de transporte"}
+        ]
+      },
+      {
+        "codigo": "9.2",
+        "nome": "Promover a industrialização inclusiva e sustentável",
+        "indicadores": [
+          {"codigo": "9.2.1", "nome": "Valor adicionado da manufatura como proporção do PIB e per capita"},
+          {"codigo": "9.2.2", "nome": "Emprego na manufatura como proporção do emprego total"}
+        ]
+      },
+      {
+        "codigo": "9.3",
+        "nome": "Aumentar o acesso de pequenas indústrias e outras empresas a serviços financeiros",
+        "indicadores": [
+          {"codigo": "9.3.1", "nome": "Proporção do valor adicionado das empresas de pequena escala no total do valor adicionado da indústria"},
+          {"codigo": "9.3.2", "nome": "Proporção de pequenas indústrias com um empréstimo ou linha de crédito"}
+        ]
+      },
+      {
+        "codigo": "9.4",
+        "nome": "Até 2030, modernizar a infraestrutura e reabilitar as indústrias para torná-las sustentáveis",
+        "indicadores": [
+          {"codigo": "9.4.1", "nome": "Emissão de CO2 por unidade de valor adicionado"}
+        ]
+      },
+      {
+        "codigo": "9.5",
+        "nome": "Fortalecer a pesquisa científica e melhorar as capacidades tecnológicas",
+        "indicadores": [
+          {"codigo": "9.5.1", "nome": "Despesas em pesquisa e desenvolvimento como proporção do PIB"},
+          {"codigo": "9.5.2", "nome": "Pesquisadores (em equivalente de tempo integral) por milhão de habitantes"}
+        ]
+      },
+      {
+        "codigo": "9.a",
+        "nome": "Facilitar o desenvolvimento de infraestrutura sustentável e resiliente",
+        "indicadores": [
+          {"codigo": "9.a.1", "nome": "Total de apoio internacional oficial a infraestrutura"}
+        ]
+      },
+      {
+        "codigo": "9.b",
+        "nome": "Apoiar o desenvolvimento tecnológico doméstico, pesquisa e inovação",
+        "indicadores": [
+          {"codigo": "9.b.1", "nome": "Proporção do valor adicionado de indústrias de média e alta tecnologia no valor adicionado total"}
+        ]
+      },
+      {
+        "codigo": "9.c",
+        "nome": "Aumentar significativamente o acesso às tecnologias de informação e comunicação",
+        "indicadores": [
+          {"codigo": "9.c.1", "nome": "Proporção da população coberta por uma rede móvel"}
+        ]
+      }
+    ]
+  },
+  {
+    "codigo": "10",
+    "nome": "Redução das desigualdades",
+    "metas": [
+      {
+        "codigo": "10.1",
+        "nome": "Até 2030, progressivamente alcançar e sustentar o crescimento da renda dos 40% da população mais pobre",
+        "indicadores": [
+          {"codigo": "10.1.1", "nome": "Taxas de crescimento dos gastos ou renda domiciliar per capita entre os 40% mais pobres da população e a população total"}
+        ]
+      },
+      {
+        "codigo": "10.2",
+        "nome": "Até 2030, empoderar e promover a inclusão social, econômica e política de todos",
+        "indicadores": [
+          {"codigo": "10.2.1", "nome": "Proporção de pessoas vivendo abaixo de 50% da mediana da renda, por idade, sexo e pessoas com deficiência"}
+        ]
+      },
+      {
+        "codigo": "10.3",
+        "nome": "Garantir a igualdade de oportunidades e reduzir as desigualdades de resultados",
+        "indicadores": [
+          {"codigo": "10.3.1", "nome": "Proporção da população que relatou ter se sentido pessoalmente discriminada ou assediada"}
+        ]
+      },
+      {
+        "codigo": "10.4",
+        "nome": "Adotar políticas, especialmente fiscais, salariais e de proteção social",
+        "indicadores": [
+          {"codigo": "10.4.1", "nome": "Participação do trabalho no PIB"},
+          {"codigo": "10.4.2", "nome": "Impacto redistributivo das políticas fiscais"}
+        ]
+      },
+      {
+        "codigo": "10.5",
+        "nome": "Melhorar a regulamentação e o monitoramento dos mercados e instituições financeiras globais",
+        "indicadores": [
+          {"codigo": "10.5.1", "nome": "Indicadores de solidez financeira"}
+        ]
+      },
+      {
+        "codigo": "10.6",
+        "nome": "Assegurar uma representação e voz reforçada dos países em desenvolvimento",
+        "indicadores": [
+          {"codigo": "10.6.1", "nome": "Proporção de membros e direitos de voto de países em desenvolvimento em organizações internacionais"}
+        ]
+      },
+      {
+        "codigo": "10.7",
+        "nome": "Facilitar a migração e a mobilidade ordenada, segura, regular e responsável",
+        "indicadores": [
+          {"codigo": "10.7.1", "nome": "Custo de recrutamento suportado pelo empregado como proporção da receita anual auferida no país de destino"},
+          {"codigo": "10.7.2", "nome": "Número de países com políticas de migração bem geridas"},
+          {"codigo": "10.7.3", "nome": "Número de pessoas que morreram ou desapareceram no processo de migração"},
+          {"codigo": "10.7.4", "nome": "Proporção da população que são refugiados"}
+        ]
+      },
+      {
+        "codigo": "10.a",
+        "nome": "Implementar o princípio do tratamento especial e diferenciado para países em desenvolvimento",
+        "indicadores": [
+          {"codigo": "10.a.1", "nome": "Proporção de linhas tarifárias aplicadas a importações de países menos desenvolvidos e em desenvolvimento com tarifa zero"}
+        ]
+      },
+      {
+        "codigo": "10.b",
+        "nome": "Incentivar a assistência oficial ao desenvolvimento e fluxos financeiros",
+        "indicadores": [
+          {"codigo": "10.b.1", "nome": "Total de fluxos de recursos para o desenvolvimento"}
+        ]
+      },
+      {
+        "codigo": "10.c",
+        "nome": "Até 2030, reduzir para menos de 3% os custos de transação das remessas de migrantes",
+        "indicadores": [
+          {"codigo": "10.c.1", "nome": "Custos das remessas como proporção do valor remetido"}
+        ]
+      }
+    ]
+  },
+  {
+    "codigo": "11",
+    "nome": "Cidades e comunidades sustentáveis",
+    "metas": [
+      {
+        "codigo": "11.1",
+        "nome": "Até 2030, garantir o acesso de todos à habitação adequada, segura e a preço acessível",
+        "indicadores": [
+          {"codigo": "11.1.1", "nome": "Proporção da população urbana que vive em assentamentos precários, assentamentos informais ou habitações inadequadas"}
+        ]
+      },
+      {
+        "codigo": "11.2",
+        "nome": "Até 2030, proporcionar o acesso a sistemas de transporte seguros, acessíveis, sustentáveis e a preço acessível",
+        "indicadores": [
+          {"codigo": "11.2.1", "nome": "Proporção da população que tem acesso conveniente a transporte público"}
+        ]
+      },
+      {
+        "codigo": "11.3",
+        "nome": "Até 2030, aumentar a urbanização inclusiva e sustentável",
+        "indicadores": [
+          {"codigo": "11.3.1", "nome": "Razão entre a taxa de consumo de terras e a taxa de crescimento populacional"},
+          {"codigo": "11.3.2", "nome": "Proporção de cidades com estrutura de participação direta da sociedade civil no planejamento e gestão urbana"}
+        ]
+      },
+      {
+        "codigo": "11.4",
+        "nome": "Fortalecer esforços para proteger e salvaguardar o patrimônio cultural e natural do mundo",
+        "indicadores": [
+          {"codigo": "11.4.1", "nome": "Total de gastos per capita na preservação, proteção e conservação de todo o patrimônio cultural e natural"}
+        ]
+      },
+      {
+        "codigo": "11.5",
+        "nome": "Até 2030, reduzir significativamente o número de mortes e o número de pessoas afetadas por desastres",
+        "indicadores": [
+          {"codigo": "11.5.1", "nome": "Número de mortes, pessoas desaparecidas e pessoas diretamente afetadas atribuídas a desastres por 100.000 habitantes"},
+          {"codigo": "11.5.2", "nome": "Perdas econômicas diretas em relação ao PIB global, danos a infraestrutura crítica e número de interrupções de serviços básicos"}
+        ]
+      },
+      {
+        "codigo": "11.6",
+        "nome": "Até 2030, reduzir o impacto ambiental negativo per capita das cidades",
+        "indicadores": [
+          {"codigo": "11.6.1", "nome": "Proporção de resíduos sólidos urbanos coletados e gerenciados em instalações controladas"},
+          {"codigo": "11.6.2", "nome": "Níveis médios anuais de partículas finas (ex. PM2.5 e PM10) nas cidades"}
+        ]
+      },
+      {
+        "codigo": "11.7",
+        "nome": "Até 2030, proporcionar o acesso universal a espaços públicos seguros, inclusivos e acessíveis",
+        "indicadores": [
+          {"codigo": "11.7.1", "nome": "Proporção média da área construída das cidades que é espaço aberto de uso público para todos"},
+          {"codigo": "11.7.2", "nome": "Proporção de pessoas vítimas de violência física ou sexual"}
+        ]
+      },
+      {
+        "codigo": "11.a",
+        "nome": "Apoiar vínculos econômicos, sociais e ambientais positivos entre áreas urbanas, periurbanas e rurais",
+        "indicadores": [
+          {"codigo": "11.a.1", "nome": "Número de países que possuem políticas urbanas nacionais ou planos de desenvolvimento regional"}
+        ]
+      },
+      {
+        "codigo": "11.b",
+        "nome": "Até 2020, aumentar substancialmente o número de cidades e assentamentos humanos adotando e implementando políticas e planos integrados",
+        "indicadores": [
+          {"codigo": "11.b.1", "nome": "Número de países que adotam e implementam estratégias nacionais de redução de risco de desastres"},
+          {"codigo": "11.b.2", "nome": "Proporção de governos locais que adotam e implementam estratégias locais de redução de risco de desastres"}
+        ]
+      },
+      {
+        "codigo": "11.c",
+        "nome": "Apoiar os países menos desenvolvidos, inclusive por meio de assistência financeira e técnica",
+        "indicadores": [
+          {"codigo": "11.c.1", "nome": "Proporção de apoio financeiro aos países menos desenvolvidos que é alocada à construção e retrofitting de edifícios sustentáveis, resilientes e eficientes em recursos"}
+        ]
+      }
+    ]
+  },
+  {
+    "codigo": "12",
+    "nome": "Consumo e produção responsáveis",
+    "metas": [
+      {
+        "codigo": "12.1",
+        "nome": "Implementar o Marco Decenal de Programas sobre Produção e Consumo Sustentáveis",
+        "indicadores": [
+          {"codigo": "12.1.1", "nome": "Número de países que desenvolvem, adotam ou implementam instrumentos de política visando apoiar a transição para padrões de consumo e produção sustentáveis"}
+        ]
+      },
+      {
+        "codigo": "12.2",
+        "nome": "Até 2030, alcançar a gestão sustentável e o uso eficiente dos recursos naturais",
+        "indicadores": [
+          {"codigo": "12.2.1", "nome": "Pegada material"},
+          {"codigo": "12.2.2", "nome": "Consumo material doméstico"}
+        ]
+      },
+      {
+        "codigo": "12.3",
+        "nome": "Até 2030, reduzir pela metade o desperdício de alimentos per capita mundial",
+        "indicadores": [
+          {"codigo": "12.3.1", "nome": "Índice de perda global de alimentos e índice de desperdício de alimentos"}
+        ]
+      },
+      {
+        "codigo": "12.4",
+        "nome": "Até 2020, alcançar a gestão ambientalmente adequada dos produtos químicos e de todos os resíduos",
+        "indicadores": [
+          {"codigo": "12.4.1", "nome": "Número de partes em acordos multilaterais ambientais internacionais sobre resíduos perigosos e outros produtos químicos"},
+          {"codigo": "12.4.2", "nome": "Resíduos perigosos gerados per capita e proporção de resíduos perigosos tratados"}
+        ]
+      },
+      {
+        "codigo": "12.5",
+        "nome": "Até 2030, reduzir substancialmente a geração de resíduos",
+        "indicadores": [
+          {"codigo": "12.5.1", "nome": "Taxa nacional de reciclagem"}
+        ]
+      },
+      {
+        "codigo": "12.6",
+        "nome": "Incentivar as empresas a adotar práticas sustentáveis e a integrar informações de sustentabilidade em seu ciclo de relatórios",
+        "indicadores": [
+          {"codigo": "12.6.1", "nome": "Número de empresas que publicam relatórios de sustentabilidade"}
+        ]
+      },
+      {
+        "codigo": "12.7",
+        "nome": "Promover práticas de compras públicas que sejam sustentáveis",
+        "indicadores": [
+          {"codigo": "12.7.1", "nome": "Grau de implementação de políticas e planos de ação de compras públicas sustentáveis"}
+        ]
+      },
+      {
+        "codigo": "12.8",
+        "nome": "Até 2030, garantir que as pessoas em todos os lugares tenham as informações e a conscientização relevantes para o desenvolvimento sustentável",
+        "indicadores": [
+          {"codigo": "12.8.1", "nome": "Grau em que a educação para cidadania global e o desenvolvimento sustentável são mainstreamed"}
+        ]
+      },
+      {
+        "codigo": "12.a",
+        "nome": "Apoiar os países em desenvolvimento a fortalecer suas capacidades científicas e tecnológicas",
+        "indicadores": [
+          {"codigo": "12.a.1", "nome": "Capacidade instalada de geração de energia renovável em países em desenvolvimento"}
+        ]
+      },
+      {
+        "codigo": "12.b",
+        "nome": "Desenvolver e implementar ferramentas para monitorar os impactos do desenvolvimento sustentável para o turismo sustentável",
+        "indicadores": [
+          {"codigo": "12.b.1", "nome": "Implementação de ferramentas padrão de contabilidade para monitorar os aspectos econômicos e ambientais da sustentabilidade do turismo"}
+        ]
+      },
+      {
+        "codigo": "12.c",
+        "nome": "Racionalizar os subsídios ineficientes a combustíveis fósseis",
+        "indicadores": [
+          {"codigo": "12.c.1", "nome": "Montante de subsídios a combustíveis fósseis"}
+        ]
+      }
+    ]
+  },
+  {
+    "codigo": "13",
+    "nome": "Ação contra a mudança global do clima",
+    "metas": [
+      {
+        "codigo": "13.1",
+        "nome": "Reforçar a resiliência e a capacidade de adaptação a riscos relacionados ao clima e às catástrofes naturais",
+        "indicadores": [
+          {"codigo": "13.1.1", "nome": "Número de mortes, pessoas desaparecidas e pessoas diretamente afetadas atribuídas a desastres por 100.000 habitantes"},
+          {"codigo": "13.1.2", "nome": "Número de países que adotam e implementam estratégias nacionais de redução de risco de desastres"},
+          {"codigo": "13.1.3", "nome": "Proporção de governos locais que adotam e implementam estratégias locais de redução de risco de desastres"}
+        ]
+      },
+      {
+        "codigo": "13.2",
+        "nome": "Integrar medidas da mudança do clima nas políticas, estratégias e planejamentos nacionais",
+        "indicadores": [
+          {"codigo": "13.2.1", "nome": "Número de países com contribuições nacionalmente determinadas, estratégias de longo prazo, planos nacionais de adaptação e estratégias reportadas"}
+        ]
+      },
+      {
+        "codigo": "13.3",
+        "nome": "Melhorar a educação, aumentar a conscientização e a capacidade humana e institucional sobre mudança do clima",
+        "indicadores": [
+          {"codigo": "13.3.1", "nome": "Grau em que a educação para cidadania global e o desenvolvimento sustentável são mainstreamed"}
+        ]
+      },
+      {
+        "codigo": "13.a",
+        "nome": "Implementar o compromisso assumido pelos países desenvolvidos na Convenção-Quadro das Nações Unidas sobre Mudança do Clima",
+        "indicadores": [
+          {"codigo": "13.a.1", "nome": "Montantes mobilizados em dólares americanos por ano em relação à meta de US$ 100 bilhões coletivamente"}
+        ]
+      },
+      {
+        "codigo": "13.b",
+        "nome": "Promover mecanismos para aumentar a capacidade de planejamento e gestão eficazes relacionados à mudança do clima",
+        "indicadores": [
+          {"codigo": "13.b.1", "nome": "Número de países menos desenvolvidos e pequenos Estados insulares em desenvolvimento com contribuições nacionalmente determinadas, estratégias de longo prazo e planos nacionais de adaptação"}
+        ]
+      }
+    ]
+  },
+  {
+    "codigo": "14",
+    "nome": "Vida na água",
+    "metas": [
+      {
+        "codigo": "14.1",
+        "nome": "Até 2025, prevenir e reduzir significativamente a poluição marinha",
+        "indicadores": [
+          {"codigo": "14.1.1", "nome": "Índice de eutrofização costeira e densidade de detritos plásticos flutuantes"}
+        ]
+      },
+      {
+        "codigo": "14.2",
+        "nome": "Até 2020, gerir de forma sustentável e proteger os ecossistemas marinhos e costeiros",
+        "indicadores": [
+          {"codigo": "14.2.1", "nome": "Número de países que utilizam abordagens baseadas em ecossistemas para gerenciar áreas marinhas"}
+        ]
+      },
+      {
+        "codigo": "14.3",
+        "nome": "Minimizar e enfrentar os impactos da acidificação dos oceanos",
+        "indicadores": [
+          {"codigo": "14.3.1", "nome": "Acidez média marinha medida em um conjunto representativo de estações de amostragem"}
+        ]
+      },
+      {
+        "codigo": "14.4",
+        "nome": "Até 2020, efetivamente regular a coleta e acabar com a sobrepesca",
+        "indicadores": [
+          {"codigo": "14.4.1", "nome": "Proporção de estoques de peixes dentro de níveis biologicamente sustentáveis"}
+        ]
+      },
+      {
+        "codigo": "14.5",
+        "nome": "Até 2020, conservar pelo menos 10% das zonas costeiras e marinhas",
+        "indicadores": [
+          {"codigo": "14.5.1", "nome": "Cobertura de áreas protegidas em relação às áreas marinhas"}
+        ]
+      },
+      {
+        "codigo": "14.6",
+        "nome": "Até 2020, proibir certas formas de subsídios à pesca",
+        "indicadores": [
+          {"codigo": "14.6.1", "nome": "Grau de implementação de instrumentos internacionais visando combater a pesca ilegal, não declarada e não regulamentada"}
+        ]
+      },
+      {
+        "codigo": "14.7",
+        "nome": "Até 2030, aumentar os benefícios econômicos para os pequenos Estados insulares em desenvolvimento e os países menos desenvolvidos",
+        "indicadores": [
+          {"codigo": "14.7.1", "nome": "Pesca sustentável como proporção do PIB"}
+        ]
+      },
+      {
+        "codigo": "14.a",
+        "nome": "Aumentar o conhecimento científico, desenvolver capacidades de pesquisa e transferir tecnologia marinha",
+        "indicadores": [
+          {"codigo": "14.a.1", "nome": "Proporção do orçamento total de pesquisa alocada para pesquisa no campo da tecnologia marinha"}
+        ]
+      },
+      {
+        "codigo": "14.b",
+        "nome": "Proporcionar o acesso dos pescadores artesanais de pequena escala aos recursos marinhos e mercados",
+        "indicadores": [
+          {"codigo": "14.b.1", "nome": "Grau de aplicação de um quadro legal/regulatório/político/institucional que reconheça e proteja os direitos de acesso para a pesca de pequena escala"}
+        ]
+      },
+      {
+        "codigo": "14.c",
+        "nome": "Assegurar a conservação e o uso sustentável dos oceanos e seus recursos",
+        "indicadores": [
+          {"codigo": "14.c.1", "nome": "Número de países que fazem progressos na ratificação, aceitação e implementação de instrumentos relacionados aos oceanos"}
+        ]
+      }
+    ]
+  },
+  {
+    "codigo": "15",
+    "nome": "Vida terrestre",
+    "metas": [
+      {
+        "codigo": "15.1",
+        "nome": "Até 2020, assegurar a conservação, recuperação e uso sustentável de ecossistemas terrestres e de água doce interiores",
+        "indicadores": [
+          {"codigo": "15.1.1", "nome": "Área florestal como proporção da área total de terras"},
+          {"codigo": "15.1.2", "nome": "Proporção de sítios importantes para a biodiversidade terrestre e de água doce que são cobertos por áreas protegidas"}
+        ]
+      },
+      {
+        "codigo": "15.2",
+        "nome": "Até 2020, promover a implementação da gestão sustentável de todos os tipos de florestas",
+        "indicadores": [
+          {"codigo": "15.2.1", "nome": "Progresso em direção à gestão florestal sustentável"}
+        ]
+      },
+      {
+        "codigo": "15.3",
+        "nome": "Até 2030, combater a desertificação, restaurar a terra e o solo degradados",
+        "indicadores": [
+          {"codigo": "15.3.1", "nome": "Proporção de terras que são degradadas em relação à área total de terras"}
+        ]
+      },
+      {
+        "codigo": "15.4",
+        "nome": "Até 2030, assegurar a conservação dos ecossistemas de montanha",
+        "indicadores": [
+          {"codigo": "15.4.1", "nome": "Cobertura por áreas protegidas de sítios importantes para a biodiversidade de montanha"},
+          {"codigo": "15.4.2", "nome": "Índice de cobertura verde de montanha"}
+        ]
+      },
+      {
+        "codigo": "15.5",
+        "nome": "Tomar medidas urgentes e significativas para reduzir a degradação de habitats naturais",
+        "indicadores": [
+          {"codigo": "15.5.1", "nome": "Índice da Lista Vermelha"}
+        ]
+      },
+      {
+        "codigo": "15.6",
+        "nome": "Promover o compartilhamento justo e equitativo dos benefícios decorrentes da utilização dos recursos genéticos",
+        "indicadores": [
+          {"codigo": "15.6.1", "nome": "Número de países que adotaram marcos legislativos, administrativos e políticos para assegurar o compartilhamento justo e equitativo de benefícios"}
+        ]
+      },
+      {
+        "codigo": "15.7",
+        "nome": "Tomar medidas urgentes para acabar com a caça ilegal e o tráfico de espécies da flora e fauna protegidas",
+        "indicadores": [
+          {"codigo": "15.7.1", "nome": "Proporção de animais selvagens comercializados que foi caçada ou traficada ilegalmente"}
+        ]
+      },
+      {
+        "codigo": "15.8",
+        "nome": "Até 2020, introduzir medidas para prevenir a introdução e reduzir significativamente o impacto de espécies exóticas invasoras",
+        "indicadores": [
+          {"codigo": "15.8.1", "nome": "Proporção de países que adotam legislação nacional relevante e alocam recursos adequados para a prevenção ou controle de espécies exóticas invasoras"}
+        ]
+      },
+      {
+        "codigo": "15.9",
+        "nome": "Até 2020, integrar os valores da biodiversidade em processos nacionais e locais de planejamento",
+        "indicadores": [
+          {"codigo": "15.9.1", "nome": "Progresso em direção às metas nacionais estabelecidas de acordo com a Meta 2 de Aichi de Biodiversidade"}
+        ]
+      },
+      {
+        "codigo": "15.a",
+        "nome": "Mobilizar e aumentar significativamente os recursos financeiros de todas as fontes",
+        "indicadores": [
+          {"codigo": "15.a.1", "nome": "Assistência oficial ao desenvolvimento e gastos públicos em conservação e uso sustentável da biodiversidade e dos ecossistemas"}
+        ]
+      },
+      {
+        "codigo": "15.b",
+        "nome": "Mobilizar recursos significativos de todas as fontes e em todos os níveis para financiar a gestão sustentável das florestas",
+        "indicadores": [
+          {"codigo": "15.b.1", "nome": "Assistência oficial ao desenvolvimento e gastos públicos em conservação e uso sustentável da biodiversidade e dos ecossistemas"}
+        ]
+      },
+      {
+        "codigo": "15.c",
+        "nome": "Aumentar o apoio global aos esforços para combater a caça ilegal e o tráfico de espécies protegidas",
+        "indicadores": [
+          {"codigo": "15.c.1", "nome": "Proporção de animais selvagens comercializados que foi caçada ou traficada ilegalmente"}
+        ]
+      }
+    ]
+  },
+  {
+    "codigo": "16",
+    "nome": "Paz, justiça e instituições eficazes",
+    "metas": [
+      {
+        "codigo": "16.1",
+        "nome": "Reduzir significativamente todas as formas de violência e as taxas de mortalidade relacionadas",
+        "indicadores": [
+          {"codigo": "16.1.1", "nome": "Número de vítimas de homicídio intencional por 100.000 habitantes"},
+          {"codigo": "16.1.2", "nome": "Mortes relacionadas a conflitos por 100.000 habitantes"},
+          {"codigo": "16.1.3", "nome": "Proporção da população sujeita a violência física, psicológica ou sexual"},
+          {"codigo": "16.1.4", "nome": "Proporção da população que se sente segura andando sozinha na área onde mora"}
+        ]
+      },
+      {
+        "codigo": "16.2",
+        "nome": "Acabar com abuso, exploração, tráfico e todas as formas de violência e tortura contra crianças",
+        "indicadores": [
+          {"codigo": "16.2.1", "nome": "Proporção de crianças de 1-17 anos que sofreram qualquer punição física e/ou agressão psicológica por cuidadores"},
+          {"codigo": "16.2.2", "nome": "Número de vítimas de tráfico de pessoas por 100.000 habitantes"},
+          {"codigo": "16.2.3", "nome": "Proporção de jovens de 18-29 anos que sofreram violência sexual até os 18 anos"}
+        ]
+      },
+      {
+        "codigo": "16.3",
+        "nome": "Promover o Estado de Direito em níveis nacional e internacional e garantir a igualdade de acesso à justiça",
+        "indicadores": [
+          {"codigo": "16.3.1", "nome": "Proporção de vítimas de violência que relataram sua vitimização às autoridades competentes"},
+          {"codigo": "16.3.2", "nome": "Detentos não sentenciados como proporção da população carcerária total"},
+          {"codigo": "16.3.3", "nome": "Proporção da população que experimentou uma disputa e acessou um mecanismo formal ou informal de resolução de disputas"}
+        ]
+      },
+      {
+        "codigo": "16.4",
+        "nome": "Até 2030, reduzir significativamente os fluxos ilícitos de armas e financeiro",
+        "indicadores": [
+          {"codigo": "16.4.1", "nome": "Valor total de fluxos financeiros ilícitos de entrada e saída"},
+          {"codigo": "16.4.2", "nome": "Proporção de armas apreendidas, encontradas ou entregues cujo origem ilícita ou contexto foi rastreado"}
+        ]
+      },
+      {
+        "codigo": "16.5",
+        "nome": "Reduzir substancialmente a corrupção e o suborno em todas as suas formas",
+        "indicadores": [
+          {"codigo": "16.5.1", "nome": "Proporção de pessoas que tiveram pelo menos um contato com um funcionário público e que pagaram suborno"},
+          {"codigo": "16.5.2", "nome": "Proporção de empresas que tiveram pelo menos um contato com um funcionário público e que pagaram suborno"}
+        ]
+      },
+      {
+        "codigo": "16.6",
+        "nome": "Desenvolver instituições eficazes, responsáveis e transparentes em todos os níveis",
+        "indicadores": [
+          {"codigo": "16.6.1", "nome": "Despesas primárias do governo como proporção do orçamento original aprovado"},
+          {"codigo": "16.6.2", "nome": "Proporção da população satisfeita com sua última experiência de serviços públicos"}
+        ]
+      },
+      {
+        "codigo": "16.7",
+        "nome": "Garantir a tomada de decisão responsiva, inclusiva, participativa e representativa",
+        "indicadores": [
+          {"codigo": "16.7.1", "nome": "Proporções de posições em instituições nacionais e locais"},
+          {"codigo": "16.7.2", "nome": "Proporção da população que acredita que a tomada de decisão é inclusiva e responsiva"}
+        ]
+      },
+      {
+        "codigo": "16.8",
+        "nome": "Ampliar e fortalecer a participação dos países em desenvolvimento nas instituições de governança global",
+        "indicadores": [
+          {"codigo": "16.8.1", "nome": "Proporção de membros e direitos de voto de países em desenvolvimento em organizações internacionais"}
+        ]
+      },
+      {
+        "codigo": "16.9",
+        "nome": "Até 2030, fornecer identidade legal para todos, incluindo registro de nascimento",
+        "indicadores": [
+          {"codigo": "16.9.1", "nome": "Proporção de crianças menores de 5 anos cujo nascimento foi registrado com uma autoridade civil"}
+        ]
+      },
+      {
+        "codigo": "16.10",
+        "nome": "Assegurar o acesso público à informação e proteger as liberdades fundamentais",
+        "indicadores": [
+          {"codigo": "16.10.1", "nome": "Número de casos verificados de assassinato, sequestro, desaparecimento forçado, detenção arbitrária e tortura de jornalistas, profissionais de mídia associados, sindicalistas e defensores de direitos humanos"},
+          {"codigo": "16.10.2", "nome": "Número de países que adotam e implementam garantias constitucionais, estatutárias e/ou políticas para acesso público à informação"}
+        ]
+      },
+      {
+        "codigo": "16.a",
+        "nome": "Fortalecer as instituições nacionais relevantes, inclusive por meio da cooperação internacional",
+        "indicadores": [
+          {"codigo": "16.a.1", "nome": "Existência de instituições nacionais independentes de direitos humanos"}
+        ]
+      },
+      {
+        "codigo": "16.b",
+        "nome": "Promover e fazer cumprir leis e políticas não discriminatórias",
+        "indicadores": [
+          {"codigo": "16.b.1", "nome": "Proporção da população que relatou ter se sentido pessoalmente discriminada ou assediada"}
+        ]
+      }
+    ]
+  },
+  {
+    "codigo": "17",
+    "nome": "Parcerias e meios de implementação",
+    "metas": [
+      {
+        "codigo": "17.1",
+        "nome": "Fortalecer a mobilização de recursos domésticos",
+        "indicadores": [
+          {"codigo": "17.1.1", "nome": "Total de receitas do governo como proporção do PIB"},
+          {"codigo": "17.1.2", "nome": "Proporção do orçamento doméstico financiado por impostos domésticos"}
+        ]
+      },
+      {
+        "codigo": "17.2",
+        "nome": "Países desenvolvidos implementarem plenamente seus compromissos de assistência oficial ao desenvolvimento",
+        "indicadores": [
+          {"codigo": "17.2.1", "nome": "Assistência oficial líquida ao desenvolvimento como proporção da renda nacional bruta"}
+        ]
+      },
+      {
+        "codigo": "17.3",
+        "nome": "Mobilizar recursos financeiros adicionais para os países em desenvolvimento",
+        "indicadores": [
+          {"codigo": "17.3.1", "nome": "Investimento estrangeiro direto, assistência oficial ao desenvolvimento e cooperação Sul-Sul como proporção do total de orçamentos domésticos"},
+          {"codigo": "17.3.2", "nome": "Volume de remessas como proporção do PIB total"}
+        ]
+      },
+      {
+        "codigo": "17.4",
+        "nome": "Ajudar os países em desenvolvimento a atingir a sustentabilidade da dívida de longo prazo",
+        "indicadores": [
+          {"codigo": "17.4.1", "nome": "Serviço da dívida como proporção das exportações de bens e serviços"}
+        ]
+      },
+      {
+        "codigo": "17.5",
+        "nome": "Adotar e implementar regimes de promoção de investimento para os países menos desenvolvidos",
+        "indicadores": [
+          {"codigo": "17.5.1", "nome": "Número de países que adotam e implementam regimes de promoção de investimento"}
+        ]
+      },
+      {
+        "codigo": "17.6",
+        "nome": "Aprimorar a cooperação Norte-Sul, Sul-Sul e triangular regional e internacional",
+        "indicadores": [
+          {"codigo": "17.6.1", "nome": "Assinaturas de banda larga fixa por 100 habitantes"}
+        ]
+      },
+      {
+        "codigo": "17.7",
+        "nome": "Promover o desenvolvimento, a transferência, a disseminação e a difusão de tecnologias ambientalmente corretas",
+        "indicadores": [
+          {"codigo": "17.7.1", "nome": "Total de financiamento para países em desenvolvimento para promover o desenvolvimento, transferência, disseminação e difusão de tecnologias ambientalmente corretas"}
+        ]
+      },
+      {
+        "codigo": "17.8",
+        "nome": "Operacionalizar plenamente o banco de tecnologia e o mecanismo de capacitação em ciência, tecnologia e inovação",
+        "indicadores": [
+          {"codigo": "17.8.1", "nome": "Proporção de indivíduos que usam a Internet"}
+        ]
+      },
+      {
+        "codigo": "17.9",
+        "nome": "Aumentar o apoio internacional para a implementação efetiva e direcionada da capacitação",
+        "indicadores": [
+          {"codigo": "17.9.1", "nome": "Valor em dólares do apoio financeiro e técnico comprometido com países em desenvolvimento"}
+        ]
+      },
+      {
+        "codigo": "17.10",
+        "nome": "Promover um sistema multilateral de comércio universal, baseado em regras, aberto, não discriminatório e equitativo",
+        "indicadores": [
+          {"codigo": "17.10.1", "nome": "Média ponderada das tarifas mundiais"}
+        ]
+      },
+      {
+        "codigo": "17.11",
+        "nome": "Aumentar significativamente as exportações dos países em desenvolvimento",
+        "indicadores": [
+          {"codigo": "17.11.1", "nome": "Participação das exportações dos países em desenvolvimento e dos países menos desenvolvidos nas exportações globais"}
+        ]
+      },
+      {
+        "codigo": "17.12",
+        "nome": "Realizar a implementação oportuna de acesso a mercados livres de cotas e tarifas",
+        "indicadores": [
+          {"codigo": "17.12.1", "nome": "Médias ponderadas das tarifas enfrentadas pelos países em desenvolvimento, países menos desenvolvidos e pequenos Estados insulares em desenvolvimento"}
+        ]
+      },
+      {
+        "codigo": "17.13",
+        "nome": "Aumentar a estabilidade macroeconômica global",
+        "indicadores": [
+          {"codigo": "17.13.1", "nome": "Painel de indicadores macroeconômicos"}
+        ]
+      },
+      {
+        "codigo": "17.14",
+        "nome": "Aumentar a coerência de políticas para o desenvolvimento sustentável",
+        "indicadores": [
+          {"codigo": "17.14.1", "nome": "Número de países com mecanismos em vigor para aumentar a coerência de políticas para o desenvolvimento sustentável"}
+        ]
+      },
+      {
+        "codigo": "17.15",
+        "nome": "Respeitar o espaço político e a liderança de cada país",
+        "indicadores": [
+          {"codigo": "17.15.1", "nome": "Extensão do uso de marcos de resultados e ferramentas de planejamento de propriedade do país"}
+        ]
+      },
+      {
+        "codigo": "17.16",
+        "nome": "Aprimorar a parceria global para o desenvolvimento sustentável",
+        "indicadores": [
+          {"codigo": "17.16.1", "nome": "Número de países que relatam progresso em estruturas de monitoramento de multi-stakeholder"}
+        ]
+      },
+      {
+        "codigo": "17.17",
+        "nome": "Incentivar e promover parcerias públicas, público-privadas e com a sociedade civil eficazes",
+        "indicadores": [
+          {"codigo": "17.17.1", "nome": "Montante em dólares americanos comprometido com parcerias público-privadas"}
+        ]
+      },
+      {
+        "codigo": "17.18",
+        "nome": "Até 2020, aumentar significativamente a disponibilidade de dados de alta qualidade, oportunos e confiáveis",
+        "indicadores": [
+          {"codigo": "17.18.1", "nome": "Indicador de capacidade estatística"},
+          {"codigo": "17.18.2", "nome": "Número de países que têm legislação estatística nacional"},
+          {"codigo": "17.18.3", "nome": "Número de países com um plano estatístico nacional financiado"}
+        ]
+      },
+      {
+        "codigo": "17.19",
+        "nome": "Até 2030, desenvolver ainda mais as medidas de progresso sobre o desenvolvimento sustentável",
+        "indicadores": [
+          {"codigo": "17.19.1", "nome": "Valor em dólares de todos os recursos disponibilizados para fortalecer a capacidade estatística"},
+          {"codigo": "17.19.2", "nome": "Proporção de países que realizaram pelo menos um censo populacional e habitacional nos últimos 10 anos"}
+        ]
+      }
+    ]
+  },
+  {
+    "codigo": "18",
+    "nome": "Igualdade étnico-racial",
+    "metas": [
+      {
+        "codigo": "18.1",
+        "nome": "Eliminar o racismo e a discriminação étnico-racial",
+        "indicadores": [
+          {"codigo": "18.1.1", "nome": "Taxa de ocupação de pessoas por grupos de idade, raça/cor, etnia, sexo/gênero e território"},
+          {"codigo": "18.1.2", "nome": "Taxa de informalidade das pessoas de 15 anos ou mais de idade ocupadas, por sexo e cor/raça"}
+        ]
+      },
+      {
+        "codigo": "18.2",
+        "nome": "Eliminar todas as formas de violência contra povos indígenas e afrodescendentes",
+        "indicadores": [
+          {"codigo": "18.2.1", "nome": "Taxa de vítimas de homicídio intencional por 100.000 habitantes, por sexo, idade e cor/raça"},
+          {"codigo": "18.2.2", "nome": "Proporção da população por sexo e cor/raça sujeita a violência física, psicológica ou sexual"}
+        ]
+      },
+      {
+        "codigo": "18.3",
+        "nome": "Garantir tratamento justo e igualitário no sistema de justiça",
+        "indicadores": [
+          {"codigo": "18.3.1", "nome": "Distribuição de pessoas encarceradas por cor/raça, idade, etnia, sexo/gênero e tipo de crime"},
+          {"codigo": "18.3.2", "nome": "Distribuição de presos sem sentença por cor/raça, idade, etnia e sexo/gênero"},
+          {"codigo": "18.3.3", "nome": "Número de processos relacionados a racismo/injúria racial, intolerância religiosa, homofobia e transfobia"}
+        ]
+      }
+    ]
+  }
+]
