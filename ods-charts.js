@@ -28,8 +28,8 @@
 	const API_URL = 'https://apisidra.ibge.gov.br';
 	
 	const GEO_URL = {
-		2: 'https://mateusnbm.github.io/geoms/geometrias/topojson/n2.topojson',
-		3: 'https://mateusnbm.github.io/geoms/geometrias/topojson/n3.topojson',
+		2: 'https://mateusnbm.github.io/ods-charts/geometrias/topojson/n2.topojson',
+		3: 'https://mateusnbm.github.io/ods-charts/geometrias/topojson/n3.topojson',
 	};
 	
 	const UNIDADES = {
