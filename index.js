@@ -148,6 +148,7 @@ function lineFormDesagregacoes() {
 	var niveis = 
 		_metadados
 		.NiveisTerritoriais
+		.filter(x => x.Id >= 1 && x.Id <= 3)
 		.map(x => `<option value="${x.Id}">Nível territorial - ${x.Nome}</option>`);
 	
 	var unidades = 
@@ -174,8 +175,10 @@ function lineFormDesagregacoes() {
 						</span>
 						<button 
 						type="button" 
+						id="btn-nivel-territorial"
 						class="btn btn-link btn-toggles fst-italic p-0" 
 						data-param="n"
+						data-param-id="${_metadados.NiveisTerritoriais[0].Id}"
 						style="font-size: 0.75rem;"
 						>[gerenciar]</button>
 					</div>
@@ -332,20 +335,24 @@ function lineFormEventSelectNivel() {
 	
 	$(document).on("change", "#line-chart-form #select-nivel", function() {
 		
-		var nivel = 
+		const idNivel = parseInt($(this).val());
+		
+		const nivel = 
 			_metadados
 			.NiveisTerritoriais
-			.find(x => x.Id == $(this).val());
+			.find(x => x.Id == idNivel);
 		
-		var unidades = 
+		const unidades = 
 			nivel
 			.Unidades
 			.filter(x => x.Mostrar ?? true)
 			.map(x => x.Nome);
 		
-		var subtexto = truncar(unidades.join(", "), 35);
+		const subtexto = truncar(unidades.join(", "), 35);
 		
 		$("#line-chart-form #subtexto-nivel-territorial").html(subtexto);
+		
+		$("#line-chart-form #btn-nivel-territorial").data("param-id", idNivel);
 		
 		$("#line-chart-form #titulos").html(lineFormTitulos());
 		
@@ -360,133 +367,8 @@ function lineFormEventBtnToggles() {
 		var param = $(this).data("param");
 		var paramId = $(this).data("param-id");
 		
-		var titulo = "";
-		var linhas = "";
+		mostrarToggles("line-chart-form", param, paramId);
 		
-		if (param == "p") {
-			
-			// Períodos 
-			
-			titulo = "Períodos";
-			
-			_metadados.Periodos.forEach((periodo) => {
-				
-				linhas += `
-					<tr>
-						<td>${periodo.Codigo}</td>
-						<td>${periodo.Nome}</td>
-						<td>
-							<input 
-							class="form-check-input" 
-							type="checkbox" 
-							data-id="${periodo.Codigo}"
-							${periodo.Mostrar ?? true ? "checked" : ""}>
-						</td>
-					</tr>`;
-					
-				periodo.TmpMostrar = periodo.Mostrar;
-				
-			});
-			
-		} else if (param == "c") {
-		
-			// Categorias de uma classificação
-			
-			const classificacao = 
-				_metadados
-				.Classificacoes
-				.find(x => x.Id == paramId);
-			
-			titulo = classificacao.Nome;
-			
-			classificacao.Categorias.forEach((categoria) => {
-			
-				linhas += `
-					<tr>
-						<td>${categoria.Id}</td>
-						<td>${categoria.Nome}</td>
-						<td>
-							<input 
-							class="form-check-input" 
-							type="checkbox" 
-							data-id="${categoria.Id}"
-							${categoria.Mostrar ?? true ? "checked" : ""}>
-						</td>
-					</tr>`;
-					
-				categoria.TmpMostrar = categoria.Mostrar;
-			
-			});
-			
-		} else if (param == "n") {
-			
-			// Unidades de um nível territorial
-			
-			const nivel = 
-				_metadados
-				.NiveisTerritoriais
-				.find(x => x.Id == $("#line-chart-form #select-nivel").val());
-			
-			paramId = nivel.Id;
-			
-			titulo = nivel.Nome;
-			
-			nivel.Unidades.forEach((unidade) => {
-			
-				linhas += `
-					<tr>
-						<td>${unidade.Codigo}</td>
-						<td>${unidade.Nome}</td>
-						<td>
-							<input 
-							class="form-check-input" 
-							type="checkbox" 
-							data-id="${unidade.Codigo}"
-							${unidade.Mostrar ?? true ? "checked" : ""}>
-						</td>
-					</tr>`;
-				
-				unidade.TmpMostrar = unidade.Mostrar;
-				
-			});
-		
-		}
-		
-		var html = `
-			<table class="table table-striped">
-				<thead>
-					<tr>
-						<th scope="col">Código</th>
-						<th scope="col">Nome</th>
-						<th scope="col">
-							<div class="d-flex align-items-center gap-1">
-								<span>Mostrar</span>
-								&nbsp;
-								<button type="button" class="btn p-0 lh-1" id="btn-all">
-									<i class="bi bi-check-square"></i>
-								</button>
-								&nbsp;
-								<button type="button" class="btn p-0 lh-1" id="btn-none">
-									<i class="bi bi-x-square"></i>
-								</button>
-							</div>
-						</th>
-					</tr>
-				</thead>
-				<tbody>
-					${linhas}
-				</tbody>
-			</table>`;
-		
-		$("#modal-toggles").data("form", "line-chart-form");
-		$("#modal-toggles").data("param", param);
-		$("#modal-toggles").data("param-id", paramId);
-		
-		$("#modal-toggles .modal-title").html(titulo);
-		$("#modal-toggles .modal-body").html(html);
-		
-		$("#modal-toggles").modal("show");
-	
 	});
 	
 }
@@ -733,6 +615,7 @@ function barFormDesagregacoes() {
 	var niveis = 
 		_metadados
 		.NiveisTerritoriais
+		.filter(x => x.Id >= 1 && x.Id <= 3)
 		.map(x => `<option value="${x.Id}">Nível territorial - ${x.Nome}</option>`);
 	
 	var unidades = 
@@ -759,8 +642,10 @@ function barFormDesagregacoes() {
 						</span>
 						<button 
 						type="button" 
+						id="btn-nivel-territorial"
 						class="btn btn-link btn-toggles fst-italic p-0" 
 						data-param="n"
+						data-param-id="${_metadados.NiveisTerritoriais[0].Id}"
 						style="font-size: 0.75rem;"
 						>[gerenciar]</button>
 					</div>
@@ -917,10 +802,12 @@ function barFormEventSelectNivel() {
 	
 	$(document).on("change", "#bar-form #select-nivel", function() {
 		
+		const idNivel = parseInt($(this).val());
+		
 		var nivel = 
 			_metadados
 			.NiveisTerritoriais
-			.find(x => x.Id == $(this).val());
+			.find(x => x.Id == idNivel);
 		
 		var unidades = 
 			nivel
@@ -931,6 +818,8 @@ function barFormEventSelectNivel() {
 		var subtexto = truncar(unidades.join(", "), 35);
 		
 		$("#bar-form #subtexto-nivel-territorial").html(subtexto);
+		
+		$("#bar-form #btn-nivel-territorial").data("param-id", idNivel);
 		
 		$("#bar-form #titulos").html(barFormTitulos());
 		
@@ -945,133 +834,8 @@ function barFormEventBtnToggles() {
 		var param = $(this).data("param");
 		var paramId = $(this).data("param-id");
 		
-		var titulo = "";
-		var linhas = "";
+		mostrarToggles("bar-form", param, paramId);
 		
-		if (param == "p") {
-			
-			// Períodos 
-			
-			titulo = "Períodos";
-			
-			_metadados.Periodos.forEach((periodo) => {
-				
-				linhas += `
-					<tr>
-						<td>${periodo.Codigo}</td>
-						<td>${periodo.Nome}</td>
-						<td>
-							<input 
-							class="form-check-input" 
-							type="checkbox" 
-							data-id="${periodo.Codigo}"
-							${periodo.Mostrar ?? true ? "checked" : ""}>
-						</td>
-					</tr>`;
-					
-				periodo.TmpMostrar = periodo.Mostrar;
-				
-			});
-			
-		} else if (param == "c") {
-		
-			// Categorias de uma classificação
-			
-			const classificacao = 
-				_metadados
-				.Classificacoes
-				.find(x => x.Id == paramId);
-			
-			titulo = classificacao.Nome;
-			
-			classificacao.Categorias.forEach((categoria) => {
-			
-				linhas += `
-					<tr>
-						<td>${categoria.Id}</td>
-						<td>${categoria.Nome}</td>
-						<td>
-							<input 
-							class="form-check-input" 
-							type="checkbox" 
-							data-id="${categoria.Id}"
-							${categoria.Mostrar ?? true ? "checked" : ""}>
-						</td>
-					</tr>`;
-					
-				categoria.TmpMostrar = categoria.Mostrar;
-			
-			});
-			
-		} else if (param == "n") {
-			
-			// Unidades de um nível territorial
-			
-			const nivel = 
-				_metadados
-				.NiveisTerritoriais
-				.find(x => x.Id == $("#bar-form #select-nivel").val());
-			
-			paramId = nivel.Id;
-			
-			titulo = nivel.Nome;
-			
-			nivel.Unidades.forEach((unidade) => {
-			
-				linhas += `
-					<tr>
-						<td>${unidade.Codigo}</td>
-						<td>${unidade.Nome}</td>
-						<td>
-							<input 
-							class="form-check-input" 
-							type="checkbox" 
-							data-id="${unidade.Codigo}"
-							${unidade.Mostrar ?? true ? "checked" : ""}>
-						</td>
-					</tr>`;
-				
-				unidade.TmpMostrar = unidade.Mostrar;
-				
-			});
-		
-		}
-		
-		var html = `
-			<table class="table table-striped">
-				<thead>
-					<tr>
-						<th scope="col">Código</th>
-						<th scope="col">Nome</th>
-						<th scope="col">
-							<div class="d-flex align-items-center gap-1">
-								<span>Mostrar</span>
-								&nbsp;
-								<button type="button" class="btn p-0 lh-1" id="btn-all">
-									<i class="bi bi-check-square"></i>
-								</button>
-								&nbsp;
-								<button type="button" class="btn p-0 lh-1" id="btn-none">
-									<i class="bi bi-x-square"></i>
-								</button>
-							</div>
-						</th>
-					</tr>
-				</thead>
-				<tbody>
-					${linhas}
-				</tbody>
-			</table>`;
-		
-		$("#modal-toggles").data("form", "bar-form");
-		$("#modal-toggles").data("param", param);
-		$("#modal-toggles").data("param-id", paramId);
-		
-		$("#modal-toggles .modal-title").html(titulo);
-		$("#modal-toggles .modal-body").html(html);
-		
-		$("#modal-toggles").modal("show");
-	
 	});
 	
 }
@@ -1720,133 +1484,8 @@ function heatmapFormEventBtnToggles() {
 		var param = $(this).data("param");
 		var paramId = $(this).data("param-id");
 		
-		var titulo = "";
-		var linhas = "";
+		mostrarToggles("heatmap-form", param, paramId);
 		
-		if (param == "p") {
-			
-			// Períodos 
-			
-			titulo = "Períodos";
-			
-			_metadados.Periodos.forEach((periodo) => {
-				
-				linhas += `
-					<tr>
-						<td>${periodo.Codigo}</td>
-						<td>${periodo.Nome}</td>
-						<td>
-							<input 
-							class="form-check-input" 
-							type="checkbox" 
-							data-id="${periodo.Codigo}"
-							${periodo.Mostrar ?? true ? "checked" : ""}>
-						</td>
-					</tr>`;
-					
-				periodo.TmpMostrar = periodo.Mostrar;
-				
-			});
-			
-		} else if (param == "c") {
-		
-			// Categorias de uma classificação
-			
-			const classificacao = 
-				_metadados
-				.Classificacoes
-				.find(x => x.Id == paramId);
-			
-			titulo = classificacao.Nome;
-			
-			classificacao.Categorias.forEach((categoria) => {
-			
-				linhas += `
-					<tr>
-						<td>${categoria.Id}</td>
-						<td>${categoria.Nome}</td>
-						<td>
-							<input 
-							class="form-check-input" 
-							type="checkbox" 
-							data-id="${categoria.Id}"
-							${categoria.Mostrar ?? true ? "checked" : ""}>
-						</td>
-					</tr>`;
-					
-				categoria.TmpMostrar = categoria.Mostrar;
-			
-			});
-			
-		} else if (param == "n") {
-			
-			// Unidades de um nível territorial
-			
-			const nivel = 
-				_metadados
-				.NiveisTerritoriais
-				.find(x => x.Id == $("#bar-form #select-nivel").val());
-			
-			paramId = nivel.Id;
-			
-			titulo = nivel.Nome;
-			
-			nivel.Unidades.forEach((unidade) => {
-			
-				linhas += `
-					<tr>
-						<td>${unidade.Codigo}</td>
-						<td>${unidade.Nome}</td>
-						<td>
-							<input 
-							class="form-check-input" 
-							type="checkbox" 
-							data-id="${unidade.Codigo}"
-							${unidade.Mostrar ?? true ? "checked" : ""}>
-						</td>
-					</tr>`;
-				
-				unidade.TmpMostrar = unidade.Mostrar;
-				
-			});
-		
-		}
-		
-		var html = `
-			<table class="table table-striped">
-				<thead>
-					<tr>
-						<th scope="col">Código</th>
-						<th scope="col">Nome</th>
-						<th scope="col">
-							<div class="d-flex align-items-center gap-1">
-								<span>Mostrar</span>
-								&nbsp;
-								<button type="button" class="btn p-0 lh-1" id="btn-all">
-									<i class="bi bi-check-square"></i>
-								</button>
-								&nbsp;
-								<button type="button" class="btn p-0 lh-1" id="btn-none">
-									<i class="bi bi-x-square"></i>
-								</button>
-							</div>
-						</th>
-					</tr>
-				</thead>
-				<tbody>
-					${linhas}
-				</tbody>
-			</table>`;
-		
-		$("#modal-toggles").data("form", "heatmap-form");
-		$("#modal-toggles").data("param", param);
-		$("#modal-toggles").data("param-id", paramId);
-		
-		$("#modal-toggles .modal-title").html(titulo);
-		$("#modal-toggles .modal-body").html(html);
-		
-		$("#modal-toggles").modal("show");
-	
 	});
 	
 }
@@ -2279,7 +1918,177 @@ function choroplethParams() {
 
 }
 
-// Atualizações da interface
+// Mudanças na interface
+
+function mostrarToggles(form, param, paramId) {
+	
+	var titulo = "";
+	var linhas = "";
+	
+	var qnt = 0;
+	var qntSelecionada = 0;
+	
+	if (param == "p") {
+		
+		// Períodos 
+		
+		titulo = "Períodos";
+		
+		_metadados.Periodos.forEach((periodo) => {
+			
+			linhas += `
+				<div class="row">
+					<div class="col py-2 border-bottom">
+						<input 
+						class="form-check-input" 
+						type="checkbox" 
+						data-id="${periodo.Codigo}"
+						${periodo.Mostrar ?? true ? "checked" : ""}>
+						&nbsp;
+						<span class="nome">
+							${periodo.Nome}
+						</span>
+						<span class="codigo text-secondary small">
+							&mdash; ${periodo.Codigo}
+						</span>
+					</div>
+				</div>`;
+				
+			periodo.TmpMostrar = periodo.Mostrar;
+			
+			qnt += 1;
+			qntSelecionada += (periodo.Mostrar ?? true ? 1 : 0);
+			
+		});
+		
+	} else if (param == "c") {
+	
+		// Categorias de uma classificação
+		
+		const classificacao = 
+			_metadados
+			.Classificacoes
+			.find(x => x.Id == paramId);
+		
+		titulo = classificacao.Nome;
+		
+		classificacao.Categorias.forEach((categoria) => {
+			
+			linhas += `
+				<div class="row item-row">
+					<div class="col py-2 border-bottom">
+						<input 
+						class="form-check-input" 
+						type="checkbox" 
+						data-id="${categoria.Id}"
+						${categoria.Mostrar ?? true ? "checked" : ""}>
+						&nbsp;
+						<span class="nome">
+							${categoria.Nome}
+						</span>
+						<span class="codigo text-secondary small">
+							&mdash; ${categoria.Id}
+						</span>
+					</div>
+				</div>`;
+				
+			categoria.TmpMostrar = categoria.Mostrar;
+			
+			qnt += 1;
+			qntSelecionada += (categoria.Mostrar ?? true ? 1 : 0);
+			
+		});
+		
+	} else if (param == "n") {
+		
+		// Unidades de um nível territorial
+		
+		var nivel = 
+			_metadados
+			.NiveisTerritoriais
+			.find(x => x.Id == paramId);
+		
+		titulo = nivel.Nome;
+		
+		nivel.Unidades.forEach((unidade) => {
+			
+			linhas += `
+				<div class="row item-row">
+					<div class="col py-2 border-bottom">
+						<input 
+						class="form-check-input" 
+						type="checkbox" 
+						data-id="${unidade.Codigo}"
+						${unidade.Mostrar ?? true ? "checked" : ""}>
+						&nbsp;
+						<span class="nome">
+							${unidade.Nome}
+						</span>
+						<span class="codigo text-secondary small">
+							&mdash; ${unidade.Codigo}
+						</span>
+					</div>
+				</div>`;
+			
+			unidade.TmpMostrar = unidade.Mostrar;
+			
+			qnt += 1;
+			qntSelecionada += (unidade.Mostrar ?? true ? 1 : 0);
+			
+		});
+	
+	}
+	
+	var html = `
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<input type="text" class="form-control" id="toggles-search-input" placeholder="Pesquisar">
+				</div>
+			</div>
+			<div class="row my-3">
+				<div class="col text-secondary small">
+					<span id="span-qnt-visiveis">
+						Mostrando ${qnt} de ${qnt} ite${qnt == 1 ? "em" : "ns"}
+					</span>
+				</div>
+			</div>
+			<div class="row my-3">
+				<div class="col">
+					<div class="toggles-wrapper border rounded">
+						<div class="container">
+							${linhas}
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col text-secondary small">
+					<span id="span-qnt-selecionados">
+						${qntSelecionada} selecionado${qntSelecionada == 1 ? "" : "s"} de ${qnt}
+					</span>
+					&nbsp;|&nbsp;
+					<span id="btn-all">
+						Todos
+					</span>
+					&nbsp;|&nbsp;
+					<span id="btn-none">
+						Nenhum
+					</span>
+				</div>
+			</div>
+		</div>`;
+	
+	$("#modal-toggles").data("form", form);
+	$("#modal-toggles").data("param", param);
+	$("#modal-toggles").data("param-id", paramId);
+	
+	$("#modal-toggles .modal-title").html(titulo);
+	$("#modal-toggles .modal-body").html(html);
+	
+	$("#modal-toggles").modal("show");
+	
+}
 
 function atualizarTema(tema) {
 	
@@ -2976,6 +2785,16 @@ function configurarBtnNone() {
 
 function configurarToggles() {
 	
+	$(document).on("click", "#modal-toggles .item-row", function() {
+		
+		$(this).find(".form-check-input").prop("checked", function () {
+			
+			return !this.checked;
+			
+		}).trigger("change");
+		
+	});
+	
 	$(document).on("change", "#modal-toggles .form-check-input", function() {
 		
 		const param = $("#modal-toggles").data("param");
@@ -2984,12 +2803,26 @@ function configurarToggles() {
 		const id = $(this).data("id");
 		const mostrar = $(this).prop("checked");
 		
+		var qnt = 0;
+		var qntSelecionada = 0;
+		
 		if (param == "p") {
 			
 			_metadados
 			.Periodos
 			.find(x => x.Codigo == id)
 			.TmpMostrar = mostrar;
+			
+			qnt = 
+				_metadados
+				.Periodos
+				.length;
+			
+			qntSelecionada = 
+				_metadados
+				.Periodos
+				.filter(x => x.TmpMostrar ?? true)
+				.length;
 			
 		} else if (param == "c") {
 			
@@ -3000,6 +2833,21 @@ function configurarToggles() {
 			.find(x => x.Id == id)
 			.TmpMostrar = mostrar;
 			
+			qnt = 
+				_metadados
+				.Classificacoes
+				.find(x => x.Id == paramId)
+				.Categorias
+				.length;
+			
+			qntSelecionada = 
+				_metadados
+				.Classificacoes
+				.find(x => x.Id == paramId)
+				.Categorias
+				.filter(x => x.TmpMostrar ?? true)
+				.length;
+			
 		} else if (param == "n") {
 		
 			_metadados
@@ -3009,7 +2857,62 @@ function configurarToggles() {
 			.find(x => x.Codigo == id)
 			.TmpMostrar = mostrar;
 			
+			qnt = 
+				_metadados
+				.NiveisTerritoriais
+				.find(x => x.Id == paramId)
+				.Unidades
+				.length;
+			
+			qntSelecionada = 
+				_metadados
+				.NiveisTerritoriais
+				.find(x => x.Id == paramId)
+				.Unidades
+				.filter(x => x.TmpMostrar ?? true)
+				.length;
+			
 		}
+		
+		var aux = `${qntSelecionada} selecionado${qntSelecionada == 1 ? "" : "s"} de ${qnt}`;
+		
+		$("#span-qnt-selecionados").html(aux);
+		
+	});
+	
+}
+
+function configurarTogglesSearch() {
+	
+	$(document).on("input", "#toggles-search-input", function() {
+		
+		const busca = $(this).val().toLowerCase();
+		
+		var qnt = 0;
+		var qntVisivel = 0;
+		
+		$(".toggles-wrapper .row").each(function () {
+			
+			if (busca.length > 0) {
+				
+				const id = $(this).find(".codigo").text().trim();
+				const nome = $(this).find(".nome").text().trim();
+				const titulo = (id + " " + nome).toLowerCase();
+				
+				$(this).toggle(titulo.includes(busca));
+				
+			} else {
+				
+				$(this).toggle(true);
+				
+			}
+			
+			qnt += 1;
+			qntVisivel += ($(this).is(":visible") ? 1 : 0);
+			
+			$("#span-qnt-visiveis").html(`Mostrando ${qntVisivel} de ${qnt} ite${qnt == 1 ? "em" : "ns"}`);
+			
+		});
 		
 	});
 	
@@ -3054,7 +2957,7 @@ function configurarBtnSave() {
 			if (formId == "heatmap-form") {
 				
 				var vX = $(`#${formId} #select-eixo-x`).val();
-				var vY = $(`#${formId} #select-eixo-x`).val();
+				var vY = $(`#${formId} #select-eixo-y`).val();
 				
 				if (vX == "p") {
 					
@@ -3108,7 +3011,33 @@ function configurarBtnSave() {
 				
 			var subtexto = truncar(categorias.join(", "), 35);
 			
-			$(`#${formId} #subtexto-c-${paramId}`).html(subtexto);
+			if (formId == "heatmap-form") {
+				
+				var sX = $(`#${formId} #select-eixo-x`);
+				var vX = sX.val();
+				var iX = sX.find("option:selected").data("id");
+				
+				var sY = $(`#${formId} #select-eixo-y`);
+				var vY = sY.val();
+				var iY = sY.find("option:selected").data("id");
+				
+				if (vX == "c" && iX == paramId) {
+					
+					$(`#${formId} #subtexto-eixo-x`).html(subtexto);
+					
+				}
+				
+				if (vY == "c" && iY == paramId) {
+					
+					$(`#${formId} #subtexto-eixo-y`).html(subtexto);
+					
+				}
+				
+			} else {
+				
+				$(`#${formId} #subtexto-c-${paramId}`).html(subtexto);
+				
+			}
 			
 		} else if (param == "n") {
 		
@@ -3144,7 +3073,33 @@ function configurarBtnSave() {
 				
 			var subtexto = truncar(unidades.join(", "), 35);
 			
-			$(`#${formId} #subtexto-nivel-territorial`).html(subtexto);
+			if (formId == "heatmap-form") {
+				
+				var sX = $(`#${formId} #select-eixo-x`);
+				var vX = sX.val();
+				var iX = sX.find("option:selected").data("id");
+				
+				var sY = $(`#${formId} #select-eixo-y`);
+				var vY = sY.val();
+				var iY = sY.find("option:selected").data("id");
+				
+				if (vX == "n" && iX == paramId) {
+					
+					$(`#${formId} #subtexto-eixo-x`).html(subtexto);
+					
+				}
+				
+				if (vY == "n" && iY == paramId) {
+					
+					$(`#${formId} #subtexto-eixo-y`).html(subtexto);
+					
+				}
+				
+			} else {
+				
+				$(`#${formId} #subtexto-nivel-territorial`).html(subtexto);
+				
+			}
 			
 		}
 		
@@ -3198,6 +3153,7 @@ $(document).ready(function () {
 			configurarBtnAll();
 			configurarBtnNone();
 			configurarToggles();
+			configurarTogglesSearch();
 			configurarBtnSave();
 			configurarModalHide();
 			

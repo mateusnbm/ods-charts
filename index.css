@@ -46,6 +46,21 @@
 	pointer-events: none;
 }
 
+.toggles-wrapper {
+	max-height: 325px;
+	overflow-y: auto;
+	user-select: none;
+	cursor: pointer;
+}
+#btn-all {
+	user-select: none;
+	cursor: pointer;
+}
+#btn-none {
+	user-select: none;
+	cursor: pointer;
+}
+
 .divisor {
 	border-top-color: var(--bs-border-color);
 	opacity: 1;
