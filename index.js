@@ -2564,7 +2564,7 @@ function configurarBtnPreview() {
 		var met = obj.metas.find(x => x.codigo === $("#select-met").val());
 		var ind = met.indicadores.find(x => x.codigo === $("#select-ind").val());
 		
-		window.open(`http://localhost:9000/preview.html?indicador=${ind.codigo}`, "_blank");
+		window.open(`preview.html?indicador=${ind.codigo}`, "_blank");
 		
 	});
 	
