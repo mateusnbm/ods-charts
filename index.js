@@ -1937,7 +1937,7 @@ function mostrarToggles(form, param, paramId) {
 		_metadados.Periodos.forEach((periodo) => {
 			
 			linhas += `
-				<div class="row">
+				<div class="row item-row">
 					<div class="col py-2 border-bottom">
 						<input 
 						class="form-check-input" 
@@ -2785,7 +2785,9 @@ function configurarBtnNone() {
 
 function configurarToggles() {
 	
-	$(document).on("click", "#modal-toggles .item-row", function() {
+	$(document).on("click", "#modal-toggles .item-row", function(e) {
+		
+		if ($(e.target).closest(".form-check-input").length) return;
 		
 		$(this).find(".form-check-input").prop("checked", function () {
 			
@@ -2799,6 +2801,10 @@ function configurarToggles() {
 		
 		const param = $("#modal-toggles").data("param");
 		const paramId = $("#modal-toggles").data("param-id");
+		
+		console.log("modal:");
+		console.log(param);
+		console.log(paramId);
 		
 		const id = $(this).data("id");
 		const mostrar = $(this).prop("checked");
