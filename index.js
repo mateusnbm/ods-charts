@@ -959,6 +959,535 @@ function barParams() {
 	
 }
 
+// Formulário do gráfico de barras ranqueado
+
+function rankedFormX() {
+	
+	var itens = _metadados.Variaveis.map((variavel, index) => {
+		
+		return `
+			<option value="${variavel.Id}" ${index == 0 ? "selected" : ""}>
+				${variavel.Nome}
+			</option>`;
+			
+	});
+	
+	var html = `
+		<div class="row mb-2">
+			<label for="select-eixo-x" class="col-3 col-lg-2 col-form-label">Eixo X</label>
+			<div class="col">
+				<select class="form-select" id="select-eixo-x">
+					<option value="" disabled selected hidden></option>
+					${itens.join("")}
+				</select>
+			</div>
+		</div>`;
+	
+	return html;
+	
+}
+
+function rankedFormY() {
+	
+	var periodos = 
+		_metadados
+		.Periodos
+		.filter(x => x.Mostrar ?? true)
+		.map(x => x.Nome);
+	
+	var classificacoes = _metadados.Classificacoes.map((cla) => {
+		
+		return `
+			<option value="c" data-id="${cla.Id}">
+				Classificação - ${cla.Nome}
+			</option>`;
+		
+	});
+	
+	var niveis = _metadados.NiveisTerritoriais.map((nivel) => {
+		
+		if (nivel.Id == 1 || nivel.Id == 2 || nivel.Id == 3) {
+			
+			return `
+				<option value="n" data-id="${nivel.Id}">
+					Nível Territorial - ${nivel.Nome}
+				</option>`;
+			
+		}
+		
+	});
+	
+	var html = `
+		<div class="row mb-2">
+			<label for="select-eixo-y" class="col-3 col-lg-2 col-form-label">Eixo Y</label>
+			<div class="col">
+				<div class="row mb-2">
+					<div class="col">
+						<select class="form-select" id="select-eixo-y">
+							<option value="p" selected>
+								Período - ${_metadados.TipoPeriodo}
+							</option>
+							${classificacoes}
+							${niveis}
+						</select>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col fst-italic text-end" style="font-size: 0.75rem;">
+						<span id="subtexto-eixo-y">
+							${truncar(periodos.join(", "), 35)}
+						</span>
+						<button 
+						type="button" 
+						id="btn-eixo-y"
+						class="btn btn-link btn-toggles fst-italic p-0" 
+						data-param="p"
+						style="font-size: 0.75rem;"
+						>[gerenciar]</button>
+					</div>
+				</div>
+			</div>
+		</div>`;
+	
+	return html;
+	
+}
+
+function rankedFormDesagregacoes() {
+	
+	var desagregacoes = "";
+	
+	var sY = $("#ranked-form #select-eixo-y");
+	var vY = sY.length ? sY.val() : null;
+	var iY = sY.length ? sY.find("option:selected").data("id") : null;
+	
+	// Adiciona um select para o período caso ele não tenha sido selecionado
+	
+	if (sY.length != 0 && vY != "p") {
+		
+		var periodos = _metadados.Periodos.map((periodo, index) => {
+			
+			return `
+				<option value="${periodo.Codigo}" ${index == 0 ? "selected" : ""}>
+					${periodo.Nome}
+				</option>`;
+				
+		});
+		
+		var desagregacoes = `
+			<div class="row mb-2">
+				<label for="select-periodo" class="col-3 col-lg-2 col-form-label">Período</label>
+				<div class="col">
+					<select class="form-select" id="select-periodo">
+						${periodos.join("")}
+					</select>
+				</div>
+			</div>`;
+		
+	}
+	
+	// Adiciona um select para as classificações que não foram selecionadas
+	
+	_metadados.Classificacoes.forEach((classificacao) => {
+		
+		if (sY.length && vY == "c" && iY == classificacao.Id) return;
+		
+		var categorias = classificacao.Categorias.map((categoria, index) => {
+			
+			return `
+				<option value="${categoria.Id}" ${index == 0 ? "selected" : ""}>
+					${categoria.Nome}
+				</option>`;
+			
+		});
+		
+		desagregacoes += `
+			<div class="row mb-2">
+				<label 
+				for="select-cla-${classificacao.Id}" 
+				class="col-3 col-lg-2 col-form-label">
+					${classificacao.Nome}
+				</label>
+				<div class="col">
+					<select class="form-select" id="select-cla-${classificacao.Id}">
+						${categorias.join("")}
+					</select>
+				</div>
+			</div>
+			`;
+		
+	});
+	
+	// Adiciona um select para o território caso ele não tenha sido selecionado
+	
+	if (sY.length == 0 || vY != "n") {
+		
+		var niveis = 
+			_metadados
+			.NiveisTerritoriais
+			.filter(x => x.Id >= 1 && x.Id <= 3)
+			.map(x => `<option value="${x.Id}">${x.Nome}</option>`);
+		
+		var unidades = 
+			_metadados
+			.NiveisTerritoriais[0]
+			.Unidades
+			.map(x => `<option value="${x.Codigo}">${x.Nome}</option>`);
+		
+		desagregacoes += `
+			<div class="row mb-2">
+				<label 
+				for="select-nivel-territorial" 
+				class="col-3 col-lg-2 col-form-label">
+					Nível territorial
+				</label>
+				<div class="col">
+					<select class="form-select" id="select-nivel-territorial">
+						${niveis.join("")}
+					</select>
+				</div>
+			</div>
+			<div class="row mb-2">
+				<label 
+				for="select-unidade-territorial" 
+				class="col-3 col-lg-2 col-form-label">
+					Unidade territorial
+				</label>
+				<div class="col">
+					<select class="form-select" id="select-unidade-territorial">
+						${unidades.join("")}
+					</select>
+				</div>
+			</div>
+			`;
+		
+	}
+	
+	return desagregacoes;
+
+}
+
+function rankedFormTitulos() {
+	
+	var selectEixoX = $("#ranked-form #select-eixo-x");
+	var variavelSelecionada = 
+		selectEixoX.length ? 
+		_metadados.Variaveis.find(x => x.Id == selectEixoX.val()) : 
+		_metadados.Variaveis[0];
+	var tituloEixoX = `${variavelSelecionada.Nome} (${variavelSelecionada.UnidadeMedida})`;
+	
+	var sY = $("#ranked-form #select-eixo-y");
+	var vY = sY.length ? sY.val() : null;
+	var iY = sY.length ? sY.find("option:selected").data("id") : null;
+	var tituloEixoY = `${_metadados.TipoPeriodo}`;
+	
+	if (vY == "c") {
+		
+		tituloEixoY = _metadados.Classificacoes.find(x => x.Id == iY).Nome;
+		
+	} else if (vY == "n") {
+		
+		tituloEixoY = _metadados.NiveisTerritoriais.find(x => x.Id == iY).Nome;
+		
+	}
+	
+	var html = `
+		<!-- TÍTULO DO GRÁFICO -->
+		<div class="row mb-2">
+			<label for="titulo" class="col-3 col-lg-2 col-form-label">Título</label>
+			<div class="col">
+				<input type="text" class="form-control" id="titulo" value="${_metadados.Nome}">
+			</div>
+		</div>
+		<!-- SUBTÍTULO -->
+		<div class="row mb-2">
+			<label for="subtitulo" class="col-3 col-lg-2 col-form-label">Subtítulo</label>
+			<div class="col">
+				<input type="text" class="form-control" id="subtitulo" value="Fonte: IBGE, ${_metadados.Pesquisa}, SIDRA, Tabela ${_metadados.Id}">
+			</div>
+		</div>
+		<!-- TÍTULO DO EIXO X -->
+		<div class="row mb-2">
+			<label for="titulo-x" class="col-3 col-lg-2 col-form-label">Título X</label>
+			<div class="col">
+				<input type="text" class="form-control" id="titulo-x" value="${tituloEixoX}">
+			</div>
+		</div>
+		<!-- TÍTULO DO EIXO Y -->
+		<div class="row mb-2">
+			<label for="titulo-y" class="col-3 col-lg-2 col-form-label">Título Y</label>
+			<div class="col">
+				<input 
+				type="text" 
+				class="form-control" 
+				id="titulo-y" 
+				value="${tituloEixoY}">
+			</div>
+		</div>
+	`;
+	
+	return html;
+
+}
+
+function rankedFormEventSelectEixoX() {
+	
+	$(document).on("change", "#ranked-form #select-eixo-x", function() {
+		
+		var variavel = 
+			_metadados
+			.Variaveis
+			.find(x => x.Id == $(this).val());
+		
+		$("#ranked-form #titulo-x").val(variavel.Nome);
+		
+	});
+
+}
+
+function rankedFormEventSelectEixoY() {
+	
+	$(document).on("change", "#ranked-form #select-eixo-y", function() {
+		
+		var tp = $(this).val();
+		var id = $(this).find("option:selected").data("id");
+		
+		if (tp == "p") {
+			
+			var periodos = 
+				_metadados
+				.Periodos
+				.filter(x => x.Mostrar ?? true)
+				.map(x => x.Nome);
+				
+			$("#ranked-form #subtexto-eixo-y").html(truncar(periodos.join(", "), 35));
+			$("#ranked-form #btn-eixo-y").data("param", "p");
+			
+		} else if (tp == "c") {
+			
+			var classificacao = 
+				_metadados
+				.Classificacoes
+				.find(x => x.Id == id);
+			
+			var categorias = 
+				classificacao
+				.Categorias
+				.filter(x => x.Mostrar ?? true)
+				.map(x => x.Nome);
+			
+			$("#ranked-form #subtexto-eixo-y").html(truncar(categorias.join(", "), 35));
+			$("#ranked-form #btn-eixo-y").data("param", "c");
+			$("#ranked-form #btn-eixo-y").data("param-id", classificacao.Id);
+			
+		} else if (tp == "n") {
+			
+			var nivel = 
+				_metadados
+				.NiveisTerritoriais
+				.find(x => x.Id == id);
+			
+			var unidades = 
+				nivel
+				.Unidades
+				.filter(x => x.Mostrar ?? true)
+				.map(x => x.Nome);
+			
+			$("#ranked-form #subtexto-eixo-y").html(truncar(unidades.join(", "), 35));
+			$("#ranked-form #btn-eixo-y").data("param", "n");
+			$("#ranked-form #btn-eixo-y").data("param-id", nivel.Id);
+			
+		}
+		
+		$("#ranked-form #desagregacoes").html(rankedFormDesagregacoes());
+		$("#ranked-form #titulos").html(rankedFormTitulos());
+		
+	});
+	
+}
+
+function rankedFormEventSelectNivel() {
+	
+	$(document).on("change", "#ranked-form #select-nivel-territorial", function() {
+		
+		var nivel = 
+			_metadados
+			.NiveisTerritoriais
+			.find(x => x.Id == $(this).val());
+		
+		var unidades = 
+			nivel
+			.Unidades
+			.map(x => `<option value="${x.Codigo}">${x.Nome}</option>`);
+		
+		$("#ranked-form #select-unidade-territorial").html(unidades);
+		
+	});
+	
+}
+
+function rankedFormEventBtnToggles() {
+	
+	$(document).on("click", "#ranked-form .btn-toggles", function() {
+		
+		var param = $(this).data("param");
+		var paramId = $(this).data("param-id");
+		
+		mostrarToggles("ranked-form", param, paramId);
+		
+	});
+	
+}
+
+function rankedFormEventModalToggles() {
+	
+	$("#modal-toggles").on("hide.bs.modal", function() {
+		
+		$("#ranked-form #titulos").html(rankedFormTitulos());
+		
+	});
+	
+}
+
+function rankedForm() {
+	
+	var eixoX = rankedFormX();
+	var eixoY = rankedFormY();
+	var desagregacoes = rankedFormDesagregacoes();
+	var titulos = rankedFormTitulos();
+	
+	var html = `
+		<div id="ranked-form">
+			${eixoX}
+			${eixoY}
+			<div id="desagregacoes">
+				${desagregacoes}
+			</div>
+			<div id="titulos">
+				${titulos}
+			</div>
+		</div>
+	`;
+	
+	$("#chart-form-wrapper").html(html);
+	
+	rankedFormEventSelectEixoX();
+	rankedFormEventSelectEixoY();
+	rankedFormEventSelectNivel();
+	rankedFormEventBtnToggles();
+	rankedFormEventModalToggles();
+	
+}
+
+function rankedParams() {
+	
+	var form = "#ranked-form";
+	
+	var titulo = $(`${form} #titulo`).val();
+	var subtitulo = $(`${form} #subtitulo`).val();
+	var tituloX = $(`${form} #titulo-x`).val();
+	var tituloY = $(`${form} #titulo-y`).val();
+	
+	var variavel = parseInt($(`${form} #select-eixo-x`).val());
+	
+	var sY = $(`${form} #select-eixo-y`);
+	var vY = sY.length ? sY.val() : null;
+	var iY = sY.length ? sY.find("option:selected").data("id") : null;
+	
+	var selectPeriodo = $(`${form} #select-periodo`);
+	var selectNivel = $(`${form} #select-nivel-territorial`);
+	var selectUnidade = $(`${form} #select-unidade-territorial`);
+	
+	var selecionadosY = [];
+	
+	var periodos = [];
+	var nivel = null;
+	var unidades = null;
+	var classificacoes = [];
+	
+	if (vY == "p") {
+		
+		selecionadosY = 
+			_metadados
+			.Periodos
+			.filter(x => x.Mostrar ?? true)
+			.map(x => x.Codigo);
+			
+		periodos = selecionadosY;
+		
+	} else if (vY == "c") {
+		
+		selecionadosY = 
+			_metadados
+			.Classificacoes
+			.find(x => x.Id == iY)
+			.Categorias
+			.filter(x => x.Mostrar ?? true)
+			.map(x => x.Id);
+			
+		classificacoes.push({id: iY, categorias: selecionadosY});
+		
+	} else if (vY == "n") {
+		
+		selecionadosY = 
+			_metadados
+			.NiveisTerritoriais
+			.find(x => x.Id == iY)
+			.Unidades
+			.filter(x => x.Mostrar ?? true)
+			.map(x => x.Codigo);
+		
+		nivel = iY;
+		unidades = selecionadosY;
+		
+	}
+	
+	if (vY != "p") {
+		
+		periodos = [selectPeriodo.val()];
+		
+	}
+	
+	if (vY != "n") {
+		
+		nivel = selectNivel.val();
+		unidades = [selectUnidade.val()];
+		
+	}
+	
+	_metadados.Classificacoes.forEach((classificacao) => {
+		
+		if (sY.length && vY == "c" && iY == classificacao.Id) return;
+		
+		var categoria = $(`${form} #select-cla-${classificacao.Id}`).val();
+		
+		classificacoes.push({id: classificacao.Id, categorias: [categoria]});
+		
+	});
+	
+	var params = {
+		tipo: "ranked",
+		agregado: _metadados.Id,
+		y: {
+			attr: vY,
+			id: iY,
+			selecionados: selecionadosY
+		},
+		variavel,
+		periodos,
+		nivelTerritorial: nivel,
+		unidadesTerritoriais: unidades,
+		classificacoes,
+		titulo,
+		subtitulo,
+		tituloX,
+		tituloY
+	};
+	
+	return params;
+	
+}
+
 // Formulário do heatmap
 
 function heatmapFormX() {
@@ -2364,6 +2893,7 @@ function atualizarSelectTipos(metadados) {
 	
 	html += `<option value="line">Linha</option>`;
 	html += `<option value="bar">Barra</option>`;
+	html += `<option value="ranked">Ranqueado</option>`;
 	html += `<option value="heatmap">Heatmap</option>`;
 	
 	if (temGR == true || temUF == true) {
@@ -2388,6 +2918,7 @@ function atualizarChartForm() {
 	const funcs = {
 		line: lineForm,
 		bar: barForm,
+		ranked: rankedForm,
 		heatmap: heatmapForm,
 		choropleth: choroplethForm
 	};
@@ -2650,6 +3181,7 @@ function configurarBtnPlot() {
 		const funcs = {
 			line: lineParams,
 			bar: barParams,
+			ranked: rankedParams,
 			heatmap: heatmapParams,
 			choropleth: choroplethParams
 		};
@@ -2801,10 +3333,6 @@ function configurarToggles() {
 		
 		const param = $("#modal-toggles").data("param");
 		const paramId = $("#modal-toggles").data("param-id");
-		
-		console.log("modal:");
-		console.log(param);
-		console.log(paramId);
 		
 		const id = $(this).data("id");
 		const mostrar = $(this).prop("checked");
@@ -2977,6 +3505,10 @@ function configurarBtnSave() {
 					
 				}
 				
+			} else if (formId == "ranked-form") {
+				
+				$(`#${formId} #subtexto-eixo-y`).html(subtexto);
+				
 			} else {
 				
 				$(`#${formId} #subtexto-eixo-x`).html(subtexto);
@@ -3039,6 +3571,10 @@ function configurarBtnSave() {
 					
 				}
 				
+			} else if (formId == "ranked-form") {
+				
+				$(`#${formId} #subtexto-eixo-y`).html(subtexto);
+				
 			} else {
 				
 				$(`#${formId} #subtexto-c-${paramId}`).html(subtexto);
@@ -3100,6 +3636,10 @@ function configurarBtnSave() {
 					$(`#${formId} #subtexto-eixo-y`).html(subtexto);
 					
 				}
+				
+			} else if (formId == "ranked-form") {
+				
+				$(`#${formId} #subtexto-eixo-y`).html(subtexto);
 				
 			} else {
 				

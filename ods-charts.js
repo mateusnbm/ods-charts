@@ -8,10 +8,11 @@
  *
  * Uso:
  *
- *   ODSCharts.line('div', params)
- *   ODSCharts.bar('div', params)
- *   ODSCharts.heatmap('div', params)
- *   ODSCharts.choropleth('div', params)
+ *   ODSCharts.line(div, params)
+ *   ODSCharts.bar(div, params)
+ *   ODSCharts.ranked(div, params)
+ *   ODSCharts.heatmap(div, params)
+ *   ODSCharts.choropleth(div, params)
  *
  * Retorna a instância do ECharts (permite .resize(), .dispose() etc.)
  *
@@ -324,6 +325,7 @@
 			
 			datasets.push({
 				type: "bar",
+				//stack: "total",
 				name: params.titulos[index],
 				data: pontosEixoX.map(x => datapoints[x.id + "-" + ids])
 			});
@@ -372,6 +374,119 @@
 				nameGap: 35
 			},
 			series: datasets
+		};
+		
+		const chart = echarts.init(document.getElementById(div));
+		
+		chart.setOption(option);
+		
+		return chart;
+		
+	}
+	
+	async function ranked(div, params) {
+		
+		const urls = [
+			urlMetadados(params),
+			urlDados(params)
+		];
+		
+		const [metadados, dados] = await fetchAll(urls);
+		
+		var yIndex = 0;
+		var yLabels = [];
+		var yLabelsMap = {};
+		
+		// Gambiarra para obter as unidades do nível territorial (não achei api para isto)
+		
+		agregarUnidades(metadados);
+		
+		// ...
+		
+		const pIndex = 1;
+		const nIndex = 3;
+		const cIndex = 4;
+		
+		if (params.y.attr == "p") {
+			
+			yIndex = pIndex;
+			yLabels = params.periodos.map(m => metadados.Periodos.find(n => n.Codigo == m).Nome);
+			yLabelsMap = Object.fromEntries(params.periodos.map((k, i) => [k, yLabels[i]]));
+			
+		} else if (params.y.attr == "n") {
+			
+			const nivel = metadados.NiveisTerritoriais.find(x => x.Id == params.y.id);
+			
+			yIndex = nIndex;
+			yLabels = params.y.selecionados.map(x => nivel.Unidades.find(k => k.Codigo == x).Nome);
+			yLabelsMap = Object.fromEntries(params.y.selecionados.map((k, i) => [k, yLabels[i]]));
+			
+		} else if (params.y.attr == "c") {
+		
+			const classificacao = metadados.Classificacoes.find(x => x.Id == params.y.id);
+			
+			yIndex = cIndex + params.classificacoes.findIndex(x => x.id == params.y.id); 
+			yLabels = params.y.selecionados.map(x => classificacao.Categorias.find(k => k.Id == x).Nome);
+			yLabelsMap = Object.fromEntries(params.y.selecionados.map((k, i) => [k, yLabels[i]]));
+			
+		}
+		
+		// Mapeia as categorias de Y para o valor correspondente e constrói a série odernada
+		
+		const datapoints = [];
+		
+		dados.slice(1).forEach((datapoint) => {
+			
+			datapoints.push({
+				nome: yLabelsMap[datapoint[`D${yIndex}C`]],
+				valor: parseFloat(datapoint.V)
+			});
+			
+		});
+		
+		datapoints.sort((a, b) => a.valor - b.valor);
+		
+		// Plota o gráfico de barras
+		
+		const option = {
+			title: {
+				text: params.titulo,
+				subtext: params.subtitulo,
+				left: 'center',
+			},
+			tooltip: {
+				trigger: 'axis'
+			},
+			legend: {},
+			grid: {
+				top: '20%',
+				left: '10%',
+				right: '10%',
+				containLabel: true
+			},
+			toolbox: {
+				feature: {
+					saveAsImage: {},
+					dataView: { readOnly: false },
+				}
+			},
+			xAxis: {
+				type: 'value',
+				name: params.tituloX,
+				nameLocation: 'middle',
+				nameGap: 35
+			},
+			yAxis: {
+				type: 'category',
+				name: params.tituloY,
+				nameLocation: 'middle',
+				nameGap: 35,
+				data: datapoints.map(x => x.nome)
+			},
+			series: [{
+				type: 'bar',
+				data: datapoints.map(x => x.valor)
+			}]
 		};
 		
 		const chart = echarts.init(document.getElementById(div));
@@ -705,6 +820,7 @@
 	const ODSCharts = {
 		line,
 		bar,
+		ranked,
 		heatmap,
 		choropleth,
 		utils: { agregarUnidades },
