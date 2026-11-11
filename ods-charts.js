@@ -112,6 +112,76 @@
 		
 	}
 	
+	function getTitleHeight(text, maxWidth) {
+		const fontSize = 18;
+		const fontWeight = 'bolder';
+		const fontFamily = 'sans-serif';
+		const lineHeight = fontSize * 1.2; // valor padrão razoável do ECharts quando não é definido
+
+		// Cria um canvas temporário para medir o texto com a fonte real
+		const canvas = document.createElement('canvas');
+		const ctx = canvas.getContext('2d');
+		ctx.font = `${fontWeight} ${fontSize}px ${fontFamily}`;
+
+		// Quebra o texto da mesma forma que o ECharts faz com overflow: 'break'
+		const words = text.split(' ');
+		let lines = [];
+		let currentLine = words[0] || '';
+
+		for (let i = 1; i < words.length; i++) {
+		const word = words[i];
+		const width = ctx.measureText(currentLine + ' ' + word).width;
+
+		if (width < maxWidth) {
+		currentLine += ' ' + word;
+		} else {
+		lines.push(currentLine);
+		currentLine = word;
+		}
+		}
+		lines.push(currentLine);
+
+		// Altura total = quantidade de linhas × lineHeight + padding extra
+		const titleHeight = lines.length * lineHeight + 16; // +16 de margem de segurança
+
+		return titleHeight;
+	}
+	
+	function getSubTitleHeight(text, maxWidth) {
+		const fontSize = 12;
+		const fontWeight = 'normal';
+		const fontFamily = 'sans-serif';
+		const lineHeight = fontSize * 1.2; // ~14.4px
+
+		// Canvas para medir com a fonte real do ECharts
+		const canvas = document.createElement('canvas');
+		const ctx = canvas.getContext('2d');
+		ctx.font = `${fontWeight} ${fontSize}px ${fontFamily}`;
+
+		// Quebra o texto da mesma forma que o ECharts (overflow: 'break')
+		const words = text.split(' ');
+		let lines = [];
+		let currentLine = words[0] || '';
+
+		for (let i = 1; i < words.length; i++) {
+		const word = words[i];
+		const width = ctx.measureText(currentLine + ' ' + word).width;
+
+		if (width < maxWidth) {
+		currentLine += ' ' + word;
+		} else {
+		lines.push(currentLine);
+		currentLine = word;
+		}
+		}
+		lines.push(currentLine);
+
+		const height = lines.length * lineHeight + 8; // +8 de margem
+
+		return height;
+		
+	}
+	
 	function urlTopologia(params) {
 		
 		return GEO_URL[params.nivelTerritorial];
@@ -225,11 +295,26 @@
 		
 		// Plota o gráfico de linhas
 		
+		const chart = echarts.init(document.getElementById(div));
+		
+		const titlesMaxWidth = chart.getWidth() * 0.8;
+		const titlesHeight = 
+			getTitleHeight(params.titulo, titlesMaxWidth) +
+			getSubTitleHeight(params.subtitulo, titlesMaxWidth) + 10;
+		
 		const option = {
 			title: {
 				text: params.titulo,
 				subtext: params.subtitulo,
 				left: 'center',
+				textStyle: {
+					width: titlesMaxWidth,
+					overflow: 'break'
+				},
+				subtextStyle: {
+					width: titlesMaxWidth,
+					overflow: 'break'
+				}
 			},
 			tooltip: {
 				trigger: 'axis'
@@ -240,12 +325,13 @@
 				data: datasets.map(x => x.name)
 			},
 			grid: {
-				top: '20%',
+				top: titlesHeight,
 				left: '10%',
 				right: '10%',
 				containLabel: true
 			},
 			toolbox: {
+				show: true,
 				feature: {
 					saveAsImage: {},
 					dataView: { readOnly: false },
@@ -266,8 +352,6 @@
 			},
 			series: datasets
 		};
-		
-		const chart = echarts.init(document.getElementById(div));
 		
 		chart.setOption(option);
 		
@@ -334,11 +418,26 @@
 		
 		// Plota o gráfico de barras
 		
+		const chart = echarts.init(document.getElementById(div));
+		
+		const titlesMaxWidth = chart.getWidth() * 0.8;
+		const titlesHeight = 
+			getTitleHeight(params.titulo, titlesMaxWidth) +
+			getSubTitleHeight(params.subtitulo, titlesMaxWidth) + 10;
+		
 		const option = {
 			title: {
 				text: params.titulo,
 				subtext: params.subtitulo,
 				left: 'center',
+				textStyle: {
+					width: titlesMaxWidth,
+					overflow: 'break'
+				},
+				subtextStyle: {
+					width: titlesMaxWidth,
+					overflow: 'break'
+				}
 			},
 			tooltip: {
 				trigger: 'axis'
@@ -349,12 +448,13 @@
 				data: datasets.map(x => x.name)
 			},
 			grid: {
-				top: '20%',
+				top: titlesHeight,
 				left: '10%',
 				right: '10%',
 				containLabel: true
 			},
 			toolbox: {
+				show: true,
 				feature: {
 					saveAsImage: {},
 					dataView: { readOnly: false },
@@ -375,8 +475,6 @@
 			},
 			series: datasets
 		};
-		
-		const chart = echarts.init(document.getElementById(div));
 		
 		chart.setOption(option);
 		
@@ -448,18 +546,33 @@
 		
 		// Plota o gráfico de barras
 		
+		const chart = echarts.init(document.getElementById(div));
+		
+		const titlesMaxWidth = chart.getWidth() * 0.8;
+		const titlesHeight = 
+			getTitleHeight(params.titulo, titlesMaxWidth) +
+			getSubTitleHeight(params.subtitulo, titlesMaxWidth) + 10;
+		
 		const option = {
 			title: {
 				text: params.titulo,
 				subtext: params.subtitulo,
 				left: 'center',
+				textStyle: {
+					width: titlesMaxWidth,
+					overflow: 'break'
+				},
+				subtextStyle: {
+					width: titlesMaxWidth,
+					overflow: 'break'
+				}
 			},
 			tooltip: {
 				trigger: 'axis'
 			},
 			legend: {},
 			grid: {
-				top: '20%',
+				top: titlesHeight,
 				left: '10%',
 				right: '10%',
 				containLabel: true
@@ -488,8 +601,6 @@
 				data: datapoints.map(x => x.valor)
 			}]
 		};
-		
-		const chart = echarts.init(document.getElementById(div));
 		
 		chart.setOption(option);
 		
@@ -601,11 +712,26 @@
 			
 		// Plota o heatmap
 		
+		const chart = echarts.init(document.getElementById(div));
+		
+		const titlesMaxWidth = chart.getWidth() * 0.8;
+		const titlesHeight = 
+			getTitleHeight(params.titulo, titlesMaxWidth) +
+			getSubTitleHeight(params.subtitulo, titlesMaxWidth) + 10;
+		
 		const option = {
 			title: {
 				text: params.titulo,
 				subtext: params.subtitulo,
-				left: 'center'
+				left: 'center',
+				textStyle: {
+					width: titlesMaxWidth,
+					overflow: 'break'
+				},
+				subtextStyle: {
+					width: titlesMaxWidth,
+					overflow: 'break'
+				}
 			},
 			tooltip: {
 				position: 'top',
@@ -621,7 +747,7 @@
 				}
 			},
 			grid: {
-				top: '20%',
+				top: titlesHeight,
 				left: '10%',
 				right: '10%',
 				bottom: '10%',
@@ -667,8 +793,6 @@
 				}
 			}]
 		};
-		
-		const chart = echarts.init(document.getElementById(div));
 		
 		chart.setOption(option);
 		
@@ -741,11 +865,26 @@
 		
 		// Plota o mapa coroplético
 		
+		const chart = echarts.init(document.getElementById(div));
+		
+		const titlesMaxWidth = chart.getWidth() * 0.8;
+		const titlesHeight = 
+			getTitleHeight(params.titulo, titlesMaxWidth) +
+			getSubTitleHeight(params.subtitulo, titlesMaxWidth) + 10;
+		
 		const option = {
 			title: {
 				text: params.titulo,
 				subtext: params.subtitulo,
-				left: 'center'
+				left: 'center',
+				textStyle: {
+					width: titlesMaxWidth,
+					overflow: 'break'
+				},
+				subtextStyle: {
+					width: titlesMaxWidth,
+					overflow: 'break'
+				}
 			},
 			tooltip: {
 				trigger: 'item',
@@ -773,7 +912,7 @@
 			series: [{
 				type: "map",
 				map: "geometrias",
-				top: "15%",
+				top: titlesHeight,
 				bottom: "15%",
 				label: {
 					show: true,
@@ -804,8 +943,6 @@
 				}
 			}]
 		};
-		
-		const chart = echarts.init(document.getElementById(div));
 		
 		chart.setOption(option); // { notMerge: true }
 		
