@@ -1,0 +1,79 @@
+[
+  {
+    "tipo": "line",
+    "agregado": 9769,
+    "periodos": [
+      2008,
+      2017
+    ],
+    "variavel": 9452,
+    "nivelTerritorial": 1,
+    "unidadesTerritoriais": [
+      1
+    ],
+    "classificacoes": [],
+    "series": [
+      [
+        {
+          "id": 1,
+          "nome": "Brasil"
+        }
+      ]
+    ],
+    "titulos": [
+      "Brasil"
+    ],
+    "titulo": "Proporção da população com algum grau de pobreza multidimensional e Índice de pobreza multidimensional",
+    "subtitulo": "Fonte: IBGE, Objetivos de Desenvolvimento Sustentável, SIDRA, Tabela 9769",
+    "tituloX": "Ano",
+    "tituloY": "Proporção (%)"
+  },
+  {
+    "tipo": "ranked",
+    "agregado": 9769,
+    "y": {
+      "attr": "n",
+      "id": 2,
+      "selecionados": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    "variavel": 9452,
+    "periodos": [
+      "2017"
+    ],
+    "nivelTerritorial": 2,
+    "unidadesTerritoriais": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "classificacoes": [],
+    "titulo": "Proporção da população com algum grau de pobreza multidimensional e Índice de pobreza multidimensional em 2017, por grande região",
+    "subtitulo": "Fonte: IBGE, Objetivos de Desenvolvimento Sustentável, SIDRA, Tabela 9769",
+    "tituloX": "Proporção (%)",
+    "tituloY": "Grande Região"
+  },
+  {
+    "tipo": "choropleth",
+    "agregado": 9769,
+    "nivelTerritorial": "3",
+    "unidadesTerritoriais": [
+      "all"
+    ],
+    "periodos": [
+      "2017"
+    ],
+    "variavel": "9452",
+    "classificacoes": [],
+    "titulo": "Proporção da população com algum grau de pobreza multidimensional e Índice de pobreza multidimensional em 2017, por unidade da federação",
+    "subtitulo": "Fonte: IBGE, Objetivos de Desenvolvimento Sustentável, SIDRA, Tabela 9769",
+    "paleta": "vermelho"
+  }
+]

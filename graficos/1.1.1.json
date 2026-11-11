@@ -34,83 +34,8 @@
     "titulos": [
       "Brasil"
     ],
-    "titulo": "Indicador 1.1.1 - Proporção da população abaixo da linha de pobreza internacional",
+    "titulo": "Proporção da população abaixo da linha de pobreza internacional",
     "subtitulo": "Fonte: IBGE, Objetivos de Desenvolvimento Sustentável, SIDRA, Tabela 5817",
-    "tituloX": "Ano",
-    "tituloY": "Proporção (%)"
-  },
-  {
-    "tipo": "line",
-    "agregado": 5818,
-    "periodos": [
-      2012,
-      2013,
-      2014,
-      2015,
-      2016,
-      2017,
-      2018,
-      2019,
-      2020,
-      2021,
-      2022,
-      2023,
-      2024
-    ],
-    "variavel": 9617,
-    "nivelTerritorial": 1,
-    "unidadesTerritoriais": [
-      1
-    ],
-    "classificacoes": [
-      {
-        "id": 86,
-        "categorias": [
-          95251,
-          2776,
-          119525
-        ]
-      }
-    ],
-    "series": [
-      [
-        {
-          "id": 95251,
-          "nome": "Total"
-        },
-        {
-          "id": 1,
-          "nome": "Brasil"
-        }
-      ],
-      [
-        {
-          "id": 2776,
-          "nome": "Branca"
-        },
-        {
-          "id": 1,
-          "nome": "Brasil"
-        }
-      ],
-      [
-        {
-          "id": 119525,
-          "nome": "Preta ou parda"
-        },
-        {
-          "id": 1,
-          "nome": "Brasil"
-        }
-      ]
-    ],
-    "titulos": [
-      "Total",
-      "Branca",
-      "Preta ou parda"
-    ],
-    "titulo": "Indicador 1.1.1 - Proporção da população abaixo da linha de pobreza internacional, por cor ou raça",
-    "subtitulo": "Fonte: IBGE, Objetivos de Desenvolvimento Sustentável, SIDRA, Tabela 5818",
     "tituloX": "Ano",
     "tituloY": "Proporção (%)"
   },
@@ -184,8 +109,83 @@
       "Homens",
       "Mulheres"
     ],
-    "titulo": "Indicador 1.1.1 - Proporção da população abaixo da linha de pobreza internacional, por sexo",
+    "titulo": "Proporção da população abaixo da linha de pobreza internacional, por sexo",
     "subtitulo": "Fonte: IBGE, Objetivos de Desenvolvimento Sustentável, SIDRA, Tabela 6682",
+    "tituloX": "Ano",
+    "tituloY": "Proporção (%)"
+  },
+  {
+    "tipo": "line",
+    "agregado": 5818,
+    "periodos": [
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024
+    ],
+    "variavel": 9617,
+    "nivelTerritorial": 1,
+    "unidadesTerritoriais": [
+      1
+    ],
+    "classificacoes": [
+      {
+        "id": 86,
+        "categorias": [
+          95251,
+          2776,
+          119525
+        ]
+      }
+    ],
+    "series": [
+      [
+        {
+          "id": 95251,
+          "nome": "Total"
+        },
+        {
+          "id": 1,
+          "nome": "Brasil"
+        }
+      ],
+      [
+        {
+          "id": 2776,
+          "nome": "Branca"
+        },
+        {
+          "id": 1,
+          "nome": "Brasil"
+        }
+      ],
+      [
+        {
+          "id": 119525,
+          "nome": "Preta ou parda"
+        },
+        {
+          "id": 1,
+          "nome": "Brasil"
+        }
+      ]
+    ],
+    "titulos": [
+      "Total",
+      "Branca",
+      "Preta ou parda"
+    ],
+    "titulo": "Proporção da população abaixo da linha de pobreza internacional, por cor ou raça",
+    "subtitulo": "Fonte: IBGE, Objetivos de Desenvolvimento Sustentável, SIDRA, Tabela 5818",
     "tituloX": "Ano",
     "tituloY": "Proporção (%)"
   },
@@ -292,7 +292,7 @@
       "Mulher branca",
       "Mulher preta ou parda"
     ],
-    "titulo": "Indicador 1.1.1 - Proporção da população abaixo da linha de pobreza internacional, por sexo, e cor ou raça",
+    "titulo": "Proporção da população abaixo da linha de pobreza internacional, por sexo, e cor ou raça",
     "subtitulo": "Fonte: IBGE, Objetivos de Desenvolvimento Sustentável, SIDRA, Tabela 10443",
     "tituloX": "Ano",
     "tituloY": "Proporção (%)"
@@ -367,7 +367,7 @@
       "Urbana",
       "Rural"
     ],
-    "titulo": "Indicador 1.1.1 - Proporção da população abaixo da linha de pobreza internacional, por situação do domicílio",
+    "titulo": "Proporção da população abaixo da linha de pobreza internacional, por situação do domicílio",
     "subtitulo": "Fonte: IBGE, Objetivos de Desenvolvimento Sustentável, SIDRA, Tabela 6684",
     "tituloX": "Ano",
     "tituloY": "Proporção (%)"
@@ -446,7 +446,7 @@
         ]
       }
     ],
-    "titulo": "Indicador 1.1.1 - Proporção da população abaixo da linha de pobreza internacional, por grupos de idade",
+    "titulo": "Proporção da população abaixo da linha de pobreza internacional, por grupos de idade",
     "subtitulo": "Fonte: IBGE, Objetivos de Desenvolvimento Sustentável, SIDRA, Tabela 6683",
     "tituloX": "Ano",
     "tituloY": "Grupo de idade",
@@ -519,7 +519,7 @@
       "Sul",
       "Centro-Oeste"
     ],
-    "titulo": "Indicador 1.1.1 - Proporção da população abaixo da linha de pobreza internacional",
+    "titulo": "Proporção da população abaixo da linha de pobreza internacional, por grande região",
     "subtitulo": "Fonte: IBGE, Objetivos de Desenvolvimento Sustentável, SIDRA, Tabela 5817",
     "tituloX": "Ano",
     "tituloY": "Proporção (%)"
@@ -529,14 +529,14 @@
     "agregado": 5817,
     "nivelTerritorial": "3",
     "unidadesTerritoriais": [
-		"all"
-	],
-	"periodos": [
-		"2024"
-	],
+      "all"
+    ],
+    "periodos": [
+      "2024"
+    ],
     "variavel": "9617",
     "classificacoes": [],
-    "titulo": "Indicador 1.1.1 - Proporção da população abaixo da linha de pobreza internacional em 2024",
+    "titulo": "Proporção da população abaixo da linha de pobreza internacional em 2024, por unidade da federação",
     "subtitulo": "Fonte: IBGE, Objetivos de Desenvolvimento Sustentável, SIDRA, Tabela 5817",
     "paleta": "vermelho"
   }
