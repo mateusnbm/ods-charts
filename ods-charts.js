@@ -112,76 +112,6 @@
 		
 	}
 	
-	function getTitleHeight(text, maxWidth) {
-		const fontSize = 18;
-		const fontWeight = 'bolder';
-		const fontFamily = 'sans-serif';
-		const lineHeight = fontSize * 1.2; // valor padrão razoável do ECharts quando não é definido
-
-		// Cria um canvas temporário para medir o texto com a fonte real
-		const canvas = document.createElement('canvas');
-		const ctx = canvas.getContext('2d');
-		ctx.font = `${fontWeight} ${fontSize}px ${fontFamily}`;
-
-		// Quebra o texto da mesma forma que o ECharts faz com overflow: 'break'
-		const words = text.split(' ');
-		let lines = [];
-		let currentLine = words[0] || '';
-
-		for (let i = 1; i < words.length; i++) {
-		const word = words[i];
-		const width = ctx.measureText(currentLine + ' ' + word).width;
-
-		if (width < maxWidth) {
-		currentLine += ' ' + word;
-		} else {
-		lines.push(currentLine);
-		currentLine = word;
-		}
-		}
-		lines.push(currentLine);
-
-		// Altura total = quantidade de linhas × lineHeight + padding extra
-		const titleHeight = lines.length * lineHeight + 16; // +16 de margem de segurança
-
-		return titleHeight;
-	}
-	
-	function getSubTitleHeight(text, maxWidth) {
-		const fontSize = 12;
-		const fontWeight = 'normal';
-		const fontFamily = 'sans-serif';
-		const lineHeight = fontSize * 1.2; // ~14.4px
-
-		// Canvas para medir com a fonte real do ECharts
-		const canvas = document.createElement('canvas');
-		const ctx = canvas.getContext('2d');
-		ctx.font = `${fontWeight} ${fontSize}px ${fontFamily}`;
-
-		// Quebra o texto da mesma forma que o ECharts (overflow: 'break')
-		const words = text.split(' ');
-		let lines = [];
-		let currentLine = words[0] || '';
-
-		for (let i = 1; i < words.length; i++) {
-		const word = words[i];
-		const width = ctx.measureText(currentLine + ' ' + word).width;
-
-		if (width < maxWidth) {
-		currentLine += ' ' + word;
-		} else {
-		lines.push(currentLine);
-		currentLine = word;
-		}
-		}
-		lines.push(currentLine);
-
-		const height = lines.length * lineHeight + 8; // +8 de margem
-
-		return height;
-		
-	}
-	
 	function urlTopologia(params) {
 		
 		return GEO_URL[params.nivelTerritorial];
@@ -230,6 +160,154 @@
 		);
 		
 		return results;
+		
+	}
+	
+	// ...
+	
+	function getTextHeight(text, fontStyle) {
+		
+		const fontSize = fontStyle.fontSize;
+		const fontWeight = fontStyle.fontWeight;
+		const fontFamily = fontStyle.fontFamily;
+		
+		const canvas = document.createElement('canvas');
+		const ctx = canvas.getContext('2d');
+		
+		ctx.font = `${fontWeight} ${fontSize}px ${fontFamily}`;
+		
+		const textMetrics = ctx.measureText(text);
+		
+		return Math.ceil(textMetrics.actualBoundingBoxAscent + textMetrics.actualBoundingBoxDescent);
+		
+	}
+	
+	function getBreakableTextHeight(text, maxWidth, fontStyle) {
+		
+		const fontSize = fontStyle.fontSize;
+		const fontWeight = fontStyle.fontWeight;
+		const fontFamily = fontStyle.fontFamily;
+		
+		const canvas = document.createElement('canvas');
+		const ctx = canvas.getContext('2d');
+		
+		ctx.font = `${fontWeight} ${fontSize}px ${fontFamily}`;
+		
+		const words = text.split(' ');
+		
+		let lines = [];
+		let currentLine = words[0] || '';
+
+		for (let i = 1; i < words.length; i++) {
+			
+			const word = words[i];
+			const metrics = ctx.measureText(currentLine + ' ' + word);
+			const width = metrics.actualBoundingBoxRight + metrics.actualBoundingBoxLeft;
+			
+			if (width < maxWidth) {
+				
+				currentLine += ' ' + word;
+				
+			} else {
+				
+				lines.push(currentLine);
+				
+				currentLine = word;
+				
+			}
+			
+		}
+		
+		lines.push(currentLine);
+		
+		const linesHeight = lines.map(x => getTextHeight(x, fontStyle)).reduce((sum, x) => sum + x, 0);
+		const linesSpacing = (lines.length - 1) * (fontStyle.lineHeight - fontStyle.fontSize);
+		
+		return linesHeight + linesSpacing;
+		
+	}
+	
+	function getLegendHeight(items, maxWidth, fontStyle) {
+		
+		const lineGap = 10;
+		const symbolWidth = 41;
+		
+		const fontSize = fontStyle.fontSize;
+		const fontWeight = fontStyle.fontWeight;
+		const fontFamily = fontStyle.fontFamily;
+		const lineHeight = fontSize * 1.2;
+		
+		const canvas = document.createElement('canvas');
+		const ctx = canvas.getContext('2d');
+		
+		ctx.font = `${fontWeight} ${fontSize}px ${fontFamily}`;
+		
+		let lines = [];
+		let currentLine = items[0] || '';
+		let lineItemsCount = 1;
+		
+		for (let i = 1; i < items.length; i++) {
+			
+			const word = items[i];
+			const metrics = ctx.measureText(currentLine + ' ' + word);
+			const width = metrics.actualBoundingBoxRight + metrics.actualBoundingBoxLeft + ((lineItemsCount + 1) * symbolWidth);
+			
+			if (width < maxWidth) {
+				
+				currentLine += ' ' + word;
+				
+				lineItemsCount++;
+				
+			} else {
+				
+				lines.push(currentLine);
+				
+				currentLine = word;
+				
+				lineItemsCount = 1;
+				
+			}
+			
+		}
+		
+		lines.push(currentLine);
+		
+		return (lines.length * lineHeight) + ((lines.length - 1) * lineGap);
+		
+	}
+	
+	function formatAxisValue(value) {
+		
+		return value.toLocaleString('pt-BR');
+		
+	}
+	
+	function getLabelsMaxWidth(labels) {
+		
+		const fontSize = 12;
+		const fontWeight = 'normal';
+		const fontFamily = 'sans-serif';
+		
+		const canvas = document.createElement('canvas');
+		const ctx = canvas.getContext('2d');
+
+		ctx.font = `${fontWeight} ${fontSize}px ${fontFamily}`;
+		
+		let maxWidth = 0;
+		
+		labels.forEach(label => {
+		
+			const width = ctx.measureText(String(label)).width;
+			
+			if (width > maxWidth) {
+				
+				maxWidth = width;
+				
+			}
+			
+		});
+		
+		return Math.ceil(maxWidth);
 		
 	}
 	
@@ -297,10 +375,53 @@
 		
 		const chart = echarts.init(document.getElementById(div));
 		
+		const titleFont = { fontSize: 18, fontWeight: 'bolder', fontFamily: 'sans-serif', lineHeight: 22 };
+		const subtitleFont = { fontSize: 12, fontWeight: 'normal', fontFamily: 'sans-serif', lineHeight: 14 };
+		const legendFont = { fontSize: 12, fontWeight: 'normal', fontFamily: 'sans-serif' };
+		const axisFont = { fontSize: 12, fontWeight: 'normal', fontFamily: 'sans-serif' };
+		
 		const titlesMaxWidth = chart.getWidth() * 0.8;
-		const titlesHeight = 
-			getTitleHeight(params.titulo, titlesMaxWidth) +
-			getSubTitleHeight(params.subtitulo, titlesMaxWidth) + 10;
+		const titleMarginTop = 5;
+		const titleHeight = getBreakableTextHeight(params.titulo, titlesMaxWidth, titleFont);
+		const titleMarginBottom = 10;
+		const subtitleHeight = getBreakableTextHeight(params.subtitulo, titlesMaxWidth, subtitleFont);
+		const subtitleMarginBottom = 25;
+		
+		const gridMarginTop = 
+			titleMarginTop + 
+			titleHeight + 
+			titleMarginBottom + 
+			subtitleHeight + 
+			subtitleMarginBottom;
+		
+		const valoresY = datasets.map(x => x.data).flat();
+		const valoresYFormatados = valoresY.map(x => formatAxisValue(x));
+		const valoresYMarginRight = 8;
+		const valoresYMaxWidth = getLabelsMaxWidth(valoresYFormatados);
+		
+		const nomeYMarginRight = 15;
+		const nomeYAxisGap = valoresYMarginRight + valoresYMaxWidth + nomeYMarginRight;
+		
+		const valoresXMarginTop = 8;
+		const valoresXHeight = getTextHeight(pontosEixoX[0].nome, axisFont);
+		const valoresXMarginBottom = 15;
+		
+		const nomeXHeight = getTextHeight(params.tituloX, axisFont);
+		const nomeXMarginBottom = 15;
+		const nomeXAxisGap = valoresXMarginTop + valoresXHeight + valoresXMarginBottom;
+		
+		const legendas = datasets.map(x => x.name);
+		const legendasHeight = getLegendHeight(legendas, chart.getWidth(), legendFont);
+		const legendasDefaultHeight = getLegendHeight([legendas[0]], chart.getWidth(), legendFont);
+		
+		const gridMarginBottom = 
+			valoresXMarginTop + 
+			valoresXHeight + 
+			valoresXMarginBottom + 
+			nomeXHeight + 
+			nomeXMarginBottom + 
+			legendasHeight -
+			legendasDefaultHeight;
 		
 		const option = {
 			title: {
@@ -308,12 +429,20 @@
 				subtext: params.subtitulo,
 				left: 'center',
 				textStyle: {
-					width: titlesMaxWidth,
-					overflow: 'break'
+					fontSize: titleFont.fontSize,
+					fontWeight: titleFont.fontWeight,
+					fontFamily: titleFont.fontFamily,
+					lineHeight: titleFont.lineHeight,
+					overflow: 'break',
+					width: titlesMaxWidth
 				},
 				subtextStyle: {
-					width: titlesMaxWidth,
-					overflow: 'break'
+					fontSize: subtitleFont.fontSize,
+					fontWeight: subtitleFont.fontWeight,
+					fontFamily: subtitleFont.fontFamily,
+					lineHeight: subtitleFont.lineHeight,
+					overflow: 'break',
+					width: titlesMaxWidth
 				}
 			},
 			tooltip: {
@@ -322,12 +451,18 @@
 			legend: {
 				bottom: 0,
 				left: 'center',
-				data: datasets.map(x => x.name)
+				data: datasets.map(x => x.name),
+				textStyle: {
+					fontSize: legendFont.fontSize,
+					fontWeight: legendFont.fontWeight,
+					fontFamily: legendFont.fontFamily,
+				}
 			},
 			grid: {
-				top: titlesHeight,
+				top: gridMarginTop,
 				left: '10%',
 				right: '10%',
+				bottom: gridMarginBottom,
 				containLabel: true
 			},
 			toolbox: {
@@ -341,14 +476,35 @@
 				type: 'category',
 				name: params.tituloX,
 				nameLocation: 'middle',
-				nameGap: 35,
-				data: pontosEixoX.map(x => x.nome)
+				nameGap: nomeXAxisGap,
+				data: pontosEixoX.map(x => x.nome),
+				axisLabel: {
+					fontSize: axisFont.fontSize,
+					fontWeight: axisFont.fontWeight,
+					fontFamily: axisFont.fontFamily,
+				},
+				nameTextStyle: {
+					fontSize: axisFont.fontSize,
+					fontWeight: axisFont.fontWeight,
+					fontFamily: axisFont.fontFamily,
+				} 
 			},
 			yAxis: {
 				type: 'value',
 				name: params.tituloY,
 				nameLocation: 'middle',
-				nameGap: 35
+				nameGap: nomeYAxisGap,
+				axisLabel: {
+					fontSize: axisFont.fontSize,
+					fontWeight: axisFont.fontWeight,
+					fontFamily: axisFont.fontFamily,
+					formatter: formatAxisValue
+				},
+				nameTextStyle: {
+					fontSize: axisFont.fontSize,
+					fontWeight: axisFont.fontWeight,
+					fontFamily: axisFont.fontFamily,
+				}
 			},
 			series: datasets
 		};
@@ -420,10 +576,53 @@
 		
 		const chart = echarts.init(document.getElementById(div));
 		
+		const titleFont = { fontSize: 18, fontWeight: 'bolder', fontFamily: 'sans-serif', lineHeight: 22 };
+		const subtitleFont = { fontSize: 12, fontWeight: 'normal', fontFamily: 'sans-serif', lineHeight: 14 };
+		const legendFont = { fontSize: 12, fontWeight: 'normal', fontFamily: 'sans-serif' };
+		const axisFont = { fontSize: 12, fontWeight: 'normal', fontFamily: 'sans-serif' };
+		
 		const titlesMaxWidth = chart.getWidth() * 0.8;
-		const titlesHeight = 
-			getTitleHeight(params.titulo, titlesMaxWidth) +
-			getSubTitleHeight(params.subtitulo, titlesMaxWidth) + 10;
+		const titleMarginTop = 5;
+		const titleHeight = getBreakableTextHeight(params.titulo, titlesMaxWidth, titleFont);
+		const titleMarginBottom = 10;
+		const subtitleHeight = getBreakableTextHeight(params.subtitulo, titlesMaxWidth, subtitleFont);
+		const subtitleMarginBottom = 25;
+		
+		const gridMarginTop = 
+			titleMarginTop + 
+			titleHeight + 
+			titleMarginBottom + 
+			subtitleHeight + 
+			subtitleMarginBottom;
+		
+		const valoresY = datasets.map(x => x.data).flat();
+		const valoresYFormatados = valoresY.map(x => formatAxisValue(x));
+		const valoresYMarginRight = 8;
+		const valoresYMaxWidth = getLabelsMaxWidth(valoresYFormatados);
+		
+		const nomeYMarginRight = 15;
+		const nomeYAxisGap = valoresYMarginRight + valoresYMaxWidth + nomeYMarginRight;
+		
+		const valoresXMarginTop = 8;
+		const valoresXHeight = getTextHeight(pontosEixoX[0].nome, axisFont);
+		const valoresXMarginBottom = 15;
+		
+		const nomeXHeight = getTextHeight(params.tituloX, axisFont);
+		const nomeXMarginBottom = 15;
+		const nomeXAxisGap = valoresXMarginTop + valoresXHeight + valoresXMarginBottom;
+		
+		const legendas = datasets.map(x => x.name);
+		const legendasHeight = getLegendHeight(legendas, chart.getWidth(), legendFont);
+		const legendasDefaultHeight = getLegendHeight([legendas[0]], chart.getWidth(), legendFont);
+		
+		const gridMarginBottom = 
+			valoresXMarginTop + 
+			valoresXHeight + 
+			valoresXMarginBottom + 
+			nomeXHeight + 
+			nomeXMarginBottom + 
+			legendasHeight -
+			legendasDefaultHeight;
 		
 		const option = {
 			title: {
@@ -431,12 +630,20 @@
 				subtext: params.subtitulo,
 				left: 'center',
 				textStyle: {
-					width: titlesMaxWidth,
-					overflow: 'break'
+					fontSize: titleFont.fontSize,
+					fontWeight: titleFont.fontWeight,
+					fontFamily: titleFont.fontFamily,
+					lineHeight: titleFont.lineHeight,
+					overflow: 'break',
+					width: titlesMaxWidth
 				},
 				subtextStyle: {
-					width: titlesMaxWidth,
-					overflow: 'break'
+					fontSize: subtitleFont.fontSize,
+					fontWeight: subtitleFont.fontWeight,
+					fontFamily: subtitleFont.fontFamily,
+					lineHeight: subtitleFont.lineHeight,
+					overflow: 'break',
+					width: titlesMaxWidth
 				}
 			},
 			tooltip: {
@@ -445,12 +652,18 @@
 			legend: {
 				bottom: 0,
 				left: 'center',
-				data: datasets.map(x => x.name)
+				data: datasets.map(x => x.name),
+				textStyle: {
+					fontSize: legendFont.fontSize,
+					fontWeight: legendFont.fontWeight,
+					fontFamily: legendFont.fontFamily,
+				}
 			},
 			grid: {
-				top: titlesHeight,
+				top: gridMarginTop,
 				left: '10%',
 				right: '10%',
+				bottom: gridMarginBottom,
 				containLabel: true
 			},
 			toolbox: {
@@ -464,14 +677,34 @@
 				type: 'category',
 				name: params.tituloX,
 				nameLocation: 'middle',
-				nameGap: 35,
-				data: pontosEixoX.map(x => x.nome)
+				nameGap: nomeXAxisGap,
+				data: pontosEixoX.map(x => x.nome),
+				axisLabel: {
+					fontSize: axisFont.fontSize,
+					fontWeight: axisFont.fontWeight,
+					fontFamily: axisFont.fontFamily,
+				},
+				nameTextStyle: {
+					fontSize: axisFont.fontSize,
+					fontWeight: axisFont.fontWeight,
+					fontFamily: axisFont.fontFamily,
+				} 
 			},
 			yAxis: {
 				type: 'value',
 				name: params.tituloY,
 				nameLocation: 'middle',
-				nameGap: 35
+				nameGap: nomeYAxisGap,
+				axisLabel: {
+					fontSize: axisFont.fontSize,
+					fontWeight: axisFont.fontWeight,
+					fontFamily: axisFont.fontFamily,
+				},
+				nameTextStyle: {
+					fontSize: axisFont.fontSize,
+					fontWeight: axisFont.fontWeight,
+					fontFamily: axisFont.fontFamily,
+				} 
 			},
 			series: datasets
 		};
@@ -548,10 +781,43 @@
 		
 		const chart = echarts.init(document.getElementById(div));
 		
+		const titleFont = { fontSize: 18, fontWeight: 'bolder', fontFamily: 'sans-serif', lineHeight: 22 };
+		const subtitleFont = { fontSize: 12, fontWeight: 'normal', fontFamily: 'sans-serif', lineHeight: 14 };
+		const legendFont = { fontSize: 12, fontWeight: 'normal', fontFamily: 'sans-serif' };
+		const axisFont = { fontSize: 12, fontWeight: 'normal', fontFamily: 'sans-serif' };
+		
 		const titlesMaxWidth = chart.getWidth() * 0.8;
-		const titlesHeight = 
-			getTitleHeight(params.titulo, titlesMaxWidth) +
-			getSubTitleHeight(params.subtitulo, titlesMaxWidth) + 10;
+		const titleMarginTop = 5;
+		const titleHeight = getBreakableTextHeight(params.titulo, titlesMaxWidth, titleFont);
+		const titleMarginBottom = 10;
+		const subtitleHeight = getBreakableTextHeight(params.subtitulo, titlesMaxWidth, subtitleFont);
+		const subtitleMarginBottom = 25;
+		
+		const gridMarginTop = 
+			titleMarginTop + 
+			titleHeight + 
+			titleMarginBottom + 
+			subtitleHeight + 
+			subtitleMarginBottom;
+		
+		const valoresYMarginRight = 8;
+		const valoresYMaxWidth = getLabelsMaxWidth(yLabels);
+		
+		const nomeYMarginRight = 15;
+		const nomeYAxisGap = valoresYMarginRight + valoresYMaxWidth + nomeYMarginRight;
+		
+		const valoresXMarginTop = 8;
+		const valoresXHeight = getTextHeight(datapoints[datapoints.length-1].valor, axisFont);
+		const valoresXMarginBottom = 15;
+		
+		const nomeXHeight = getTextHeight(params.tituloX, axisFont);
+		const nomeXMarginBottom = 0;
+		const nomeXAxisGap = valoresXMarginTop + valoresXHeight + valoresXMarginBottom;
+		
+		const gridMarginBottom = 
+			valoresXMarginBottom + 
+			nomeXHeight + 
+			nomeXMarginBottom;
 		
 		const option = {
 			title: {
@@ -559,12 +825,20 @@
 				subtext: params.subtitulo,
 				left: 'center',
 				textStyle: {
-					width: titlesMaxWidth,
-					overflow: 'break'
+					fontSize: titleFont.fontSize,
+					fontWeight: titleFont.fontWeight,
+					fontFamily: titleFont.fontFamily,
+					lineHeight: titleFont.lineHeight,
+					overflow: 'break',
+					width: titlesMaxWidth
 				},
 				subtextStyle: {
-					width: titlesMaxWidth,
-					overflow: 'break'
+					fontSize: subtitleFont.fontSize,
+					fontWeight: subtitleFont.fontWeight,
+					fontFamily: subtitleFont.fontFamily,
+					lineHeight: subtitleFont.lineHeight,
+					overflow: 'break',
+					width: titlesMaxWidth
 				}
 			},
 			tooltip: {
@@ -572,9 +846,10 @@
 			},
 			legend: {},
 			grid: {
-				top: titlesHeight,
+				top: gridMarginTop,
 				left: '10%',
 				right: '10%',
+				bottom: gridMarginBottom,
 				containLabel: true
 			},
 			toolbox: {
@@ -587,14 +862,35 @@
 				type: 'value',
 				name: params.tituloX,
 				nameLocation: 'middle',
-				nameGap: 35
+				nameGap: nomeXAxisGap,
+				axisLabel: {
+					fontSize: axisFont.fontSize,
+					fontWeight: axisFont.fontWeight,
+					fontFamily: axisFont.fontFamily,
+					formatter: formatAxisValue
+				},
+				nameTextStyle: {
+					fontSize: axisFont.fontSize,
+					fontWeight: axisFont.fontWeight,
+					fontFamily: axisFont.fontFamily,
+				}
 			},
 			yAxis: {
 				type: 'category',
 				name: params.tituloY,
 				nameLocation: 'middle',
-				nameGap: 35,
-				data: datapoints.map(x => x.nome)
+				nameGap: nomeYAxisGap,
+				data: datapoints.map(x => x.nome),
+				axisLabel: {
+					fontSize: axisFont.fontSize,
+					fontWeight: axisFont.fontWeight,
+					fontFamily: axisFont.fontFamily,
+				},
+				nameTextStyle: {
+					fontSize: axisFont.fontSize,
+					fontWeight: axisFont.fontWeight,
+					fontFamily: axisFont.fontFamily,
+				}
 			},
 			series: [{
 				type: 'bar',
@@ -714,10 +1010,40 @@
 		
 		const chart = echarts.init(document.getElementById(div));
 		
+		const titleFont = { fontSize: 18, fontWeight: 'bolder', fontFamily: 'sans-serif', lineHeight: 22 };
+		const subtitleFont = { fontSize: 12, fontWeight: 'normal', fontFamily: 'sans-serif', lineHeight: 14 };
+		const legendFont = { fontSize: 12, fontWeight: 'normal', fontFamily: 'sans-serif' };
+		const axisFont = { fontSize: 12, fontWeight: 'normal', fontFamily: 'sans-serif' };
+		
 		const titlesMaxWidth = chart.getWidth() * 0.8;
-		const titlesHeight = 
-			getTitleHeight(params.titulo, titlesMaxWidth) +
-			getSubTitleHeight(params.subtitulo, titlesMaxWidth) + 10;
+		const titleMarginTop = 5;
+		const titleHeight = getBreakableTextHeight(params.titulo, titlesMaxWidth, titleFont);
+		const titleMarginBottom = 10;
+		const subtitleHeight = getBreakableTextHeight(params.subtitulo, titlesMaxWidth, subtitleFont);
+		const subtitleMarginBottom = 25;
+		
+		const gridMarginTop = 
+			titleMarginTop + 
+			titleHeight + 
+			titleMarginBottom + 
+			subtitleHeight + 
+			subtitleMarginBottom;
+		
+		const valoresYMarginRight = 8;
+		const valoresYMaxWidth = getLabelsMaxWidth(yLabels);
+		
+		const nomeYMarginRight = 15;
+		const nomeYAxisGap = valoresYMarginRight + valoresYMaxWidth + nomeYMarginRight;
+		
+		const valoresXMarginTop = 8;
+		const valoresXHeight = getTextHeight(xLabels[0], axisFont);
+		const valoresXMarginBottom = 15;
+		
+		const nomeXHeight = getTextHeight(params.tituloX, axisFont);
+		const nomeXMarginBottom = 0;
+		const nomeXAxisGap = valoresXMarginTop + valoresXHeight + valoresXMarginBottom;
+		
+		const gridMarginBottom = valoresXMarginBottom + nomeXHeight + nomeXMarginBottom;
 		
 		const option = {
 			title: {
@@ -725,12 +1051,20 @@
 				subtext: params.subtitulo,
 				left: 'center',
 				textStyle: {
-					width: titlesMaxWidth,
-					overflow: 'break'
+					fontSize: titleFont.fontSize,
+					fontWeight: titleFont.fontWeight,
+					fontFamily: titleFont.fontFamily,
+					lineHeight: titleFont.lineHeight,
+					overflow: 'break',
+					width: titlesMaxWidth
 				},
 				subtextStyle: {
-					width: titlesMaxWidth,
-					overflow: 'break'
+					fontSize: subtitleFont.fontSize,
+					fontWeight: subtitleFont.fontWeight,
+					fontFamily: subtitleFont.fontFamily,
+					lineHeight: subtitleFont.lineHeight,
+					overflow: 'break',
+					width: titlesMaxWidth
 				}
 			},
 			tooltip: {
@@ -747,25 +1081,45 @@
 				}
 			},
 			grid: {
-				top: titlesHeight,
+				top: gridMarginTop,
 				left: '10%',
 				right: '10%',
-				bottom: '10%',
+				bottom: gridMarginBottom,
 				containLabel: true
 			},
 			xAxis: {
 				type: 'category',
 				name: params.tituloX,
 				nameLocation: 'middle',
-				nameGap: 35,
+				nameGap: nomeXAxisGap,
 				data: xLabels,
+				axisLabel: {
+					fontSize: axisFont.fontSize,
+					fontWeight: axisFont.fontWeight,
+					fontFamily: axisFont.fontFamily,
+				},
+				nameTextStyle: {
+					fontSize: axisFont.fontSize,
+					fontWeight: axisFont.fontWeight,
+					fontFamily: axisFont.fontFamily,
+				}
 			},
 			yAxis: {
 				type: 'category',
 				name: params.tituloY,
 				nameLocation: 'middle',
-				nameGap: 35,
+				nameGap: nomeYAxisGap,
 				data: yLabels,
+				axisLabel: {
+					fontSize: axisFont.fontSize,
+					fontWeight: axisFont.fontWeight,
+					fontFamily: axisFont.fontFamily,
+				},
+				nameTextStyle: {
+					fontSize: axisFont.fontSize,
+					fontWeight: axisFont.fontWeight,
+					fontFamily: axisFont.fontFamily,
+				}
 			},
 			visualMap: {
 				show: false,
@@ -867,10 +1221,30 @@
 		
 		const chart = echarts.init(document.getElementById(div));
 		
+		const titleFont = { fontSize: 18, fontWeight: 'bolder', fontFamily: 'sans-serif', lineHeight: 22 };
+		const subtitleFont = { fontSize: 12, fontWeight: 'normal', fontFamily: 'sans-serif', lineHeight: 14 };
+		const legendFont = { fontSize: 12, fontWeight: 'normal', fontFamily: 'sans-serif' };
+		const axisFont = { fontSize: 12, fontWeight: 'normal', fontFamily: 'sans-serif' };
+		
 		const titlesMaxWidth = chart.getWidth() * 0.8;
-		const titlesHeight = 
-			getTitleHeight(params.titulo, titlesMaxWidth) +
-			getSubTitleHeight(params.subtitulo, titlesMaxWidth) + 10;
+		const titleMarginTop = 5;
+		const titleHeight = getBreakableTextHeight(params.titulo, titlesMaxWidth, titleFont);
+		const titleMarginBottom = 10;
+		const subtitleHeight = getBreakableTextHeight(params.subtitulo, titlesMaxWidth, subtitleFont);
+		const subtitleMarginBottom = 25;
+		
+		const gridMarginTop = 
+			titleMarginTop + 
+			titleHeight + 
+			titleMarginBottom + 
+			subtitleHeight + 
+			subtitleMarginBottom;
+		
+		const visualMapMarginTop = 25;
+		const visualMapHeight = 15;
+		const visualMapMarginBottom = 5;
+		
+		const gridMarginBottom = visualMapMarginTop + visualMapHeight + visualMapMarginBottom;
 		
 		const option = {
 			title: {
@@ -878,12 +1252,20 @@
 				subtext: params.subtitulo,
 				left: 'center',
 				textStyle: {
-					width: titlesMaxWidth,
-					overflow: 'break'
+					fontSize: titleFont.fontSize,
+					fontWeight: titleFont.fontWeight,
+					fontFamily: titleFont.fontFamily,
+					lineHeight: titleFont.lineHeight,
+					overflow: 'break',
+					width: titlesMaxWidth
 				},
 				subtextStyle: {
-					width: titlesMaxWidth,
-					overflow: 'break'
+					fontSize: subtitleFont.fontSize,
+					fontWeight: subtitleFont.fontWeight,
+					fontFamily: subtitleFont.fontFamily,
+					lineHeight: subtitleFont.lineHeight,
+					overflow: 'break',
+					width: titlesMaxWidth
 				}
 			},
 			tooltip: {
@@ -900,9 +1282,12 @@
 			visualMap: {
 				min: minV,
 				max: maxV,
+				type: 'piecewise',
 				orient: "horizontal",
 				left: "center",
 				bottom: 0,
+				itemWidth: 20,
+				itemHeight: 14,
 				calculable: true,
 				inRange: {
 					color: cores(params.paleta)
@@ -912,8 +1297,8 @@
 			series: [{
 				type: "map",
 				map: "geometrias",
-				top: titlesHeight,
-				bottom: "15%",
+				top: gridMarginTop,
+				bottom: gridMarginBottom,
 				label: {
 					show: true,
 					formatter: (p) => {
@@ -965,6 +1350,7 @@
 	};
 	
 	// Exposição (UMD simples)
+	
 	if (typeof module !== 'undefined' && module.exports) {
 		
 		module.exports = ODSCharts;
