@@ -509,7 +509,7 @@
 			series: datasets
 		};
 		
-		chart.setOption(option);
+		chart.setOption(option, { notMerge: true });
 		
 		return chart;
 		
@@ -565,10 +565,15 @@
 			
 			datasets.push({
 				type: "bar",
-				//stack: "total",
 				name: params.titulos[index],
 				data: pontosEixoX.map(x => datapoints[x.id + "-" + ids])
 			});
+			
+			if (params.empilhar === true) {
+				
+				datasets[datasets.length-1].stack = "total";
+				
+			}
 			
 		});
 		
@@ -709,7 +714,7 @@
 			series: datasets
 		};
 		
-		chart.setOption(option);
+		chart.setOption(option, { notMerge: true });
 		
 		return chart;
 		
@@ -898,7 +903,7 @@
 			}]
 		};
 		
-		chart.setOption(option);
+		chart.setOption(option, { notMerge: true });
 		
 		return chart;
 		
@@ -1148,7 +1153,7 @@
 			}]
 		};
 		
-		chart.setOption(option);
+		chart.setOption(option, { notMerge: true });
 		
 		return chart;
 		
@@ -1329,7 +1334,7 @@
 			}]
 		};
 		
-		chart.setOption(option); // { notMerge: true }
+		chart.setOption(option, { notMerge: true });
 		
 		return chart;
 		

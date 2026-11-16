@@ -23,7 +23,7 @@
     "titulos": [
       "Brasil"
     ],
-    "titulo": "Proporção da população com algum grau de pobreza multidimensional e Índice de pobreza multidimensional",
+    "titulo": "População com algum grau de pobreza multidimensional e Índice de pobreza multidimensional",
     "subtitulo": "Fonte: IBGE, Objetivos de Desenvolvimento Sustentável, SIDRA, Tabela 9769",
     "tituloX": "Ano",
     "tituloY": "Proporção (%)"
@@ -55,7 +55,7 @@
       5
     ],
     "classificacoes": [],
-    "titulo": "Proporção da população com algum grau de pobreza multidimensional e Índice de pobreza multidimensional em 2017, por grande região",
+    "titulo": "População com algum grau de pobreza multidimensional e Índice de pobreza multidimensional, em 2017, por Grande Região",
     "subtitulo": "Fonte: IBGE, Objetivos de Desenvolvimento Sustentável, SIDRA, Tabela 9769",
     "tituloX": "Proporção (%)",
     "tituloY": "Grande Região"
@@ -72,7 +72,7 @@
     ],
     "variavel": "9452",
     "classificacoes": [],
-    "titulo": "Proporção da população com algum grau de pobreza multidimensional e Índice de pobreza multidimensional em 2017, por unidade da federação",
+    "titulo": "População com algum grau de pobreza multidimensional e Índice de pobreza multidimensional, em 2017, por Unidade da Federação",
     "subtitulo": "Fonte: IBGE, Objetivos de Desenvolvimento Sustentável, SIDRA, Tabela 9769",
     "paleta": "vermelho"
   }

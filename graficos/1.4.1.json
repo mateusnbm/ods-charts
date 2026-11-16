@@ -1,0 +1,563 @@
+[
+  {
+    "tipo": "line",
+    "agregado": 9787,
+    "periodos": [
+      2016,
+      2017,
+      2018,
+      2019,
+      2022,
+      2023
+    ],
+    "variavel": 9484,
+    "nivelTerritorial": 1,
+    "unidadesTerritoriais": [
+      1
+    ],
+    "classificacoes": [],
+    "series": [
+      [
+        {
+          "id": 1,
+          "nome": "Brasil"
+        }
+      ]
+    ],
+    "titulos": [
+      "Brasil"
+    ],
+    "titulo": "População que utiliza serviços de água potável gerenciados de forma segura",
+    "subtitulo": "Fonte: IBGE, Objetivos de Desenvolvimento Sustentável, SIDRA, Tabela 9787",
+    "tituloX": "Ano",
+    "tituloY": "Percentual (%)"
+  },
+  {
+    "tipo": "line",
+    "agregado": 9788,
+    "periodos": [
+      2016,
+      2017,
+      2018,
+      2019,
+      2022,
+      2023
+    ],
+    "variavel": 9484,
+    "nivelTerritorial": 1,
+    "unidadesTerritoriais": [
+      1
+    ],
+    "classificacoes": [
+      {
+        "id": 2,
+        "categorias": [
+          6794,
+          4,
+          5
+        ]
+      }
+    ],
+    "series": [
+      [
+        {
+          "id": 6794,
+          "nome": "Total"
+        },
+        {
+          "id": 1,
+          "nome": "Brasil"
+        }
+      ],
+      [
+        {
+          "id": 4,
+          "nome": "Homens"
+        },
+        {
+          "id": 1,
+          "nome": "Brasil"
+        }
+      ],
+      [
+        {
+          "id": 5,
+          "nome": "Mulheres"
+        },
+        {
+          "id": 1,
+          "nome": "Brasil"
+        }
+      ]
+    ],
+    "titulos": [
+      "Total",
+      "Homens",
+      "Mulheres"
+    ],
+    "titulo": "População que utiliza serviços de água potável gerenciados de forma segura, por sexo",
+    "subtitulo": "Fonte: IBGE, Objetivos de Desenvolvimento Sustentável, SIDRA, Tabela 9788",
+    "tituloX": "Ano",
+    "tituloY": "Percentual (%)"
+  },
+  {
+    "tipo": "line",
+    "agregado": 9790,
+    "periodos": [
+      2016,
+      2017,
+      2018,
+      2019,
+      2022,
+      2023
+    ],
+    "variavel": 9484,
+    "nivelTerritorial": 1,
+    "unidadesTerritoriais": [
+      1
+    ],
+    "classificacoes": [
+      {
+        "id": 86,
+        "categorias": [
+          95251,
+          2776,
+          119525
+        ]
+      }
+    ],
+    "series": [
+      [
+        {
+          "id": 95251,
+          "nome": "Total"
+        },
+        {
+          "id": 1,
+          "nome": "Brasil"
+        }
+      ],
+      [
+        {
+          "id": 2776,
+          "nome": "Branca"
+        },
+        {
+          "id": 1,
+          "nome": "Brasil"
+        }
+      ],
+      [
+        {
+          "id": 119525,
+          "nome": "Preta ou parda"
+        },
+        {
+          "id": 1,
+          "nome": "Brasil"
+        }
+      ]
+    ],
+    "titulos": [
+      "Total",
+      "Branca",
+      "Preta ou parda"
+    ],
+    "titulo": "População que utiliza serviços de água potável gerenciados de forma segura, por cor ou raça",
+    "subtitulo": "Fonte: IBGE, Objetivos de Desenvolvimento Sustentável, SIDRA, Tabela 9790",
+    "tituloX": "Ano",
+    "tituloY": "Percentual (%)"
+  },
+  {
+    "tipo": "line",
+    "agregado": 9791,
+    "periodos": [
+      2016,
+      2017,
+      2018,
+      2019,
+      2022,
+      2023
+    ],
+    "variavel": 9484,
+    "nivelTerritorial": 1,
+    "unidadesTerritoriais": [
+      1
+    ],
+    "classificacoes": [
+      {
+        "id": 1,
+        "categorias": [
+          6795,
+          1,
+          2
+        ]
+      }
+    ],
+    "series": [
+      [
+        {
+          "id": 6795,
+          "nome": "Total"
+        },
+        {
+          "id": 1,
+          "nome": "Brasil"
+        }
+      ],
+      [
+        {
+          "id": 1,
+          "nome": "Urbana"
+        },
+        {
+          "id": 1,
+          "nome": "Brasil"
+        }
+      ],
+      [
+        {
+          "id": 2,
+          "nome": "Rural"
+        },
+        {
+          "id": 1,
+          "nome": "Brasil"
+        }
+      ]
+    ],
+    "titulos": [
+      "Total",
+      "Urbana",
+      "Rural"
+    ],
+    "titulo": "População que utiliza serviços de água potável gerenciados de forma segura, por situação do domicílio",
+    "subtitulo": "Fonte: IBGE, Objetivos de Desenvolvimento Sustentável, SIDRA, Tabela 9791",
+    "tituloX": "Ano",
+    "tituloY": "Percentual (%)"
+  },
+  {
+    "tipo": "heatmap",
+    "agregado": 9789,
+    "x": {
+      "attr": "p",
+      "selecionados": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2022,
+        2023
+      ]
+    },
+    "y": {
+      "attr": "c",
+      "id": 58,
+      "selecionados": [
+        95253,
+        100402,
+        6796,
+        33062,
+        3302
+      ]
+    },
+    "variavel": 9484,
+    "periodos": [
+      2016,
+      2017,
+      2018,
+      2019,
+      2022,
+      2023
+    ],
+    "nivelTerritorial": "1",
+    "unidadesTerritoriais": [
+      "1"
+    ],
+    "classificacoes": [
+      {
+        "id": 58,
+        "categorias": [
+          95253,
+          100402,
+          6796,
+          33062,
+          3302
+        ]
+      }
+    ],
+    "titulo": "População que utiliza serviços de água potável gerenciados de forma segura, por grupo de idade",
+    "subtitulo": "Fonte: IBGE, Objetivos de Desenvolvimento Sustentável, SIDRA, Tabela 9789",
+    "tituloX": "Ano",
+    "tituloY": "Grupo de idade",
+    "paleta": "vermelho"
+  },
+  {
+    "tipo": "ranked",
+    "agregado": 6835,
+    "y": {
+      "attr": "n",
+      "id": 2,
+      "selecionados": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    "variavel": 10107,
+    "periodos": [
+      "2018"
+    ],
+    "nivelTerritorial": 2,
+    "unidadesTerritoriais": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "classificacoes": [],
+    "titulo": "População que utiliza (a) serviços de saneamento gerenciados de forma segura e (b) instalações para lavagem das mãos com água e sabão, em 2018, por Grande Região",
+    "subtitulo": "Fonte: IBGE, Objetivos de Desenvolvimento Sustentável, SIDRA, Tabela 6835",
+    "tituloX": "Proporção (%)",
+    "tituloY": "Grande Região"
+  },
+  {
+    "tipo": "choropleth",
+    "agregado": 6835,
+    "nivelTerritorial": "3",
+    "unidadesTerritoriais": [
+      "all"
+    ],
+    "periodos": [
+      "2018"
+    ],
+    "variavel": "10107",
+    "classificacoes": [],
+    "titulo": "População que utiliza (a) serviços de saneamento gerenciados de forma segura e (b) instalações para lavagem das mãos com água e sabão, em 2018, por Unidade da Federação",
+    "subtitulo": "Fonte: IBGE, Objetivos de Desenvolvimento Sustentável, SIDRA, Tabela 6835",
+    "paleta": "vermelho"
+  },
+  {
+    "tipo": "line",
+    "agregado": 9731,
+    "periodos": [
+      2022,
+      2023,
+      2024
+    ],
+    "variavel": 9135,
+    "nivelTerritorial": 1,
+    "unidadesTerritoriais": [
+      1
+    ],
+    "classificacoes": [],
+    "series": [
+      [
+        {
+          "id": 1,
+          "nome": "Brasil"
+        }
+      ]
+    ],
+    "titulos": [
+      "Brasil"
+    ],
+    "titulo": "Moradores em domicílios nos quais se utiliza combustível limpo na preparação de alimentos",
+    "subtitulo": "Fonte: IBGE, Objetivos de Desenvolvimento Sustentável, SIDRA, Tabela 9731",
+    "tituloX": "Ano",
+    "tituloY": "Percentual (%)"
+  },
+  {
+    "tipo": "ranked",
+    "agregado": 9731,
+    "y": {
+      "attr": "n",
+      "id": 2,
+      "selecionados": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    "variavel": 9135,
+    "periodos": [
+      "2024"
+    ],
+    "nivelTerritorial": 2,
+    "unidadesTerritoriais": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "classificacoes": [],
+    "titulo": "Moradores em domicílios nos quais se utiliza combustível limpo na preparação de alimentos, em 2024, por Grande Região",
+    "subtitulo": "Fonte: IBGE, Objetivos de Desenvolvimento Sustentável, SIDRA, Tabela 9731",
+    "tituloX": "Percentual (%)",
+    "tituloY": "Grande Região"
+  },
+  {
+    "tipo": "choropleth",
+    "agregado": 9731,
+    "nivelTerritorial": "3",
+    "unidadesTerritoriais": [
+      "all"
+    ],
+    "periodos": [
+      "2024"
+    ],
+    "variavel": "9135",
+    "classificacoes": [],
+    "titulo": "Moradores em domicílios nos quais se utiliza combustível limpo na preparação de alimentos, em 2024, por Unidade da Federação",
+    "subtitulo": "Fonte: IBGE, Objetivos de Desenvolvimento Sustentável, SIDRA, Tabela 9731",
+    "paleta": "vermelho"
+  },
+  {
+    "tipo": "line",
+    "agregado": 8687,
+    "periodos": [
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024
+    ],
+    "variavel": 6843,
+    "nivelTerritorial": 1,
+    "unidadesTerritoriais": [
+      1
+    ],
+    "classificacoes": [],
+    "series": [
+      [
+        {
+          "id": 1,
+          "nome": "Brasil"
+        }
+      ]
+    ],
+    "titulos": [
+      "Brasil"
+    ],
+    "titulo": "Resíduos sólidos urbanos coletados e gerenciados em instalações controladas pelo total de resíduos urbanos gerados",
+    "subtitulo": "Fonte: IBGE, Objetivos de Desenvolvimento Sustentável, SIDRA, Tabela 8687",
+    "tituloX": "Ano",
+    "tituloY": "Quantidade (milhões de toneladas)"
+  },
+  {
+    "tipo": "ranked",
+    "agregado": 8687,
+    "y": {
+      "attr": "n",
+      "id": 2,
+      "selecionados": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    "variavel": 6843,
+    "periodos": [
+      "2024"
+    ],
+    "nivelTerritorial": 2,
+    "unidadesTerritoriais": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "classificacoes": [],
+    "titulo": "Resíduos sólidos urbanos coletados e gerenciados em instalações controladas pelo total de resíduos urbanos gerados, em 2024, por Grande Região",
+    "subtitulo": "Fonte: IBGE, Objetivos de Desenvolvimento Sustentável, SIDRA, Tabela 8687",
+    "tituloX": "Quantidade (milhões de toneladas)",
+    "tituloY": "Grande Região"
+  },
+  {
+    "tipo": "bar",
+    "empilhar": true,
+    "agregado": 5904,
+    "periodos": [
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024
+    ],
+    "variavel": 6844,
+    "nivelTerritorial": 1,
+    "unidadesTerritoriais": [
+      1
+    ],
+    "classificacoes": [
+      {
+        "id": 1425,
+        "categorias": [
+          57683,
+          57684,
+          57682
+        ]
+      }
+    ],
+    "series": [
+      [
+        {
+          "id": 57683,
+          "nome": "Aterro controlado"
+        },
+        {
+          "id": 1,
+          "nome": "Brasil"
+        }
+      ],
+      [
+        {
+          "id": 57684,
+          "nome": "Lixão"
+        },
+        {
+          "id": 1,
+          "nome": "Brasil"
+        }
+      ],
+      [
+        {
+          "id": 57682,
+          "nome": "Aterro sanitário"
+        },
+        {
+          "id": 1,
+          "nome": "Brasil"
+        }
+      ]
+    ],
+    "titulos": [
+      "Aterro controlado",
+      "Lixão",
+      "Aterro sanitário"
+    ],
+    "titulo": "Resíduos sólidos urbanos coletados e gerenciados em instalações controladas pelo total de resíduos urbanos gerados, por disposição final",
+    "subtitulo": "Fonte: IBGE, Objetivos de Desenvolvimento Sustentável, SIDRA, Tabela 5904",
+    "tituloX": "Ano",
+    "tituloY": "Quantidade (megatonelada)"
+  }
+]

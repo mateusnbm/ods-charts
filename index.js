@@ -941,6 +941,7 @@ function barParams() {
 	
 	var params = {
 		tipo: "bar",
+		empilhar,
 		agregado: _metadados.Id,
 		periodos,
 		variavel,
@@ -2627,11 +2628,11 @@ function atualizarTema(tema) {
 	
 	document.getElementById("btn-theme-icon").className = icone;
 	
-	localStorage.setItem("ods-chart-maker-theme", tema);
+	localStorage.setItem("ods-charts-theme", tema);
 	
 }
 
-function atualizarSelectObj() {
+function atualizarSelectObj(selecionado) {
 	
 	var html = "";
 	
@@ -2640,7 +2641,7 @@ function atualizarSelectObj() {
 	_objetivos.forEach((objetivo, index) => {
 		
 		html += `
-			<option value="${objetivo.codigo}" ${index == 0 ? "selected" : ""}>
+			<option value="${objetivo.codigo}" ${selecionado === objetivo.codigo ? "selected" : ""}>
 				Objetivo ${objetivo.codigo} - ${truncar(objetivo.nome, 35)}
 			</option>`;
 		
@@ -2650,7 +2651,7 @@ function atualizarSelectObj() {
 	
 }
 
-function atualizarSelectMet() {
+function atualizarSelectMet(selecionada) {
 
 	var html = "";
 	
@@ -2662,7 +2663,7 @@ function atualizarSelectMet() {
 	obj.metas.forEach((meta, index) => {
 		
 		html += `
-			<option value="${meta.codigo}" ${index == 0 ? "selected" : ""}>
+			<option value="${meta.codigo}" ${selecionada == meta.codigo ? "selected" : ""}>
 				Meta ${meta.codigo} - ${truncar(meta.nome, 35)}
 			</option>`;
 		
@@ -2672,7 +2673,7 @@ function atualizarSelectMet() {
 
 }
 
-function atualizarSelectInd() {
+function atualizarSelectInd(selecionado) {
 	
 	var html = "";
 	
@@ -2687,7 +2688,7 @@ function atualizarSelectInd() {
 	met.indicadores.forEach((indicador, index) => {
 		
 		html += `
-			<option value="${indicador.codigo}" ${index == 0 ? "selected" : ""}>
+			<option value="${indicador.codigo}" ${selecionado == indicador.codigo ? "selected" : ""}>
 				Indicador ${indicador.codigo} - ${truncar(indicador.nome, 35)}
 			</option>`;
 		
@@ -2822,6 +2823,10 @@ function atualizarPagina(callback) {
 		
 	}
 	
+	localStorage.setItem("ods-charts-selected-obj", obj.codigo);
+	localStorage.setItem("ods-charts-selected-met", met.codigo);
+	localStorage.setItem("ods-charts-selected-ind", ind.codigo);
+	
 }
 
 function atualizarMetadados(metadados) {
@@ -2933,7 +2938,7 @@ function atualizarChartForm() {
 
 function configurarSelectObj() {
 	
-	atualizarSelectObj();
+	atualizarSelectObj(localStorage.getItem("ods-charts-selected-obj") || "1");
 	
 	$(document).on("change", "#select-obj", function() {
 		
@@ -2946,7 +2951,7 @@ function configurarSelectObj() {
 
 function configurarSelectMet() {
 	
-	atualizarSelectMet();
+	atualizarSelectMet(localStorage.getItem("ods-charts-selected-met") || "1.1");
 	
 	$(document).on("change", "#select-met", function() {
 		
@@ -2958,7 +2963,7 @@ function configurarSelectMet() {
 
 function configurarSelectInd() {
 	
-	atualizarSelectInd();
+	atualizarSelectInd(localStorage.getItem("ods-charts-selected-ind") || "1.1.1");
 	
 }
 
@@ -3708,6 +3713,6 @@ $(document).ready(function () {
 		}
 	});
 	
-	atualizarTema(localStorage.getItem("ods-chart-maker-theme") || "light");
+	atualizarTema(localStorage.getItem("ods-charts-theme") || "light");
 	
 });
