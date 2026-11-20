@@ -1,0 +1,377 @@
+[
+  {
+    "tipo": "line",
+    "agregado": 9041,
+    "periodos": [
+      2010,
+      2011,
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024
+    ],
+    "variavel": 12775,
+    "nivelTerritorial": 1,
+    "unidadesTerritoriais": [
+      1
+    ],
+    "classificacoes": [
+      {
+        "id": 1501,
+        "categorias": [
+          58723
+        ]
+      },
+      {
+        "id": 12607,
+        "categorias": [
+          58724
+        ]
+      }
+    ],
+    "series": [
+      [
+        {
+          "id": 58723,
+          "nome": "Movimentação de passageiros"
+        },
+        {
+          "id": 58724,
+          "nome": "Transporte rodoviário"
+        },
+        {
+          "id": 1,
+          "nome": "Brasil"
+        }
+      ]
+    ],
+    "titulos": [
+      "Transporte rodoviário"
+    ],
+    "titulo": "Movimentação de passageiros, por transporte rodoviário",
+    "subtitulo": "Fonte: IBGE, Objetivos de Desenvolvimento Sustentável, SIDRA, Tabela 9041",
+    "tituloX": "Ano",
+    "tituloY": "Milhões de PKM"
+  },
+  {
+    "tipo": "line",
+    "agregado": 9041,
+    "periodos": [
+      2010,
+      2011,
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024
+    ],
+    "variavel": 12775,
+    "nivelTerritorial": 1,
+    "unidadesTerritoriais": [
+      1
+    ],
+    "classificacoes": [
+      {
+        "id": 1501,
+        "categorias": [
+          58723
+        ]
+      },
+      {
+        "id": 12607,
+        "categorias": [
+          58736
+        ]
+      }
+    ],
+    "series": [
+      [
+        {
+          "id": 58723,
+          "nome": "Movimentação de passageiros"
+        },
+        {
+          "id": 58736,
+          "nome": "Transporte ferroviário"
+        },
+        {
+          "id": 1,
+          "nome": "Brasil"
+        }
+      ]
+    ],
+    "titulos": [
+      "Transporte ferroviário"
+    ],
+    "titulo": "Movimentação de passageiros, por transporte ferroviário",
+    "subtitulo": "Fonte: IBGE, Objetivos de Desenvolvimento Sustentável, SIDRA, Tabela 9041",
+    "tituloX": "Ano",
+    "tituloY": "Milhões de PKM"
+  },
+  {
+    "tipo": "line",
+    "agregado": 9041,
+    "periodos": [
+      2006,
+      2007,
+      2008,
+      2009,
+      2010,
+      2011,
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024
+    ],
+    "variavel": 12776,
+    "nivelTerritorial": 1,
+    "unidadesTerritoriais": [
+      1
+    ],
+    "classificacoes": [
+      {
+        "id": 1501,
+        "categorias": [
+          58723
+        ]
+      },
+      {
+        "id": 12607,
+        "categorias": [
+          58738
+        ]
+      }
+    ],
+    "series": [
+      [
+        {
+          "id": 58723,
+          "nome": "Movimentação de passageiros"
+        },
+        {
+          "id": 58738,
+          "nome": "Transporte aéreo"
+        },
+        {
+          "id": 1,
+          "nome": "Brasil"
+        }
+      ]
+    ],
+    "titulos": [
+      "Transporte aéreo"
+    ],
+    "titulo": "Movimentação de passageiros, por transporte aéreo",
+    "subtitulo": "Fonte: IBGE, Objetivos de Desenvolvimento Sustentável, SIDRA, Tabela 9041",
+    "tituloX": "Ano",
+    "tituloY": "Milhões de RPK"
+  },
+  {
+    "tipo": "line",
+    "agregado": 9041,
+    "periodos": [
+      2006,
+      2007,
+      2008,
+      2009,
+      2010,
+      2011,
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024
+    ],
+    "variavel": 12773,
+    "nivelTerritorial": 1,
+    "unidadesTerritoriais": [
+      1
+    ],
+    "classificacoes": [
+      {
+        "id": 1501,
+        "categorias": [
+          58722
+        ]
+      },
+      {
+        "id": 12607,
+        "categorias": [
+          58738,
+          58737,
+          58736,
+          58724
+        ]
+      }
+    ],
+    "series": [
+      [
+        {
+          "id": 58722,
+          "nome": "Movimentação de cargas"
+        },
+        {
+          "id": 58738,
+          "nome": "Transporte aéreo"
+        },
+        {
+          "id": 1,
+          "nome": "Brasil"
+        }
+      ],
+      [
+        {
+          "id": 58722,
+          "nome": "Movimentação de cargas"
+        },
+        {
+          "id": 58737,
+          "nome": "Transporte aquaviário"
+        },
+        {
+          "id": 1,
+          "nome": "Brasil"
+        }
+      ],
+      [
+        {
+          "id": 58722,
+          "nome": "Movimentação de cargas"
+        },
+        {
+          "id": 58736,
+          "nome": "Transporte ferroviário"
+        },
+        {
+          "id": 1,
+          "nome": "Brasil"
+        }
+      ],
+      [
+        {
+          "id": 58722,
+          "nome": "Movimentação de cargas"
+        },
+        {
+          "id": 58724,
+          "nome": "Transporte rodoviário"
+        },
+        {
+          "id": 1,
+          "nome": "Brasil"
+        }
+      ]
+    ],
+    "titulos": [
+      "Transporte aéreo",
+      "Transporte aquaviário",
+      "Transporte ferroviário",
+      "Transporte rodoviário"
+    ],
+    "titulo": "Movimentação de cargas, por modalidade de transporte",
+    "subtitulo": "Fonte: IBGE, Objetivos de Desenvolvimento Sustentável, SIDRA, Tabela 9041",
+    "tituloX": "Ano",
+    "tituloY": "Milhões de TKU"
+  },
+  {
+    "tipo": "line",
+    "agregado": 9041,
+    "periodos": [
+      2006,
+      2007,
+      2008,
+      2009,
+      2010,
+      2011,
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024
+    ],
+    "variavel": 12774,
+    "nivelTerritorial": 1,
+    "unidadesTerritoriais": [
+      1
+    ],
+    "classificacoes": [
+      {
+        "id": 1501,
+        "categorias": [
+          58722
+        ]
+      },
+      {
+        "id": 12607,
+        "categorias": [
+          58738
+        ]
+      }
+    ],
+    "series": [
+      [
+        {
+          "id": 58722,
+          "nome": "Movimentação de cargas"
+        },
+        {
+          "id": 58738,
+          "nome": "Transporte aéreo"
+        },
+        {
+          "id": 1,
+          "nome": "Brasil"
+        }
+      ]
+    ],
+    "titulos": [
+      "Transporte aéreo"
+    ],
+    "titulo": "Movimentação de cargas, por transporte aéreo",
+    "subtitulo": "Fonte: IBGE, Objetivos de Desenvolvimento Sustentável, SIDRA, Tabela 9041",
+    "tituloX": "Ano",
+    "tituloY": "Milhões de RTK"
+  }
+]

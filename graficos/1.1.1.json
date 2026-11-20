@@ -34,7 +34,7 @@
     "titulos": [
       "Brasil"
     ],
-    "titulo": "População abaixo da linha de pobreza internacional",
+    "titulo": "Proporção da população abaixo da linha de pobreza internacional",
     "subtitulo": "Fonte: IBGE, Objetivos de Desenvolvimento Sustentável, SIDRA, Tabela 5817",
     "tituloX": "Ano",
     "tituloY": "Proporção (%)"
@@ -109,7 +109,7 @@
       "Homens",
       "Mulheres"
     ],
-    "titulo": "População abaixo da linha de pobreza internacional, por sexo",
+    "titulo": "Proporção da população abaixo da linha de pobreza internacional, por sexo",
     "subtitulo": "Fonte: IBGE, Objetivos de Desenvolvimento Sustentável, SIDRA, Tabela 6682",
     "tituloX": "Ano",
     "tituloY": "Proporção (%)"
@@ -184,7 +184,7 @@
       "Branca",
       "Preta ou parda"
     ],
-    "titulo": "População abaixo da linha de pobreza internacional, por cor ou raça",
+    "titulo": "Proporção da população abaixo da linha de pobreza internacional, por cor ou raça",
     "subtitulo": "Fonte: IBGE, Objetivos de Desenvolvimento Sustentável, SIDRA, Tabela 5818",
     "tituloX": "Ano",
     "tituloY": "Proporção (%)"
@@ -292,7 +292,7 @@
       "Mulher branca",
       "Mulher preta ou parda"
     ],
-    "titulo": "População abaixo da linha de pobreza internacional, por sexo, e cor ou raça",
+    "titulo": "Proporção da população abaixo da linha de pobreza internacional, por sexo, e cor ou raça",
     "subtitulo": "Fonte: IBGE, Objetivos de Desenvolvimento Sustentável, SIDRA, Tabela 10443",
     "tituloX": "Ano",
     "tituloY": "Proporção (%)"
@@ -367,7 +367,7 @@
       "Urbana",
       "Rural"
     ],
-    "titulo": "População abaixo da linha de pobreza internacional, por situação do domicílio",
+    "titulo": "Proporção da população abaixo da linha de pobreza internacional, por situação do domicílio",
     "subtitulo": "Fonte: IBGE, Objetivos de Desenvolvimento Sustentável, SIDRA, Tabela 6684",
     "tituloX": "Ano",
     "tituloY": "Proporção (%)"
@@ -446,7 +446,7 @@
         ]
       }
     ],
-    "titulo": "População abaixo da linha de pobreza internacional, por grupo de idade",
+    "titulo": "Proporção da população abaixo da linha de pobreza internacional, por grupo de idade",
     "subtitulo": "Fonte: IBGE, Objetivos de Desenvolvimento Sustentável, SIDRA, Tabela 6683",
     "tituloX": "Ano",
     "tituloY": "Grupo de idade",
@@ -519,7 +519,7 @@
       "Sul",
       "Centro-Oeste"
     ],
-    "titulo": "População abaixo da linha de pobreza internacional, por Grande Região",
+    "titulo": "Proporção da população abaixo da linha de pobreza internacional, por Grande Região",
     "subtitulo": "Fonte: IBGE, Objetivos de Desenvolvimento Sustentável, SIDRA, Tabela 5817",
     "tituloX": "Ano",
     "tituloY": "Proporção (%)"
@@ -536,7 +536,7 @@
     ],
     "variavel": "9617",
     "classificacoes": [],
-    "titulo": "População abaixo da linha de pobreza internacional, em 2024, por Unidade da Federação",
+    "titulo": "Proporção da população abaixo da linha de pobreza internacional, em 2024, por Unidade da Federação",
     "subtitulo": "Fonte: IBGE, Objetivos de Desenvolvimento Sustentável, SIDRA, Tabela 5817",
     "paleta": "vermelho"
   }

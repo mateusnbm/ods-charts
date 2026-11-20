@@ -1,0 +1,92 @@
+[
+  {
+    "tipo": "heatmap",
+    "agregado": 10391,
+    "x": {
+      "attr": "c",
+      "id": 2,
+      "selecionados": [
+        92956,
+        92957
+      ]
+    },
+    "y": {
+      "attr": "c",
+      "id": 385,
+      "selecionados": [
+        49077,
+        49078
+      ]
+    },
+    "variavel": 13606,
+    "periodos": [
+      "2017"
+    ],
+    "nivelTerritorial": "1",
+    "unidadesTerritoriais": [
+      "1"
+    ],
+    "classificacoes": [
+      {
+        "id": 2,
+        "categorias": [
+          92956,
+          92957
+        ]
+      },
+      {
+        "id": 385,
+        "categorias": [
+          49077,
+          49078
+        ]
+      },
+      {
+        "id": 994,
+        "categorias": [
+          "81927"
+        ]
+      }
+    ],
+    "titulo": "Renda média dos pequenos produtores de alimentos, em 2017, por sexo, e por condição de indígena — dólares",
+    "subtitulo": "Fonte: IBGE, Objetivos de Desenvolvimento Sustentável, SIDRA, Tabela 10391",
+    "tituloX": "Sexo",
+    "tituloY": "Condição de indígena",
+    "paleta": "amarelo"
+  },
+  {
+    "tipo": "choropleth",
+    "agregado": 10391,
+    "nivelTerritorial": "3",
+    "unidadesTerritoriais": [
+      "all"
+    ],
+    "periodos": [
+      "2017"
+    ],
+    "variavel": "13606",
+    "classificacoes": [
+      {
+        "id": 994,
+        "categorias": [
+          "81927"
+        ]
+      },
+      {
+        "id": 2,
+        "categorias": [
+          "6794"
+        ]
+      },
+      {
+        "id": 385,
+        "categorias": [
+          "32777"
+        ]
+      }
+    ],
+    "titulo": "Renda média dos pequenos produtores de alimentos, em 2017 — dólares",
+    "subtitulo": "Fonte: IBGE, Objetivos de Desenvolvimento Sustentável, SIDRA, Tabela 10391",
+    "paleta": "amarelo"
+  }
+]

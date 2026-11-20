@@ -1,0 +1,128 @@
+[
+  {
+    "tipo": "line",
+    "agregado": 6840,
+    "periodos": [
+      2010,
+      2011,
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024
+    ],
+    "variavel": 9965,
+    "nivelTerritorial": 1,
+    "unidadesTerritoriais": [
+      1
+    ],
+    "classificacoes": [],
+    "series": [
+      [
+        {
+          "id": 1,
+          "nome": "Brasil"
+        }
+      ]
+    ],
+    "titulos": [
+      "Brasil"
+    ],
+    "titulo": "Participação da agropecuária na despesa pública",
+    "subtitulo": "Fonte: IBGE, Objetivos de Desenvolvimento Sustentável, SIDRA, Tabela 6840",
+    "tituloX": "Ano",
+    "tituloY": "Participação (Índice)"
+  },
+  {
+    "tipo": "line",
+    "agregado": 6840,
+    "periodos": [
+      2010,
+      2011,
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024
+    ],
+    "variavel": 9963,
+    "nivelTerritorial": 1,
+    "unidadesTerritoriais": [
+      1
+    ],
+    "classificacoes": [],
+    "series": [
+      [
+        {
+          "id": 1,
+          "nome": "Brasil"
+        }
+      ]
+    ],
+    "titulos": [
+      "Brasil"
+    ],
+    "titulo": "Participação da agropecuária no PIB",
+    "subtitulo": "Fonte: IBGE, Objetivos de Desenvolvimento Sustentável, SIDRA, Tabela 6840",
+    "tituloX": "Ano",
+    "tituloY": "Participação (Índice)"
+  },
+  {
+    "tipo": "line",
+    "agregado": 6840,
+    "periodos": [
+      2010,
+      2011,
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024
+    ],
+    "variavel": 9964,
+    "nivelTerritorial": 1,
+    "unidadesTerritoriais": [
+      1
+    ],
+    "classificacoes": [],
+    "series": [
+      [
+        {
+          "id": 1,
+          "nome": "Brasil"
+        }
+      ]
+    ],
+    "titulos": [
+      "Brasil"
+    ],
+    "titulo": "Índice de Orientação Agrícola (IOA)",
+    "subtitulo": "Fonte: IBGE, Objetivos de Desenvolvimento Sustentável, SIDRA, Tabela 6840",
+    "tituloX": "Ano",
+    "tituloY": "IOA"
+  }
+]

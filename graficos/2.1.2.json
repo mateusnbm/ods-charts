@@ -1,0 +1,82 @@
+[
+  {
+    "tipo": "line",
+    "agregado": 6665,
+    "periodos": [
+      2004,
+      2009,
+      2013,
+      2018,
+      2023,
+      2024
+    ],
+    "variavel": 800,
+    "nivelTerritorial": 1,
+    "unidadesTerritoriais": [
+      1
+    ],
+    "classificacoes": [
+      {
+        "id": 12404,
+        "categorias": [
+          109098,
+          109100,
+          109101,
+          109102
+        ]
+      }
+    ],
+    "series": [
+      [
+        {
+          "id": 109098,
+          "nome": "Com segurança alimentar"
+        },
+        {
+          "id": 1,
+          "nome": "Brasil"
+        }
+      ],
+      [
+        {
+          "id": 109100,
+          "nome": "Com insegurança alimentar leve"
+        },
+        {
+          "id": 1,
+          "nome": "Brasil"
+        }
+      ],
+      [
+        {
+          "id": 109101,
+          "nome": "Com insegurança alimentar moderada"
+        },
+        {
+          "id": 1,
+          "nome": "Brasil"
+        }
+      ],
+      [
+        {
+          "id": 109102,
+          "nome": "Com insegurança alimentar grave"
+        },
+        {
+          "id": 1,
+          "nome": "Brasil"
+        }
+      ]
+    ],
+    "titulos": [
+      "Com segurança alimentar",
+      "Com insegurança alimentar leve",
+      "Com insegurança alimentar moderada",
+      "Com insegurança alimentar grave"
+    ],
+    "titulo": "Percentual de domicílios particulares por situação de segurança alimentar existente no domicílio",
+    "subtitulo": "Fonte: IBGE, Objetivos de Desenvolvimento Sustentável, SIDRA, Tabela 6665",
+    "tituloX": "Ano",
+    "tituloY": "Percentual (%)"
+  }
+]

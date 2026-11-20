@@ -27,7 +27,7 @@
     "titulos": [
       "Brasil"
     ],
-    "titulo": "População que utiliza serviços de água potável gerenciados de forma segura",
+    "titulo": "Percentual da população que utiliza serviços de água potável gerenciados de forma segura",
     "subtitulo": "Fonte: IBGE, Objetivos de Desenvolvimento Sustentável, SIDRA, Tabela 9787",
     "tituloX": "Ano",
     "tituloY": "Percentual (%)"
@@ -95,7 +95,7 @@
       "Homens",
       "Mulheres"
     ],
-    "titulo": "População que utiliza serviços de água potável gerenciados de forma segura, por sexo",
+    "titulo": "Percentual da população que utiliza serviços de água potável gerenciados de forma segura, por sexo",
     "subtitulo": "Fonte: IBGE, Objetivos de Desenvolvimento Sustentável, SIDRA, Tabela 9788",
     "tituloX": "Ano",
     "tituloY": "Percentual (%)"
@@ -163,7 +163,7 @@
       "Branca",
       "Preta ou parda"
     ],
-    "titulo": "População que utiliza serviços de água potável gerenciados de forma segura, por cor ou raça",
+    "titulo": "Percentual da população que utiliza serviços de água potável gerenciados de forma segura, por cor ou raça",
     "subtitulo": "Fonte: IBGE, Objetivos de Desenvolvimento Sustentável, SIDRA, Tabela 9790",
     "tituloX": "Ano",
     "tituloY": "Percentual (%)"
@@ -231,7 +231,7 @@
       "Urbana",
       "Rural"
     ],
-    "titulo": "População que utiliza serviços de água potável gerenciados de forma segura, por situação do domicílio",
+    "titulo": "Percentual da população que utiliza serviços de água potável gerenciados de forma segura, por situação do domicílio",
     "subtitulo": "Fonte: IBGE, Objetivos de Desenvolvimento Sustentável, SIDRA, Tabela 9791",
     "tituloX": "Ano",
     "tituloY": "Percentual (%)"
@@ -286,7 +286,7 @@
         ]
       }
     ],
-    "titulo": "População que utiliza serviços de água potável gerenciados de forma segura, por grupo de idade",
+    "titulo": "Percentual da população que utiliza serviços de água potável gerenciados de forma segura, por grupo de idade",
     "subtitulo": "Fonte: IBGE, Objetivos de Desenvolvimento Sustentável, SIDRA, Tabela 9789",
     "tituloX": "Ano",
     "tituloY": "Grupo de idade",
@@ -319,7 +319,7 @@
       5
     ],
     "classificacoes": [],
-    "titulo": "População que utiliza (a) serviços de saneamento gerenciados de forma segura e (b) instalações para lavagem das mãos com água e sabão, em 2018, por Grande Região",
+    "titulo": "Proporção da população que utiliza (a) serviços de saneamento gerenciados de forma segura e (b) instalações para lavagem das mãos com água e sabão, em 2018, por Grande Região",
     "subtitulo": "Fonte: IBGE, Objetivos de Desenvolvimento Sustentável, SIDRA, Tabela 6835",
     "tituloX": "Proporção (%)",
     "tituloY": "Grande Região"
@@ -336,7 +336,7 @@
     ],
     "variavel": "10107",
     "classificacoes": [],
-    "titulo": "População que utiliza (a) serviços de saneamento gerenciados de forma segura e (b) instalações para lavagem das mãos com água e sabão, em 2018, por Unidade da Federação",
+    "titulo": "Proporção da população que utiliza (a) serviços de saneamento gerenciados de forma segura e (b) instalações para lavagem das mãos com água e sabão, em 2018, por Unidade da Federação",
     "subtitulo": "Fonte: IBGE, Objetivos de Desenvolvimento Sustentável, SIDRA, Tabela 6835",
     "paleta": "vermelho"
   },
@@ -365,7 +365,7 @@
     "titulos": [
       "Brasil"
     ],
-    "titulo": "Moradores em domicílios nos quais se utiliza combustível limpo na preparação de alimentos",
+    "titulo": "Percentual de moradores em domicílios nos quais se utiliza combustível limpo na preparação de alimentos",
     "subtitulo": "Fonte: IBGE, Objetivos de Desenvolvimento Sustentável, SIDRA, Tabela 9731",
     "tituloX": "Ano",
     "tituloY": "Percentual (%)"
@@ -397,7 +397,7 @@
       5
     ],
     "classificacoes": [],
-    "titulo": "Moradores em domicílios nos quais se utiliza combustível limpo na preparação de alimentos, em 2024, por Grande Região",
+    "titulo": "Percentual de moradores em domicílios nos quais se utiliza combustível limpo na preparação de alimentos, em 2024, por Grande Região",
     "subtitulo": "Fonte: IBGE, Objetivos de Desenvolvimento Sustentável, SIDRA, Tabela 9731",
     "tituloX": "Percentual (%)",
     "tituloY": "Grande Região"
@@ -414,7 +414,7 @@
     ],
     "variavel": "9135",
     "classificacoes": [],
-    "titulo": "Moradores em domicílios nos quais se utiliza combustível limpo na preparação de alimentos, em 2024, por Unidade da Federação",
+    "titulo": "Percentual de moradores em domicílios nos quais se utiliza combustível limpo na preparação de alimentos, em 2024, por Unidade da Federação",
     "subtitulo": "Fonte: IBGE, Objetivos de Desenvolvimento Sustentável, SIDRA, Tabela 9731",
     "paleta": "vermelho"
   },
@@ -450,7 +450,7 @@
     "titulos": [
       "Brasil"
     ],
-    "titulo": "Resíduos sólidos urbanos coletados e gerenciados em instalações controladas pelo total de resíduos urbanos gerados",
+    "titulo": "Quantidade de resíduos sólidos urbanos coletados e gerenciados em instalações controladas pelo total de resíduos urbanos gerados",
     "subtitulo": "Fonte: IBGE, Objetivos de Desenvolvimento Sustentável, SIDRA, Tabela 8687",
     "tituloX": "Ano",
     "tituloY": "Quantidade (milhões de toneladas)"
@@ -482,7 +482,7 @@
       5
     ],
     "classificacoes": [],
-    "titulo": "Resíduos sólidos urbanos coletados e gerenciados em instalações controladas pelo total de resíduos urbanos gerados, em 2024, por Grande Região",
+    "titulo": "Quantidade de resíduos sólidos urbanos coletados e gerenciados em instalações controladas pelo total de resíduos urbanos gerados, em 2024, por Grande Região",
     "subtitulo": "Fonte: IBGE, Objetivos de Desenvolvimento Sustentável, SIDRA, Tabela 8687",
     "tituloX": "Quantidade (milhões de toneladas)",
     "tituloY": "Grande Região"
@@ -555,9 +555,9 @@
       "Lixão",
       "Aterro sanitário"
     ],
-    "titulo": "Resíduos sólidos urbanos coletados e gerenciados em instalações controladas pelo total de resíduos urbanos gerados, por disposição final",
+    "titulo": "Quantidade de resíduos sólidos urbanos coletados e gerenciados em instalações controladas pelo total de resíduos urbanos gerados, por disposição final",
     "subtitulo": "Fonte: IBGE, Objetivos de Desenvolvimento Sustentável, SIDRA, Tabela 5904",
     "tituloX": "Ano",
-    "tituloY": "Quantidade (megatonelada)"
+    "tituloY": "Quantidade (milhões de toneladas)"
   }
 ]

@@ -1,0 +1,108 @@
+[
+  {
+    "tipo": "line",
+    "agregado": 6689,
+    "periodos": [
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024
+    ],
+    "variavel": 9619,
+    "nivelTerritorial": 1,
+    "unidadesTerritoriais": [
+      1
+    ],
+    "classificacoes": [],
+    "series": [
+      [
+        {
+          "id": 1,
+          "nome": "Brasil"
+        }
+      ]
+    ],
+    "titulos": [
+      "Brasil"
+    ],
+    "titulo": "Número de mortes, pessoas desaparecidas e pessoas diretamente afetadas atribuído a desastres por 100 mil habitantes",
+    "subtitulo": "Fonte: IBGE, Objetivos de Desenvolvimento Sustentável, SIDRA, Tabela 6689",
+    "tituloX": "Ano",
+    "tituloY": "Quantidade (pessoas)"
+  },
+  {
+    "tipo": "line",
+    "agregado": 6689,
+    "periodos": [
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024
+    ],
+    "variavel": 9619,
+    "nivelTerritorial": 2,
+    "unidadesTerritoriais": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "classificacoes": [],
+    "series": [
+      [
+        {
+          "id": 1,
+          "nome": "Norte"
+        }
+      ],
+      [
+        {
+          "id": 2,
+          "nome": "Nordeste"
+        }
+      ],
+      [
+        {
+          "id": 3,
+          "nome": "Sudeste"
+        }
+      ],
+      [
+        {
+          "id": 4,
+          "nome": "Sul"
+        }
+      ],
+      [
+        {
+          "id": 5,
+          "nome": "Centro-Oeste"
+        }
+      ]
+    ],
+    "titulos": [
+      "Norte",
+      "Nordeste",
+      "Sudeste",
+      "Sul",
+      "Centro-Oeste"
+    ],
+    "titulo": "Número de mortes, pessoas desaparecidas e pessoas diretamente afetadas atribuído a desastres por 100 mil habitantes, por Grande Região",
+    "subtitulo": "Fonte: IBGE, Objetivos de Desenvolvimento Sustentável, SIDRA, Tabela 6689",
+    "tituloX": "Ano",
+    "tituloY": "Quantidade (Pessoas)"
+  }
+]

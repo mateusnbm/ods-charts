@@ -1,0 +1,116 @@
+[
+  {
+    "tipo": "line",
+    "agregado": 6587,
+    "periodos": [
+      2010,
+      2011,
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023
+    ],
+    "variavel": 9312,
+    "nivelTerritorial": 1,
+    "unidadesTerritoriais": [
+      1
+    ],
+    "classificacoes": [],
+    "series": [
+      [
+        {
+          "id": 1,
+          "nome": "Brasil"
+        }
+      ]
+    ],
+    "titulos": [
+      "Brasil"
+    ],
+    "titulo": "Valor adicionado da indústria em proporção do PIB",
+    "subtitulo": "Fonte: IBGE, Objetivos de Desenvolvimento Sustentável, SIDRA, Tabela 6587",
+    "tituloX": "Ano",
+    "tituloY": "Proporção do PIB (%)"
+  },
+  {
+    "tipo": "choropleth",
+    "agregado": 6587,
+    "nivelTerritorial": "3",
+    "unidadesTerritoriais": [
+      "all"
+    ],
+    "periodos": [
+      "2023"
+    ],
+    "variavel": "9312",
+    "classificacoes": [],
+    "titulo": "Valor adicionado da indústria de transformação em proporção do PIB, em 2023, por Unidade da Federação",
+    "subtitulo": "Fonte: IBGE, Objetivos de Desenvolvimento Sustentável, SIDRA, Tabela 6587",
+    "paleta": "laranja"
+  },
+  {
+    "tipo": "line",
+    "agregado": 6587,
+    "periodos": [
+      2010,
+      2011,
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023
+    ],
+    "variavel": 9313,
+    "nivelTerritorial": 1,
+    "unidadesTerritoriais": [
+      1
+    ],
+    "classificacoes": [],
+    "series": [
+      [
+        {
+          "id": 1,
+          "nome": "Brasil"
+        }
+      ]
+    ],
+    "titulos": [
+      "Brasil"
+    ],
+    "titulo": "Valor adicionado da indústria de transformação em reais per capita",
+    "subtitulo": "Fonte: IBGE, Objetivos de Desenvolvimento Sustentável, SIDRA, Tabela 6587",
+    "tituloX": "Ano",
+    "tituloY": "Valor adicionado (reais)"
+  },
+  {
+    "tipo": "choropleth",
+    "agregado": 6587,
+    "nivelTerritorial": "3",
+    "unidadesTerritoriais": [
+      "all"
+    ],
+    "periodos": [
+      "2023"
+    ],
+    "variavel": "9313",
+    "classificacoes": [],
+    "titulo": "Valor adicionado da indústria de transformação em reais per capita, em 2023, por Unidade da Federação",
+    "subtitulo": "Fonte: IBGE, Objetivos de Desenvolvimento Sustentável, SIDRA, Tabela 6587",
+    "paleta": "laranja"
+  }
+]

@@ -1,0 +1,149 @@
+[
+  {
+    "tipo": "line",
+    "agregado": 6833,
+    "periodos": [
+      2003,
+      2004,
+      2005,
+      2006,
+      2007,
+      2008,
+      2009,
+      2010,
+      2011,
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024
+    ],
+    "variavel": 10104,
+    "nivelTerritorial": 1,
+    "unidadesTerritoriais": [
+      1
+    ],
+    "classificacoes": [],
+    "series": [
+      [
+        {
+          "id": 1,
+          "nome": "Brasil"
+        }
+      ]
+    ],
+    "titulos": [
+      "Brasil"
+    ],
+    "titulo": "Ajuda Oficial ao Desenvolvimento (AOD)",
+    "subtitulo": "Fonte: IBGE, Objetivos de Desenvolvimento Sustentável, SIDRA, Tabela 6833",
+    "tituloX": "Ano",
+    "tituloY": "AOD (milhões de dólares)"
+  },
+  {
+    "tipo": "line",
+    "agregado": 6833,
+    "periodos": [
+      2003,
+      2004,
+      2005,
+      2006,
+      2007,
+      2008,
+      2009,
+      2010,
+      2011,
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024
+    ],
+    "variavel": 10105,
+    "nivelTerritorial": 1,
+    "unidadesTerritoriais": [
+      1
+    ],
+    "classificacoes": [],
+    "series": [
+      [
+        {
+          "id": 1,
+          "nome": "Brasil"
+        }
+      ]
+    ],
+    "titulos": [
+      "Brasil"
+    ],
+    "titulo": "Outros Fluxos Oficiais (OFO)",
+    "subtitulo": "Fonte: IBGE, Objetivos de Desenvolvimento Sustentável, SIDRA, Tabela 6833",
+    "tituloX": "Ano",
+    "tituloY": "OFO (milhões de dólares)"
+  },
+  {
+    "tipo": "line",
+    "agregado": 6833,
+    "periodos": [
+      2003,
+      2004,
+      2005,
+      2006,
+      2007,
+      2008,
+      2009,
+      2010,
+      2011,
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024
+    ],
+    "variavel": 10106,
+    "nivelTerritorial": 1,
+    "unidadesTerritoriais": [
+      1
+    ],
+    "classificacoes": [],
+    "series": [
+      [
+        {
+          "id": 1,
+          "nome": "Brasil"
+        }
+      ]
+    ],
+    "titulos": [
+      "Brasil"
+    ],
+    "titulo": "Total de fluxos oficiais para o setor agrícola",
+    "subtitulo": "Fonte: IBGE, Objetivos de Desenvolvimento Sustentável, SIDRA, Tabela 6833",
+    "tituloX": "Ano",
+    "tituloY": "Total de fluxos (milhões de dólares)"
+  }
+]

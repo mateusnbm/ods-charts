@@ -29,8 +29,10 @@
 	const API_URL = 'https://apisidra.ibge.gov.br';
 	
 	const GEO_URL = {
-		2: 'https://mateusnbm.github.io/ods-charts/geometrias/topojson/n2.topojson',
-		3: 'https://mateusnbm.github.io/ods-charts/geometrias/topojson/n3.topojson',
+		2:   'https://mateusnbm.github.io/ods-charts/geometrias/topojson/n2.topojson',
+		3:   'https://mateusnbm.github.io/ods-charts/geometrias/topojson/n3.topojson',
+		121: 'https://mateusnbm.github.io/ods-charts/geometrias/topojson/n121.topojson',
+		123: 'https://mateusnbm.github.io/ods-charts/geometrias/topojson/n123.topojson',
 	};
 	
 	const UNIDADES = {
@@ -72,6 +74,28 @@
 			{ Codigo: 35, UF: 'SP', Nome: 'São Paulo' }, 
 			{ Codigo: 28, UF: 'SE', Nome: 'Sergipe' },
 			{ Codigo: 17, UF: 'TO', Nome: 'Tocantins' }
+		],
+		121: [
+			{ Codigo: 101, Nome: 'Amazônica' }, 
+			{ Codigo: 107, Nome: 'Atlântico Leste' }, 
+			{ Codigo: 103, Nome: 'Atlântico Nordeste Ocidental' }, 
+			{ Codigo: 105, Nome: 'Atlântico Nordeste Oriental' }, 
+			{ Codigo: 108, Nome: 'Atlântico Sudeste' }, 
+			{ Codigo: 109, Nome: 'Atlântico Sul' }, 
+			{ Codigo: 112, Nome: 'Paraguai' }, 
+			{ Codigo: 111, Nome: 'Paraná' }, 
+			{ Codigo: 104, Nome: 'Parnaíba' }, 
+			{ Codigo: 106, Nome: 'São Francisco' }, 
+			{ Codigo: 102, Nome: 'Tocantins-Araguaia' }, 
+			{ Codigo: 110, Nome: 'Uruguai' }
+		],
+		123: [
+			{ Codigo: 1, Nome: 'Amazônia' },
+			{ Codigo: 2, Nome: 'Cerrado' },
+			{ Codigo: 3, Nome: 'Caatinga' },
+			{ Codigo: 4, Nome: 'Mata Atlântica' },
+			{ Codigo: 5, Nome: 'Pampa' },
+			{ Codigo: 6, Nome: 'Pantanal' }
 		]
 	};
 	
@@ -1208,7 +1232,7 @@
 		
 		geometrias.features.forEach((feature) => {
 			
-			const codigo = feature.properties.codarea;//feature.properties[geo.attr];
+			const codigo = feature.properties.codarea;
 			
 			feature.properties.name = datapoints[codigo].name;
 			feature.properties.value = datapoints[codigo].value;
@@ -1224,14 +1248,15 @@
 		
 		// Plota o mapa coroplético
 		
-		const chart = echarts.init(document.getElementById(div));
+		const container = document.getElementById(div);
+		const containerWidth = container.clientWidth || container.offsetWidth;
 		
 		const titleFont = { fontSize: 18, fontWeight: 'bolder', fontFamily: 'sans-serif', lineHeight: 22 };
 		const subtitleFont = { fontSize: 12, fontWeight: 'normal', fontFamily: 'sans-serif', lineHeight: 14 };
 		const legendFont = { fontSize: 12, fontWeight: 'normal', fontFamily: 'sans-serif' };
 		const axisFont = { fontSize: 12, fontWeight: 'normal', fontFamily: 'sans-serif' };
 		
-		const titlesMaxWidth = chart.getWidth() * 0.8;
+		const titlesMaxWidth = containerWidth * 0.8;
 		const titleMarginTop = 5;
 		const titleHeight = getBreakableTextHeight(params.titulo, titlesMaxWidth, titleFont);
 		const titleMarginBottom = 10;
@@ -1333,6 +1358,14 @@
 				}
 			}]
 		};
+		
+		// ...
+		
+		//container.style.height = "450px"
+		
+		// ...
+		
+		const chart = echarts.init(container);
 		
 		chart.setOption(option, { notMerge: true });
 		

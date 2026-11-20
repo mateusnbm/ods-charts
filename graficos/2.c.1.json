@@ -1,0 +1,120 @@
+[
+  {
+    "tipo": "line",
+    "agregado": 10349,
+    "periodos": [
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023
+    ],
+    "variavel": 13581,
+    "nivelTerritorial": 1,
+    "unidadesTerritoriais": [
+      1
+    ],
+    "classificacoes": [
+      {
+        "id": 162,
+        "categorias": [
+          17924,
+          17926,
+          15561
+        ]
+      }
+    ],
+    "series": [
+      [
+        {
+          "id": 17924,
+          "nome": "Milho"
+        },
+        {
+          "id": 1,
+          "nome": "Brasil"
+        }
+      ],
+      [
+        {
+          "id": 17926,
+          "nome": "Trigo"
+        },
+        {
+          "id": 1,
+          "nome": "Brasil"
+        }
+      ],
+      [
+        {
+          "id": 15561,
+          "nome": "Arroz"
+        },
+        {
+          "id": 1,
+          "nome": "Brasil"
+        }
+      ]
+    ],
+    "titulos": [
+      "Milho",
+      "Trigo",
+      "Arroz"
+    ],
+    "titulo": "Indicador de anomalias dos preços de alimentação",
+    "subtitulo": "Fonte: IBGE, Objetivos de Desenvolvimento Sustentável, SIDRA, Tabela 10349",
+    "tituloX": "Ano",
+    "tituloY": "Indicador de anomalias (índice)"
+  },
+  {
+    "tipo": "line",
+    "agregado": 10349,
+    "periodos": [
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023
+    ],
+    "variavel": 13581,
+    "nivelTerritorial": 1,
+    "unidadesTerritoriais": [
+      1
+    ],
+    "classificacoes": [
+      {
+        "id": 162,
+        "categorias": [
+          79489
+        ]
+      }
+    ],
+    "series": [
+      [
+        {
+          "id": 79489,
+          "nome": "IPC alimentos"
+        },
+        {
+          "id": 1,
+          "nome": "Brasil"
+        }
+      ]
+    ],
+    "titulos": [
+      "IPC alimentos, Brasil"
+    ],
+    "titulo": "Índice de Preços ao Consumidor (IPC) - Alimentos",
+    "subtitulo": "Fonte: IBGE, Objetivos de Desenvolvimento Sustentável, SIDRA, Tabela 10349",
+    "tituloX": "Ano",
+    "tituloY": "IPC"
+  }
+]

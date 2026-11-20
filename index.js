@@ -2217,7 +2217,7 @@ function choroplethFormNivel() {
 	
 	_metadados.NiveisTerritoriais.map((nivel, index) => {
 		
-		if (nivel.Id >= 2 && nivel.Id <= 3) {
+		if (nivel.Id == 2 || nivel.Id == 3 || nivel.Id == 121 || nivel.Id == 123) {
 			
 			niveis.push(`
 				<option value="${nivel.Id}" ${index == 0 ? "selected" : ""}>
@@ -2371,21 +2371,6 @@ function choroplethFormTitulos() {
 
 }
 
-function choroplethFormEventSelectVariavel() {
-	
-	$(document).on("change", "#choropleth-form #select-variavel", function() {
-		
-		var variavel = 
-			_metadados
-			.Variaveis
-			.find(x => x.Id == $(this).val());
-		
-		$("#choropleth-form #subtitulo").val(variavel.Nome + " (" + variavel.UnidadeMedida + ")");
-		
-	});
-
-}
-
 function choroplethForm() {
 	
 	var nivel = choroplethFormNivel();
@@ -2407,8 +2392,6 @@ function choroplethForm() {
 	`;
 	
 	$("#chart-form-wrapper").html(html);
-	
-	choroplethFormEventSelectVariavel();
 	
 }
 
@@ -2893,6 +2876,8 @@ function atualizarSelectTipos(metadados) {
 	
 	var temGR = metadados.NiveisTerritoriais.some(x => x.Id == 2);
 	var temUF = metadados.NiveisTerritoriais.some(x => x.Id == 3);
+	var temRH = metadados.NiveisTerritoriais.some(x => x.Id == 121);
+	var temBI = metadados.NiveisTerritoriais.some(x => x.Id == 123);
 	
 	var html = ``;
 	
@@ -2901,10 +2886,10 @@ function atualizarSelectTipos(metadados) {
 	html += `<option value="ranked">Ranqueado</option>`;
 	html += `<option value="heatmap">Heatmap</option>`;
 	
-	if (temGR == true || temUF == true) {
-	
+	if (temGR == true || temUF == true || temRH == true || temBI == true) {
+		
 		html += `<option value="choropleth">Mapa coroplético</option>`;
-	
+		
 	}
 	
 	$("#select-tipo").html(html);

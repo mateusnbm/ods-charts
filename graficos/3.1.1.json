@@ -1,0 +1,92 @@
+[
+  {
+    "tipo": "line",
+    "agregado": 6694,
+    "periodos": [
+      2009,
+      2010,
+      2011,
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023
+    ],
+    "variavel": 9730,
+    "nivelTerritorial": 1,
+    "unidadesTerritoriais": [
+      1
+    ],
+    "classificacoes": [],
+    "series": [
+      [
+        {
+          "id": 1,
+          "nome": "Brasil"
+        }
+      ]
+    ],
+    "titulos": [
+      "Brasil"
+    ],
+    "titulo": "Razão de Mortalidade Materna",
+    "subtitulo": "Fonte: IBGE, Objetivos de Desenvolvimento Sustentável, SIDRA, Tabela 6694",
+    "tituloX": "Ano",
+    "tituloY": "Óbitos por 100 mil nascidos vivos"
+  },
+  {
+    "tipo": "ranked",
+    "agregado": 6694,
+    "y": {
+      "attr": "n",
+      "id": 2,
+      "selecionados": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    "variavel": 9730,
+    "periodos": [
+      "2023"
+    ],
+    "nivelTerritorial": 2,
+    "unidadesTerritoriais": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "classificacoes": [],
+    "titulo": "Razão de Mortalidade Materna, em 2023, por Grande Região",
+    "subtitulo": "Fonte: IBGE, Objetivos de Desenvolvimento Sustentável, SIDRA, Tabela 6694",
+    "tituloX": "Óbitos por 100 mil nascidos vivos",
+    "tituloY": "Grande Região"
+  },
+  {
+    "tipo": "choropleth",
+    "agregado": 6694,
+    "nivelTerritorial": "3",
+    "unidadesTerritoriais": [
+      "all"
+    ],
+    "periodos": [
+      "2023"
+    ],
+    "variavel": "9730",
+    "classificacoes": [],
+    "titulo": "Razão de Mortalidade Materna, em 2023, por Unidade da Federação",
+    "subtitulo": "Fonte: IBGE, Objetivos de Desenvolvimento Sustentável, SIDRA, Tabela 6694",
+    "paleta": "verde"
+  }
+]

@@ -1,0 +1,36 @@
+[
+  {
+    "tipo": "line",
+    "agregado": 8754,
+    "periodos": [
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024
+    ],
+    "variavel": 12581,
+    "nivelTerritorial": 1,
+    "unidadesTerritoriais": [
+      1
+    ],
+    "classificacoes": [],
+    "series": [
+      [
+        {
+          "id": 1,
+          "nome": "Brasil"
+        }
+      ]
+    ],
+    "titulos": [
+      "Brasil"
+    ],
+    "titulo": "Percentual de perdas econômicas diretas em relação ao PIB, incluindo danos causados por desastres em infraestruturas críticas e na interrupção de serviços básicos",
+    "subtitulo": "Fonte: IBGE, Objetivos de Desenvolvimento Sustentável, SIDRA, Tabela 8754",
+    "tituloX": "Ano",
+    "tituloY": "Percentual (%)"
+  }
+]

@@ -1,0 +1,132 @@
+[
+  {
+    "tipo": "line",
+    "agregado": 6668,
+    "periodos": [
+      1996,
+      2006,
+      2019
+    ],
+    "variavel": 9596,
+    "nivelTerritorial": 1,
+    "unidadesTerritoriais": [
+      1
+    ],
+    "classificacoes": [
+      {
+        "id": 2,
+        "categorias": [
+          6794,
+          110095,
+          110096
+        ]
+      }
+    ],
+    "series": [
+      [
+        {
+          "id": 6794,
+          "nome": "Total"
+        },
+        {
+          "id": 1,
+          "nome": "Brasil"
+        }
+      ],
+      [
+        {
+          "id": 110095,
+          "nome": "Masculino"
+        },
+        {
+          "id": 1,
+          "nome": "Brasil"
+        }
+      ],
+      [
+        {
+          "id": 110096,
+          "nome": "Feminino"
+        },
+        {
+          "id": 1,
+          "nome": "Brasil"
+        }
+      ]
+    ],
+    "titulos": [
+      "Total",
+      "Masculino",
+      "Feminino"
+    ],
+    "titulo": "Prevalência de déficit de peso para idade em crianças menores de 5 anos, por sexo",
+    "subtitulo": "Fonte: IBGE, Objetivos de Desenvolvimento Sustentável, SIDRA, Tabela 6668",
+    "tituloX": "Ano",
+    "tituloY": "Prevalência (%)"
+  },
+  {
+    "tipo": "line",
+    "agregado": 6668,
+    "periodos": [
+      1996,
+      2006,
+      2019
+    ],
+    "variavel": 9597,
+    "nivelTerritorial": 1,
+    "unidadesTerritoriais": [
+      1
+    ],
+    "classificacoes": [
+      {
+        "id": 2,
+        "categorias": [
+          6794,
+          110095,
+          110096
+        ]
+      }
+    ],
+    "series": [
+      [
+        {
+          "id": 6794,
+          "nome": "Total"
+        },
+        {
+          "id": 1,
+          "nome": "Brasil"
+        }
+      ],
+      [
+        {
+          "id": 110095,
+          "nome": "Masculino"
+        },
+        {
+          "id": 1,
+          "nome": "Brasil"
+        }
+      ],
+      [
+        {
+          "id": 110096,
+          "nome": "Feminino"
+        },
+        {
+          "id": 1,
+          "nome": "Brasil"
+        }
+      ]
+    ],
+    "titulos": [
+      "Total",
+      "Masculino",
+      "Feminino"
+    ],
+    "titulo": "Prevalência de excesso de peso para idade em crianças menores de 5 anos, por sexo",
+    "subtitulo": "Fonte: IBGE, Objetivos de Desenvolvimento Sustentável, SIDRA, Tabela 6668",
+    "tituloX": "Ano",
+    "tituloY": "Prevalência (%)"
+  }
+]

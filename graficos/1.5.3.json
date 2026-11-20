@@ -1,0 +1,48 @@
+[
+  {
+    "tipo": "line",
+    "agregado": 6673,
+    "periodos": [
+      2013,
+      2017,
+      2020
+    ],
+    "variavel": 9600,
+    "nivelTerritorial": 1,
+    "unidadesTerritoriais": [
+      1
+    ],
+    "classificacoes": [],
+    "series": [
+      [
+        {
+          "id": 1,
+          "nome": "Brasil"
+        }
+      ]
+    ],
+    "titulos": [
+      "Brasil"
+    ],
+    "titulo": "Proporção de governos locais que adotam e implementam estratégias locais de redução de risco de desastres em linha com as estratégias nacionais de redução de risco de desastres",
+    "subtitulo": "Fonte: IBGE, Objetivos de Desenvolvimento Sustentável, SIDRA, Tabela 6673",
+    "tituloX": "Ano",
+    "tituloY": "Proporção (%)"
+  },
+  {
+    "tipo": "choropleth",
+    "agregado": 6673,
+    "nivelTerritorial": "3",
+    "unidadesTerritoriais": [
+      "all"
+    ],
+    "periodos": [
+      "2020"
+    ],
+    "variavel": "9600",
+    "classificacoes": [],
+    "titulo": "Proporção de governos locais que adotam e implementam estratégias locais de redução de risco de desastres em linha com as estratégias nacionais de redução de risco de desastres, em 2020, por Unidade da Federação",
+    "subtitulo": "Fonte: IBGE, Objetivos de Desenvolvimento Sustentável, SIDRA, Tabela 6673",
+    "paleta": "vermelho"
+  }
+]

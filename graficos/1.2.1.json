@@ -34,7 +34,7 @@
     "titulos": [
       "Brasil"
     ],
-    "titulo": "População vivendo abaixo da linha de pobreza nacional",
+    "titulo": "Proporção da população vivendo abaixo da linha de pobreza nacional",
     "subtitulo": "Fonte: IBGE, Objetivos de Desenvolvimento Sustentável, SIDRA, Tabela 5877",
     "tituloX": "Ano",
     "tituloY": "Proporção (%)"
@@ -109,7 +109,7 @@
       "Homens",
       "Mulheres"
     ],
-    "titulo": "População vivendo abaixo da linha de pobreza nacional, por sexo",
+    "titulo": "Proporção da população vivendo abaixo da linha de pobreza nacional, por sexo",
     "subtitulo": "Fonte: IBGE, Objetivos de Desenvolvimento Sustentável, SIDRA, Tabela 6825",
     "tituloX": "Ano",
     "tituloY": "Proporção (%)"
@@ -184,7 +184,7 @@
       "Branca",
       "Preta ou parda"
     ],
-    "titulo": "População vivendo abaixo da linha de pobreza nacional, por cor ou raça",
+    "titulo": "Proporção da população vivendo abaixo da linha de pobreza nacional, por cor ou raça",
     "subtitulo": "Fonte: IBGE, Objetivos de Desenvolvimento Sustentável, SIDRA, Tabela 5845",
     "tituloX": "Ano",
     "tituloY": "Proporção (%)"
@@ -292,7 +292,7 @@
       "Mulher branca",
       "Mulher preta ou parda"
     ],
-    "titulo": "População ocupada de 14 anos ou mais de idade abaixo da linha de pobreza nacional, por sexo, e cor ou raça",
+    "titulo": "Proporção da população ocupada de 14 anos ou mais de idade abaixo da linha de pobreza nacional, por sexo, e cor ou raça",
     "subtitulo": "Fonte: IBGE, Objetivos de Desenvolvimento Sustentável, SIDRA, Tabela 10446",
     "tituloX": "Ano",
     "tituloY": "Proporção (%)"
@@ -367,7 +367,7 @@
       "Urbana",
       "Rural"
     ],
-    "titulo": "População abaixo da linha de pobreza nacional, por situação do domicílio",
+    "titulo": "Proporção da população abaixo da linha de pobreza nacional, por situação do domicílio",
     "subtitulo": "Fonte: IBGE, Objetivos de Desenvolvimento Sustentável, SIDRA, Tabela 6827",
     "tituloX": "Ano",
     "tituloY": "Proporção (%)"
@@ -440,7 +440,7 @@
         ]
       }
     ],
-    "titulo": "População ocupada de 14 anos ou mais de idade abaixo da linha de pobreza nacional, por grupo de idade",
+    "titulo": "Proporção da população ocupada de 14 anos ou mais de idade abaixo da linha de pobreza nacional, por grupo de idade",
     "subtitulo": "Fonte: IBGE, Objetivos de Desenvolvimento Sustentável, SIDRA, Tabela 6838",
     "tituloX": "Ano",
     "tituloY": "Grupo de idade",
@@ -513,7 +513,7 @@
       "Sul",
       "Centro-Oeste"
     ],
-    "titulo": "População vivendo abaixo da linha de pobreza nacional, por Grande Região",
+    "titulo": "Proporção da população vivendo abaixo da linha de pobreza nacional, por Grande Região",
     "subtitulo": "Fonte: IBGE, Objetivos de Desenvolvimento Sustentável, SIDRA, Tabela 5877",
     "tituloX": "Ano",
     "tituloY": "Proporção (%)"
@@ -530,7 +530,7 @@
     ],
     "variavel": "9948",
     "classificacoes": [],
-    "titulo": "População vivendo abaixo da linha de pobreza nacional, em 2024, por Unidade da Federação",
+    "titulo": "Proporção da população vivendo abaixo da linha de pobreza nacional, em 2024, por Unidade da Federação",
     "subtitulo": "Fonte: IBGE, Objetivos de Desenvolvimento Sustentável, SIDRA, Tabela 5877",
     "paleta": "vermelho"
   }

@@ -1,0 +1,76 @@
+[
+  {
+    "tipo": "line",
+    "agregado": 10449,
+    "periodos": [
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ],
+    "variavel": 13749,
+    "nivelTerritorial": 1,
+    "unidadesTerritoriais": [
+      1
+    ],
+    "classificacoes": [],
+    "series": [
+      [
+        {
+          "id": 1,
+          "nome": "Brasil"
+        }
+      ]
+    ],
+    "titulos": [
+      "Brasil"
+    ],
+    "titulo": "Proporção de raças locais classificadas como em risco de extinção",
+    "subtitulo": "Fonte: IBGE, Objetivos de Desenvolvimento Sustentável, SIDRA, Tabela 10449",
+    "tituloX": "Ano",
+    "tituloY": "Proporção (%)"
+  },
+  {
+    "tipo": "line",
+    "agregado": 10449,
+    "periodos": [
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ],
+    "variavel": 13750,
+    "nivelTerritorial": 1,
+    "unidadesTerritoriais": [
+      1
+    ],
+    "classificacoes": [],
+    "series": [
+      [
+        {
+          "id": 1,
+          "nome": "Brasil"
+        }
+      ]
+    ],
+    "titulos": [
+      "Brasil"
+    ],
+    "titulo": "Proporção de raças transfronteiriças classificadas como em risco de extinção",
+    "subtitulo": "Fonte: IBGE, Objetivos de Desenvolvimento Sustentável, SIDRA, Tabela 10449",
+    "tituloX": "Ano",
+    "tituloY": "Proporção (%)"
+  }
+]

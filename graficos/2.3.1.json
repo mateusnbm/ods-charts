@@ -1,0 +1,92 @@
+[
+  {
+    "tipo": "heatmap",
+    "agregado": 10390,
+    "x": {
+      "attr": "c",
+      "id": 2,
+      "selecionados": [
+        92956,
+        92957
+      ]
+    },
+    "y": {
+      "attr": "c",
+      "id": 385,
+      "selecionados": [
+        49077,
+        49078
+      ]
+    },
+    "variavel": 13605,
+    "periodos": [
+      "2017"
+    ],
+    "nivelTerritorial": "1",
+    "unidadesTerritoriais": [
+      "1"
+    ],
+    "classificacoes": [
+      {
+        "id": 2,
+        "categorias": [
+          92956,
+          92957
+        ]
+      },
+      {
+        "id": 385,
+        "categorias": [
+          49077,
+          49078
+        ]
+      },
+      {
+        "id": 994,
+        "categorias": [
+          "81927"
+        ]
+      }
+    ],
+    "titulo": "Volume de produção por unidade de trabalho por dimensão da empresa agrícola/pastoril/florestal, em 2017, por sexo, e por condição de indígena — dólares/dia",
+    "subtitulo": "Fonte: IBGE, Objetivos de Desenvolvimento Sustentável, SIDRA, Tabela 10390",
+    "tituloX": "Sexo",
+    "tituloY": "Condição de indígena",
+    "paleta": "amarelo"
+  },
+  {
+    "tipo": "choropleth",
+    "agregado": 10390,
+    "nivelTerritorial": "3",
+    "unidadesTerritoriais": [
+      "all"
+    ],
+    "periodos": [
+      "2017"
+    ],
+    "variavel": "13605",
+    "classificacoes": [
+      {
+        "id": 994,
+        "categorias": [
+          "81927"
+        ]
+      },
+      {
+        "id": 2,
+        "categorias": [
+          "6794"
+        ]
+      },
+      {
+        "id": 385,
+        "categorias": [
+          "32777"
+        ]
+      }
+    ],
+    "titulo": "Volume de produção por unidade de trabalho por dimensão da empresa agrícola/pastoril/florestal, em 2017, por Unidade da Federação — dólares/dia",
+    "subtitulo": "Fonte: IBGE, Objetivos de Desenvolvimento Sustentável, SIDRA, Tabela 10390",
+    "paleta": "amarelo"
+  }
+]
